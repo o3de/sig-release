@@ -1,7 +1,7 @@
 ---
 name: RFC Suggestion request
 about: Create Suggestion RFC for this project
-title: Proposed RFC Suggestion: =description=
+title: Proposed RFC Suggestion =description=
 labels: 'rfc-suggestion'
 assignees: ''
 
