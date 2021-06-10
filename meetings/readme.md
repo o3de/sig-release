@@ -1,5 +1,5 @@
 # O3DE Release SIG - Meetings
-
+ 
 ## Meetings
 
 Each SIG hosts a regular community meeting to update the community about the progress of the project and the SIG's contribution to the project. It is a recurring event to give everyone a chance to have their voice heard. The SIG holds its meetings each - TBD - , and future meetings are held based on the [agendas on GitHub](https://github.com/o3de/foundation/issues?q=is%3Aopen+label%3Asig%2Frelease+label%3Amtg-agenda+).
