@@ -4,7 +4,6 @@ about: Use this template to create a new meeting agenda.
 title: Proposed SIG-Release meeting agenda for MMMM-DD-YY
 labels: mtg-agenda
 assignees: ''
-
 ---
 
 ## Meeting Details
