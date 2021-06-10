@@ -1,8 +1,8 @@
 ---
-name: RFC Feature request
+name: 'RFC Feature request'
 about: Create Feature RFC for this project
 title: Proposed RFC Feature: =description=
-labels: 'rfc-feature'
+labels: rfc-feature
 assignees: ''
 
 ---
