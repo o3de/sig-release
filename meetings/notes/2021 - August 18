@@ -1,0 +1,33 @@
+August 18, 2021 - SIG-Release meeting notes
+
+Release Schedule
+•	We will recommend a 2x yearly release cadence (felt like a good balance to the SIG). We will recommend to the TSC. These are official versioned releases.
+•	Security and other patches would be done on an adhoc basis as needed.
+ 
+Next Release
+•	Possible release at the end of November to reinforce the messaging at AWS RE:Invent
+•	Proposed date: November 30th.
+•	We need to determine if this will just be a release candidate or a full hardened release.
+•	We want to get away from releasing in and around holidays. We should try to get into a cycle after the November release.  Maybe March & October?
+ 
+Nov 30th Release Plan
+•	When do we cut the stabilization branch?
+•	It was recommended that we reserve 5 weeks for stabilization based on the last stabilization period.  We can adjust moving forward if this is longer than needed.
+•	We will lose bandwidth due to the Thanksgiving holiday.
+•	Target the 25nd of October we would cut the Stabilization branch.
+•	Reserving the right to move this date based on development progress.
+•	Action Item: Larry – Recommend a date to Terry/Joe for the next release.
+•	Action Item: Terry – Once we have a date, we need to communication the date and talk to SIGs about what they think they can get done by the release. 
+•	Action Item: Terry – Need to discuss the date in the next SIG meeting.
+ 
+Who should own the decisions around labels and github Issues related issues?
+•	Action Item: Darrin - Talk to Royal and see if we want to make an operations-SIG to handle these types of issues.
+ 
+Runbook for the release process
+•	Who will own creating the first pass of the runbook?
+o	Terry will start creating the runbook
+	Action Item: Terry - work with Larry to create the runbook based on lessons learned from previous releases.
+ 
+Sig Charter Review – We reviewed the charter changes from last meeting. Highlights:
+•	TSC is responsible for determining the release life cycle, Not the release/SIG. 
+•	Action Item: Terry/Joe - Sig release will drive the discussion about long term release plans and will escalate that to the TSC, who will make the decision. (This needs to be added to the charter).
