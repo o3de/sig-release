@@ -1,0 +1,85 @@
+8/31 Meeting of SIG-Release
+
+Attendees
+AMZN JoeB
+AMZN_kinglawr
+DMcP-Amazon
+Terry [Amazon]
+Amelia [Amazon]
+Alex Montgomery
+stramer [Amazon]
+Tony B [Amazon]
+Royal OBrien [LF]
+
+Agenda - initial
+Confirm October 25th stabilization creation date
+Confirm Sig-Operations creation
+Confirm Nov 30th release date
+Release runbook status
+Process for determining long term release plans and Tech Steering Committee
+
+No introductions - no one new in the meeting
+
+Any new topics to add to the agenda?
+No
+
+Confirm October 25th stabilization creation date
+* We are instructing people to have everything in by EOD Friday, October 22nd.  Gives time for cleanup and verify everything is good for cutting the branch on Monday morning PST.
+Agreed on this as a plan of action
+
+Confirm Sig-Operations creation
+* No additional information about current status of the sig, it is in an odd, half-formed state
+* Joe all for creation of the sig
+* Royal had assumed it was already formed
+* Action Item:  Darrin to reach out to Royal about this, we are in agreement it should be formed.
+
+Confirm Nov 30th release date
+* Need more conversations about this date, discuss with the TSC
+* Action item:  Joe to reach out to Royal/TSC about this
+
+Runbook
+* Still pending, please invite Joe to those conversations
+* Action Item:  Terry to continue working on this with Larry & Joe (and others)
+
+Process for determining long term release plans and Tech Steering Committee
+* How do we get release dates approved.
+* Thoughts, SIG-Release takes in information from other SIGs and TSC and then presents that to TSC for confirmation
+
+Question from stramer [Amazon]:  How do we version the docs site to handle different versions, releases, etc
+* Docs to put some thoughts into how docs can support this
+** First thought could be to archive the internal pages prior to the next release
+** Could we label something?
+** Maybe using headers for deprecated or in-flight changes - similar to how we do experimental or deprecated currently
+** Need a way to distinguish between current release documentation and current development documentation
+** QT uses versioned documentation
+** Game engines are often locked to a version at some point, so wanting documentation for a given version is important to users of the engines
+** Site infrastructure and hard disk space is an issue here
+** Could we use labels/tags in the repo?  This is technically complex but the minimum work needed to serve this.
+*** How does this work with hotfixes?
+** How long do we want to keep a version around?
+** How often, or do we ever want to support long term documentation?
+** Issue with size particularly with images - how do we handle it if images change between versions?
+* Is documentation for stabilization required?
+** This documentation should just be the "work in progress" leading up to the release
+** We will plan to cut docs the same way, creating a stabilization branch for documentation at the same time
+* Should Nightly builds be documented?
+** In particular should API documentation be rebuilt each night?
+** Need to be careful of overhead
+** Can only update it if the headers change
+** Make sure to update timestamp on the page for visibility
+** How do we handle breaking or API changes
+*** Bot could pickup information from PRs and fill in a docs
+*** Docs can point to that
+*** Action item:  stramer to work on half of it, terry to work with Stephen from the engineering side
+*** Need help from the TSC side - Maybe Karl, Nick or Jeremy would be good candidates - Likely start with Nick Lawson
+*** Agenda item for next meeting:  Results from investigation of plan for documentation
+
+Nightly builds?
+* Starting with the installer around next release
+* When can we start with nightly builds?
+* Need to be careful about when and how we start this, especially without any tutorials or samples
+** Possibly around the game jam timeframe
+** Issues if it is too close to game jam
+* Need to tread carefully with its release, more conversation needed
+* Need to make any data around this public
+
