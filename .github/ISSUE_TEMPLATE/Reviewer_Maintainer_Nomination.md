@@ -1,11 +1,11 @@
 
-----
+---
 name: SIG Reviewer/Maintainer Nomination Template
 about: Nominate yourself or someone else to become a SIG reviewer or maintainer
 title: 'SIG Reviewer/Maintainer Nomination'
 labels: 'needs-triage,needs-sig'
-
 ---
+
 ### Nomination Guidelines
 **Reviewer Nomination Requirements**
 6+ contributions successfully submitted to O3DE
