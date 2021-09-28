@@ -1,0 +1,60 @@
+Attendees
+
+Attendees
+AMZN JoeB[Amazon]
+AMZN_kinglawr[Amazon]
+DMcP-[Amazon]
+Terry [Amazon]
+Amelia [Amazon]
+Alex Montgomery [Amazon]
+stramer [Amazon]
+Tony B [Amazon]
+
+
+Final Dates for stabilization branch
+
+* Feature Complete Oct 22nd 
+* Create stabilization branch on Oct 25th
+* Release – Nov 30th
+* Factoring in the major US holiday, this gives us 4 weeks of hardening.
+
+Game Jam
+* This is being run by RedHat
+* Oct 18th for 1 month
+* O3DE Support offered: 
+** We are creating a new branch. 
+** The branch will not accept new features to ensure maximum stability for GameJam participants
+* We are also including an installer to make onboarding for the Gamejam easier.
+** Based off the branch.
+** LF will provide a sire for the installer download.
+** There will be nightly builds for the installer.
+* Action Item – need a plan to communicate nightly build issues on the branch
+** We will be triaging blockers and criticals in a daily triage and will communicate out to those involved.
+** An owner has been found to do this
+
+Runbooks for the release process
+* Not much movement on this yet.
+* We know which runbooks need to be created:
+** Process
+*** How do you create Stabilization
+*** How do you get a build to main, etc
+** Disaster Management
+*** What happens if things go wrong
+* Purpose is to allow more maintainers to support releases.
+* Next Steps: 
+** Catalog the known runbook tasks
+** We need to assign owners to the runbooks
+
+Release Goals
+* Release goals are features that we’d like to complete before the release.
+* Don’t have a current list of goals.
+* Action Item: We need to write down the release goals.
+
+Sig-Operations
+* Owned by Darrin
+* Action items – Darrin continue speaking with Royal to get the SIG stood up.
+
+Agenda
+* Game jam Communication plan
+* Runbooks Review
+* SIG Operations
