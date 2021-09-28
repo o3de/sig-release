@@ -2,7 +2,7 @@
  
 ## Meetings
 
-Each SIG hosts a regular community meeting to update the community about the progress of the project and the SIG's contribution to the project. It is a recurring event to give everyone a chance to have their voice heard. The SIG holds its meetings each - TBD - , and future meetings are held based on the [agendas on GitHub](https://github.com/o3de/foundation/issues?q=is%3Aopen+label%3Asig%2Frelease+label%3Amtg-agenda+).
+Each SIG hosts a regular community meeting to update the community about the progress of the project and the SIG's contribution to the project. It is a recurring event to give everyone a chance to have their voice heard. The SIG holds its meetings each - TBD - , and future meetings are held based on the [agendas on GitHub](https://github.com/o3de/sig-release/issues?q=is%3Aissue+is%3Aopen+label%3Amtg-agenda).
 
 Please [reach out on Discord](https://discord.gg/p3padwr58u) or [Sign up on the Mailing Lists](https://lists.o3de.org/groups) to get notifications for the recurring events.
 
@@ -12,7 +12,7 @@ O3DE cannot work without the help and input from as many of its community member
 
 ## Agenda Items
 
-You can find a link to the proposed agenda for the next call in the table below. The agenda for each meeting is saved as [an issue on Github](https://github.com/o3de/foundation/issues?q=label%3Asig%2Frelease+label%3Amtg-agenda+) under the O3DE [Foundation repository](https://github.com/o3de/foundation).
+You can find a link to the proposed agenda for the next call in the table below. The agenda for each meeting is saved as [an issue on Github](https://github.com/o3de/sig-release/issues?q=is%3Aissue+is%3Aopen+label%3Amtg-agenda) under the O3DE [Sig release repository](https://github.com/o3de/sig-release).
 
 Please feel free to propose any of your topics, thoughts, or areas you feel are important to discuss.
 
@@ -28,7 +28,7 @@ Below is a list of all prior completed meetings and related resources.
 
 # General Resources
 
-See [O3DE Resources](https://o3de.github.io/o3de/foundation) for additional information related to any SIG in O3DE.
+See [O3DE Resources](https://github.com/o3de) for additional information related to any SIG in O3DE.
 
 # Licensing
 
