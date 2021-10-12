@@ -1,0 +1,43 @@
+Attendees
+AMZN JoeB[Amazon]
+Terry [Amazon]
+Amelia [Amazon]
+Alex Montgomery [Amazon]
+stramer [Amazon]
+Tony B [Amazon]
+
+O3DE Game Jam plan
+* We will be building a nightly installer building
+* We will not be integrating from Development to GameJam branch to protect stability of the GameJam branch
+* This branch will exist for the entire length of GameJam (1 month)
+* Communication plan
+** Type up a blurb to give to Royal to forward to LF marketing
+** Plan to have this done by end of week (10/1)
+
+Review status of runbook creation
+* Started runbook for creating release builds
+* Haven't started on release process runbook - will start soon
+* No other updates or questions
+
+Review status of sig operations creation
+* Darrin was handling this, tabling this until next meeting when Darrin can attend
+* May get update to include in the next meeting agenda if possible
+* Recap at request:  Sig operations will be the entity for creating and overseeing the processes for how we use GitHub Issues, reporting, etc.  This is beyond the purview of SIG-Release and SIG-Operations is the answer to this.
+
+Review status of release goal communication
+* Update on this from yesterday (9/27).  The product group are reviewing the release goals this week and once they're agreed upon, there will be communication about this.  Likely week of 10/4 but possibly sooner.
+
+Release cadence starting in 2022
+* Proposing 6 month cadence for full releases.  Currently thinking mid-October & mid-April as the target months to avoid being near major holidays
+* Cadence may change later (possibly more frequent) but will see once we have a few successful launches under our belt
+* Suggestion:  Add reasoning to the communication and description of our release schedule/cadence to be available for newly joined members of the community (why decision was made/suggested/etc)
+
+Additional Notes
+* Joe to discuss with Royal about overlap between notes, agendas, etc, to hopefully avoid having to communicate the same information in multiple places (redundant work)
+
+Upcoming Actions before next release meeting
+* Joe to communicate GameJam outward (week of 10/4)
+* Liv to communicate Release goals outward - Funneled through SIG-Release (week of 10/4)
+* Should have a draft for the release runbook for next meeting
+
+
