@@ -1,0 +1,44 @@
+Make-up release sig meeting
+* Postponed due to O3DE con by 1 week
+* This session to focus on the upcoming release
+
+No new attendees to introduce
+
+Agenda is up as Release sig issue #16
+
+Release Dates review
+* Stabilization branch created on Oct 25
+* Nov 30 is the release date to coincide with other activities
+
+O3DE release notes - what should they cover and where should they live?
+* We discussed having contributors post what they shipped to help gather this information with links to PRs and RFCs
+* Docs doesn't want to own them moving forward
+** Suggested 2-3 paragraphs of high level features, then a breakdown of additions/deprecations/known issues (severe)/etc
+** Suggested to generate a git change log is useful as a reference
+** Suggested to have a list of all the issues that were fixed for this release (or maybe a filter?)
+* Joe to start a discussion about who will own putting together the release notes for this release
+** Liv has been working with other PMs to get the high level features being delivered
+* Action:  Joe to work with Sigs to determine release note process moving forward
+
+Review status of runbook creation
+* Identified 9 runbooks to be created
+* Created runbook for code/content violating legal/policies/etc for removing that code or content
+* Dec 15th is the date for getting the other RBs created and added to the release sig repo
+* Action:  Joe to communicate the list of runbooks and to post to release repo
+* Documentation on Dashboards, Alarms & Canaries so everyone knows how to respond when something goes wrong
+
+Sig Operations review
+* Messages sent to LF but no action taken yet
+* SIG-Operations to meet later this week - Finchy is starting it.  STramer is leading the first SIG-Operations meeting
+* A few community members have been contributing but without central leadership it is difficult
+* To include AMZN_forhalle in these meetings
+
+Status of release goals
+* Liv [AWS] - This will be incorporated into the release notes and have a draft of the goals that we may release as a blog post prior to release
+* Should start a discussion around Oct 25th and include it in the sig-release discord channel to get visibility
+
+Locked versioning of documentation site for LTS versions
+* Question:  Should this release be an LTS?
+** Initial thoughts are no, but need to ask all of the sigs and the Steering Committee/Tech Steering board question
+* Action:  Joe to start this conversation with SIGS and Steering Committee
+* If we can add in customer communication in this discussion we will really differentiate our process from other OS projects
