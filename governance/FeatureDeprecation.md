@@ -1,4 +1,4 @@
-# Product Deprecation
+# Feature Deprecation
 
 # Overview
 

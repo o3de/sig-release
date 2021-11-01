@@ -30,21 +30,21 @@ Examples of a API deprecation:
     1. Add the Deprecation label.
     1. In the Description, add a preliminary Release Note (what do you want to say to the customer about this change).
     1. Fill in the Release Note Required field to identify which release this deprecation will be going out in.
-1. Add a `O3DE_DEPRECATED(<GHI Number>)` comment right above the API call.
+1. Add a `O3DE_DEPRECATION_NOTICE(<GHI Number>)` comment right above the API call.
     1. e.g.
 ```c++
-    // O3DE_DEPRECATED(GHI-1234)
+    // O3DE_DEPRECATION_NOTICE(GHI-1234)
     AZ::Entity* CreateEditorEntity(const char* name) = 0;
 ```
 > Aside: To make searching easier, only add API comments to the function/type declarations, not definitions.
 1. Create second GHI to add `AZ_DEPRECATED` to the API.
     1. Add the Deprecation label.
-    1. Set this issue to be Blocked by the first issue.
+    1. Link the issues together.
     1. _Note: If it isn't possible to use the `AZ_DEPRECATED` macro, create a ticket and make a note it will apply in Release + 2 (so a maximum of only two GHIs need be created in this case)_
 1. _LATER_ (after the first issue is Closed, i.e. a Release has actually happened) create another GitHub issue to remove the code entirely (please see Tracking Information below for details about this).
     1. Add the Deprecation label.
-    1. Set this issue to be Blocked by the second issue.
-    1. Add the `AZ_DEPRECATED` macro to the code (leaving the `O3DE_DEPRECATED` comment in place to help with searching) and submit (referencing both Git Hub numbers in the CL description).
+    1. Link this issue to the second issue.
+    1. Add the `AZ_DEPRECATED` macro to the code (leaving the `O3DE_DEPRECATION_NOTICE` comment in place to help with searching) and submit (referencing both Git Hub numbers in the CL description).
 1. _MUCH LATER_ (after the second issue is Closed, i.e. the second Release has actually happened)
     1. Remove the code and create a PR
     1. Set final issue to be Closed (will be closed by release team)
@@ -52,19 +52,19 @@ Examples of a API deprecation:
 
 ### Tracking (Informational)
 
-1. When a Release is imminent, sig-documentaion will (rip)grep the repo for all occurrences of `O3DE_DEPRECATED`
+1. When a Release is imminent, sig-documentaion will (rip)grep the repo for all occurrences of `O3DE_DEPRECATION_NOTICE`
 1. They will confirm what stage the issue is in (following the issue chain) and add the info in the Description to the Release Notes.
 1. sig-documentation will then update the issue to Closed
     1. When this happens, the engineer who began the deprecation will get a notification from GitHub of the change, and at this time they know it is okay to move to the next stage (add `AZ_DEPRECATED` (part 2), delete code (part 3)).
 
-### Find all O3DE_DEPRECATED tags
+### Find all O3DE_DEPRECATION_NOTICE tags
 
 ```bash
 # prerequisites
 # ripgrep - https://github.com/BurntSushi/ripgrep/releases
 # cmder - https://cmder.net/
  
-rg O3DE_DEPRECATED\(GHI\-([0-9]+)\) --replace https://github.com/o3de/o3de/issues/$1 --iglob *.{h,hpp,c,cpp,inl,hxx} -o -I | sort | uniq > deprecations.txt
+rg O3DE_DEPRECATION_NOTICE\(GHI\-([0-9]+)\) --replace https://github.com/o3de/o3de/issues/$1 --iglob *.{h,hpp,c,cpp,inl,hxx} -o -I | sort | uniq > deprecations.txt
  
 # this will generate a list of Git Hub issue numbers to be updated when a Release is imminent.
 ```
@@ -73,7 +73,7 @@ rg O3DE_DEPRECATED\(GHI\-([0-9]+)\) --replace https://github.com/o3de/o3de/issue
 
 Use of the `AZ_DEPRECATED` macro is now not allowed when first deprecating an API.
 
-It is now required to first use the comment identifier `O3DE_DEPRECATED`, and a second pass (corresponding to the second Git Hub issue), to add `AZ_DEPRECATED`.
+It is now required to first use the comment identifier `O3DE_DEPRECATION_NOTICE`, and a second pass (corresponding to the second Git Hub issue), to add `AZ_DEPRECATED`.
 
 `AZ_DEPRECATED` cannot be used effectively as a first step in deprecation because the warning generated will cause a compiler error for many customers building with warnings as errors.
 
