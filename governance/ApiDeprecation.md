@@ -19,8 +19,9 @@ Examples of a API deprecation:
 
 ## Process
 
-> ### Golden Rule
-> Do not make any breaking changes to an API when first deprecating it (this includes adding the AZ_DEPRECATED macro). The code must work exactly as before.
+### Golden Rule
+
+> Do not make any breaking changes to an API when first deprecating it (this includes adding the `AZ_DEPRECATED` macro). The code must work exactly as before.
 
 ### Steps (Guide)
 
