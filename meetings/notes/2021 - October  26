@@ -1,0 +1,80 @@
+Introductions:  No new members
+
+Agenda change:  To discuss the definition of LTS only, not when our first LTS version would be declared
+
+***
+Release stabilization complete target
+* Current proposal is 11/19 to allow a week of testing for the final release product and to accommodate The US holiday on 11/25 (and for most 11/26 as well)
+***
+Everything in the release communication would be locked in for 11/19.  Liv will submit a PR today with everything listed out.  Everything in stabilization branch now + engine tick stabilization + experimental terrain system is what will be in the branch.
+
+Q from Royal:  What is the poll request question?
+This could be a discussion instead of a PR, the goal is just to communicate everything to the community.  Discussion won't be able to change what is in the release though, so this is really just a communication mechanisms
+
+Q from Royal:  How are we going to communicate future roadmap and get the community involved?
+This will be done via RFCs and through the SIGs with full community inclusion
+
+No one opposed to the current plan, this is our plan of record moving forward
+
+
+Status Update- O3DE Stabilization and release plan, dates have already been set and agreed upon
+* Stabilization creation 10/25
+* Release created 11/30
+***
+No opposition to this proposal, this is our plan of record moving forward
+
+***
+O3DE Release Notes, what should these notes cover?
+***
+Known issues are all issues open against the repo
+Each major feature needs to be designated as "Experimental", "Ready", "Preview", "Deprecated", etc
+This is an iterative process that we can adjust moving forward
+Action Item:  Liv/Joe to define format, linking, etc - SIG-Docs to review
+
+***
+Review status of sig operations creation
+* Confusion between sig-operations (process and mechanisms) vs existing sig-ops repo (infrastructure operations)
+***
+Darrin not present to discuss
+Meeting happened last week, not one this week
+Sig-operations is forming its charter currently, focused on "running the foundation, integrating the tools, etc".  It is not focused on the code itself.
+This is kind of the "project management sig", Royal agrees as long as it is focused on the automation and use of github, etc, for the project
+We will remove this from the current agenda as it isn't under the charter for sig-release.
+
+***
+Review status of release goal communication
+***
+Already discussed above, but we will post this list of features in the release later today
+
+***
+Friendly names for releases
+***
+Proposal to add a moniker to releases for ease of communication and referencing it without needed the numerical release numbers
+Suggestion:  Only LTS versions would get friendly names
+Action Item:  Create an issue for discussion with the community
+Suggestion:  Create an issue on the RFC repo for maximum visibility
+Easy opportunity for people to get involved and help name a release
+
+***
+Priority - Discuss Definition and timeline for Long Term Support (LTS) of Releases
+* LTS definition and what are the responsibilities of the sigs
+* Which release should LTS be offered for
+***
+LF:  Core fundamentals of an offering have enough features complete that are ready for customers to begin developing on top of the current release
+We should not offer an LTS with features that are under heavy development with potential breaking changes.  This will break the contract for LTS.
+John K:  What customers are we aiming at for GA and can they use the GA version as the basis for their engine
+* Core components are a moving target since different games need different core components
+* In discussions with our PEs, they were concerned that there might need to be architectural changes to make the engine usable for some section of customers
+* Can we target particular customers with LTS rather than all customers?
+LTS decisions will be decided by the TSC, not SIG-Release or other SIGs
+What determines if a bug fix does or doesn't go back into the LTS
+Who is on the hook for that SLA and what does it look like?  We are not a company like Ubuntu, so there is no SLA.
+We need to create a mechanism to handle this via the community since we aren't a company running an OS project.  This will be a question for Sig-operations
+What do we put on a website to describe an LTS?  This needs to be clearly defined with a reasonable hope to meet this with the community.
+Key thing to decide is what commitment we can or cannot make to supporting an LTS.  This is an important marker for adoption.
+SLAs don't work with a community driven effort here.  There are paid companies that fill this need for customers.
+We could commit resources but not to specific timelines or targets, etc.
+Royal:  Creating hardline constraints is not a wise choice
+We need to find a way to define the process for determining which bug fixes make it back into an LTS and which ones don't.  We cannot do this for every bug fix.
+Table this topic until we get more information
+
