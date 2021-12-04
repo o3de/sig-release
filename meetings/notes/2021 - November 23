@@ -1,80 +1,64 @@
-Introductions:  No new members
+11/30 release status update
+* Stabilization locked. Only testing and Blocking issues only
+* Stabilization copy to main on track for 11/30
+* Installer, marketing, documentation, and social media release scheduled for 12/2 to coincide with re:invent schedule
 
-Agenda change:  To discuss the definition of LTS only, not when our first LTS version would be declared
+Going to become more strict starting today about anything else going into the stabilzation branch for the upcoming release
+Tony and Terry in agreement with limiting what goes in moving forward
 
-***
-Release stabilization complete target
-* Current proposal is 11/19 to allow a week of testing for the final release product and to accommodate The US holiday on 11/25 (and for most 11/26 as well)
-***
-Everything in the release communication would be locked in for 11/19.  Liv will submit a PR today with everything listed out.  Everything in stabilization branch now + engine tick stabilization + experimental terrain system is what will be in the branch.
+O3DE Release Notes creation and communication update
+* Draft release notes created. Documentation currently polishing.
 
-Q from Royal:  What is the poll request question?
-This could be a discussion instead of a PR, the goal is just to communicate everything to the community.  Discussion won't be able to change what is in the release though, so this is really just a communication mechanisms
+Joe - There is a process in place for making changes to release notes via a PR.  They will be ready for release.
 
-Q from Royal:  How are we going to communicate future roadmap and get the community involved?
-This will be done via RFCs and through the SIGs with full community inclusion
+RTE Point release Proposed Sig-Release Meeting Agenda Topic: RTE Point Release early January #27
 
-No one opposed to the current plan, this is our plan of record moving forward
+Does anyone oppose a point release early to mid January to support RTE fixes?
+There are 6 outstanding issues that won't make it into the re:Invent releases.  Minimal effort to resolve those issues.
+Questions about timing of the release, and making sure it is low effort.  Work will be done by Dec 17.  Delayed to post holidays due to staffing and support needs.
+We should keep this very focused to just RTE issues to avoid a landslide of additional functionality being put in for this release.
+Tony - We should make sure to message out the limited nature of this release
+Result:  Unanimous approval for recommending this point release in January to the TSC.
 
 
-Status Update- O3DE Stabilization and release plan, dates have already been set and agreed upon
-* Stabilization creation 10/25
-* Release created 11/30
-***
-No opposition to this proposal, this is our plan of record moving forward
+Discuss any updates for Definition of Long Term Support (LTS) of Releases
 
-***
-O3DE Release Notes, what should these notes cover?
-***
-Known issues are all issues open against the repo
-Each major feature needs to be designated as "Experimental", "Ready", "Preview", "Deprecated", etc
-This is an iterative process that we can adjust moving forward
-Action Item:  Liv/Joe to define format, linking, etc - SIG-Docs to review
+No update currently, it is in the TSC hands to define core functionality and when it is ready for long term support
+Concurrently we're creating a grid of functionality and game types to evaluate where we are at.  Most of these will be outside of "core" but important to understand
 
-***
-Review status of sig operations creation
-* Confusion between sig-operations (process and mechanisms) vs existing sig-ops repo (infrastructure operations)
-***
-Darrin not present to discuss
-Meeting happened last week, not one this week
-Sig-operations is forming its charter currently, focused on "running the foundation, integrating the tools, etc".  It is not focused on the code itself.
-This is kind of the "project management sig", Royal agrees as long as it is focused on the automation and use of github, etc, for the project
-We will remove this from the current agenda as it isn't under the charter for sig-release.
+Future release cadence?
+* Currently scheduled for ~6 months
 
-***
-Review status of release goal communication
-***
-Already discussed above, but we will post this list of features in the release later today
+John - Time to have the TSC weigh in on a rough target date that we use to focus on features/needs and then drive based on readiness and not a given date.  Core releases should be released as appropriate with a target of every 6 months.  Some gems require core changes, so this will need to be coordinated.
 
-***
-Friendly names for releases
-***
-Proposal to add a moniker to releases for ease of communication and referencing it without needed the numerical release numbers
-Suggestion:  Only LTS versions would get friendly names
-Action Item:  Create an issue for discussion with the community
-Suggestion:  Create an issue on the RFC repo for maximum visibility
-Easy opportunity for people to get involved and help name a release
+Terry - Recommendation that we shift the release cadence away from the major holidays.  Maybe Mar/Sept or Apr/Oct if 6 months is decided as the regular cadence.
+Tony - We need to request feedback wider on this in case there are other major holidays or considerations to take into account.
 
-***
-Priority - Discuss Definition and timeline for Long Term Support (LTS) of Releases
-* LTS definition and what are the responsibilities of the sigs
-* Which release should LTS be offered for
-***
-LF:  Core fundamentals of an offering have enough features complete that are ready for customers to begin developing on top of the current release
-We should not offer an LTS with features that are under heavy development with potential breaking changes.  This will break the contract for LTS.
-John K:  What customers are we aiming at for GA and can they use the GA version as the basis for their engine
-* Core components are a moving target since different games need different core components
-* In discussions with our PEs, they were concerned that there might need to be architectural changes to make the engine usable for some section of customers
-* Can we target particular customers with LTS rather than all customers?
-LTS decisions will be decided by the TSC, not SIG-Release or other SIGs
-What determines if a bug fix does or doesn't go back into the LTS
-Who is on the hook for that SLA and what does it look like?  We are not a company like Ubuntu, so there is no SLA.
-We need to create a mechanism to handle this via the community since we aren't a company running an OS project.  This will be a question for Sig-operations
-What do we put on a website to describe an LTS?  This needs to be clearly defined with a reasonable hope to meet this with the community.
-Key thing to decide is what commitment we can or cannot make to supporting an LTS.  This is an important marker for adoption.
-SLAs don't work with a community driven effort here.  There are paid companies that fill this need for customers.
-We could commit resources but not to specific timelines or targets, etc.
-Royal:  Creating hardline constraints is not a wise choice
-We need to find a way to define the process for determining which bug fixes make it back into an LTS and which ones don't.  We cannot do this for every bug fix.
-Table this topic until we get more information
+
+When should we hold elections?
+* No update as release has been priority
+
+Some comments that TSC determines when elections are held, other comments indicate that each SIG can do it at their own schedule.
+John - Suggest every 6 months is adequate - Mid January could be a good timing for our first one.
+Joe agreed with both.
+
+
+Friendly Names for releases?
+* example 2205.1 Silly Squirrel release (we need a naming theme!)
+
+Marketing committee has recommended that we need a friendly name for releases.
+This has caused some confusion amongst developers with variations.
+Need to decide on a naming theme and will work on the marketing committee about this
+We need to do a cleanup pass on how we use and display the version number via code
+Tony - Is it too late to just come up with a friendly name?  Joe - Yes, web pages and marketing is already set
+Liv - We should include this in the release notes (Joe, Terry agreed) to help get both engagement with the solution and identifying it as a known issue.
+Action Item - Liv to add this to the release notes
+
+Reminders
+
+Please use @sig-release, not @channel or @here, when trying to get particular attention from the release sig
+Q: Can @here be disabled at the admin level for discord?  Good question for sig-operations since they own discord
+Action Item - Tony will raise this in the sig operations channel
+
+
 
