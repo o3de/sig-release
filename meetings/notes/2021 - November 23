@@ -1,0 +1,64 @@
+11/30 release status update
+* Stabilization locked. Only testing and Blocking issues only
+* Stabilization copy to main on track for 11/30
+* Installer, marketing, documentation, and social media release scheduled for 12/2 to coincide with re:invent schedule
+
+Going to become more strict starting today about anything else going into the stabilzation branch for the upcoming release
+Tony and Terry in agreement with limiting what goes in moving forward
+
+O3DE Release Notes creation and communication update
+* Draft release notes created. Documentation currently polishing.
+
+Joe - There is a process in place for making changes to release notes via a PR.  They will be ready for release.
+
+RTE Point release Proposed Sig-Release Meeting Agenda Topic: RTE Point Release early January #27
+
+Does anyone oppose a point release early to mid January to support RTE fixes?
+There are 6 outstanding issues that won't make it into the re:Invent releases.  Minimal effort to resolve those issues.
+Questions about timing of the release, and making sure it is low effort.  Work will be done by Dec 17.  Delayed to post holidays due to staffing and support needs.
+We should keep this very focused to just RTE issues to avoid a landslide of additional functionality being put in for this release.
+Tony - We should make sure to message out the limited nature of this release
+Result:  Unanimous approval for recommending this point release in January to the TSC.
+
+
+Discuss any updates for Definition of Long Term Support (LTS) of Releases
+
+No update currently, it is in the TSC hands to define core functionality and when it is ready for long term support
+Concurrently we're creating a grid of functionality and game types to evaluate where we are at.  Most of these will be outside of "core" but important to understand
+
+Future release cadence?
+* Currently scheduled for ~6 months
+
+John - Time to have the TSC weigh in on a rough target date that we use to focus on features/needs and then drive based on readiness and not a given date.  Core releases should be released as appropriate with a target of every 6 months.  Some gems require core changes, so this will need to be coordinated.
+
+Terry - Recommendation that we shift the release cadence away from the major holidays.  Maybe Mar/Sept or Apr/Oct if 6 months is decided as the regular cadence.
+Tony - We need to request feedback wider on this in case there are other major holidays or considerations to take into account.
+
+
+When should we hold elections?
+* No update as release has been priority
+
+Some comments that TSC determines when elections are held, other comments indicate that each SIG can do it at their own schedule.
+John - Suggest every 6 months is adequate - Mid January could be a good timing for our first one.
+Joe agreed with both.
+
+
+Friendly Names for releases?
+* example 2205.1 Silly Squirrel release (we need a naming theme!)
+
+Marketing committee has recommended that we need a friendly name for releases.
+This has caused some confusion amongst developers with variations.
+Need to decide on a naming theme and will work on the marketing committee about this
+We need to do a cleanup pass on how we use and display the version number via code
+Tony - Is it too late to just come up with a friendly name?  Joe - Yes, web pages and marketing is already set
+Liv - We should include this in the release notes (Joe, Terry agreed) to help get both engagement with the solution and identifying it as a known issue.
+Action Item - Liv to add this to the release notes
+
+Reminders
+
+Please use @sig-release, not @channel or @here, when trying to get particular attention from the release sig
+Q: Can @here be disabled at the admin level for discord?  Good question for sig-operations since they own discord
+Action Item - Tony will raise this in the sig operations channel
+
+
+
