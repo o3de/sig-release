@@ -1,0 +1,72 @@
+2021 Dec 7 SIG-Release
+
+Meeting Lead: Terry
+Notetaker: Tony B
+Agenda: https://github.com/o3de/sig-release/issues/30
+
+Action ItemsL
+  * Terry reach out to  Sig-Docs to have them communicate
+  * Tony – put retro on 12/21 agenda, we will give those not present today a chance to speak first
+  * Tony – take friendly naming to Marketing committee
+  * Terry  add to agenda for 12/21 Release SIG meeting to vote on reducing cadence to roughly every 3 months between stabilization branch cuts.
+
+•	12/2 release status retrospective
+ 	o	Acknowledgement of release
+  --- Discussion --- 
+  Terry mentioned 1211.1 went out on 12/2.
+  SanB – it went well overall. Call in the channel was good.
+  Would be good to get metrics from docs
+  Action – Terry reach out to  Sig-Docs to have them communicate
+  Terry – we had 3-4 community members on the release call. Would be good to plan in the public
+  Tony – 100% agree
+
+  o	When should a discussion be held for how to improve the release mechanism for future releases?
+ --- Discussion: Initial retro callouts --- 
+  Terry – some things happen during the release that we don’t understand. Would be great to have runbooks with steps, explanations, permissions to execute.
+  Danilo -Working with release side and website updating, it was difficult to understand how owned what? Marketing owns copy of website, but who owns content?
+  Action – Tony B Put a retro on the SIG-Release agenda for 12/21
+
+•	O3DE January Point Release Proposed Sig-Release Meeting Agenda Topic: RTE Point Release early January #27
+ o	Technical Steering Committee is onboard with a point release.
+  --- Discussion --- 
+  Per 12/7 meeting they are on board with point release and don’t have any major concerns.
+  Terry – Per 12/7 meeting the TSC is ok with SIG-Release making decisions. Tony – confirmed.
+  Pinfel - asked about naming of current stabilization branch 2111RTE – Terry clarified naming is based on Rev The Engine (RTE) initiative.
+  Danilo – mentioned clearly defined ownership on website is important, see note above
+  Danilo suggested a runbook in advance of point release
+  
+ o	Tentative date? Sometime between January 11th - 13th to start the discussion.
+  Avoids bleeding into weekend, Allows everyone a week to recover from the holiday breaks, ives time for QA and address any issues after the break (Note that December 20th - January 2nd are very slow for contributors as most people are out during this time)
+ --- Discussion --- 
+  Tony – make it very clear that it’s a tentative date based on stabilization and QA approval.
+  Terry – proposes Tuesday Jan 11 
+  Agreed – Tuesday Jan 11 is tentative, and final date is based on QA and stabilization.
+
+•	For a variety of reasons (technical and marketing) should we consider utilizing YY.MM.Version instead of YYMM.Version?
+  o	Wix (windows installer framework) and windows has issues with each position being over 255, except the last position which can be 65k in value.
+  o	Marketing Committee considers yy.mm.version friendlier than yymm.version
+  o	If we are going to change our versioning, it is better to do it early in O3DE's life cycle.
+  --- Discussion --- 
+  Danilo- why does it start at .1 and not .0 ? Terry – don’t know.
+  Terry – does anybody disagree with new versioning scheme?  Unanimous agreement to switch to yy.mm.version
+ 
+ •	Need to coordinate with marketing committee on friendly names
+   o	Using YY.MM.version as a part of the friendly name led to confusion in documentation, the installer, the editor splash screen, and how to communicate the release. This confusion was due to how close 21.11 is to our actual version of 2111.1.
+   --- Discussion --- 
+   Action Tony – take friendly naming to Marketing committee
+
+•	Discuss any updates for Definition of Long Term Support (LTS) of Releases (ongoing discussion)
+  --- Discussion ---
+  no comments, will leave on agenda
+
+•	Future release cadence (ongoing discussion)?
+  o	Currently scheduled for ~6 months
+  --- Discussion ---
+  Pinfel- what is the point of releases? Terry – a set of features that is stabilized through thorough testing and fixing.
+  Tony – the TSC was in favor of feature-based, but sees the importance of us to have a process around whatever is chosen.
+  Terry – feature based releases will be difficult due to coordination. Recommends a date-based stabilization cut based on what’s done and in. “We cut a stabilization on date X and that becomes part of the release”. Sandeep agrees.
+  Action Terry  add to agenda for 12/21 Release SIG meeting to vote on reducing cadence to roughly every 3 months between stabilization branch cuts.
+
+•	Elections are currently being held
+  Nominations end 12/8. 
+
