@@ -1,0 +1,73 @@
+Dec 21, 2021 SIG Release meeting notes
+----SIG Updates
+What happened since the last meeting?/Actions from last meeting
+1) Terry reach out to Sig-Docs to have them communicate metrics about the release.
+-Joe reached out to SIG-Docs, metrics are coming
+
+2) [Done] Tony – put retro on 12/21 agenda, we will give those not present today a chance to speak first
+
+3) [Active] Tony – take friendly naming to Marketing committee https://discord.com/channels/805939474655346758/826862580618100786/920827279712612352
+-John K - we should come up with a system that will get us through 50 versions. 1) be clear on the type of suggestion.  Should be Clear, extendable, doesn't clash with any IP.  2) put it to a community vote.
+Joe B - On X date vote. Go to Marketing committee, then inform the TSC.
+
+4) [Done] Terry add to agenda for 12/21 Release SIG meeting to vote on reducing cadence to roughly every 3 months between stabilization branch cuts.
+
+
+----Meeting Agenda
+1) Confirmed seats for SIG-Release (per issue SIG-Release Chair/Co-Chair Nominations 12/1 - 12/8 -- Elections 12/8 - 12/15 #29)
+@amzn JoeB chair
+@tony B co-chair
+//no comments
+-> No Actions
+
+2) Discuss any updates on O3DE January Point Release Proposed Sig-Release Meeting Agenda Topic: RTE Point Release early January #27
+- Tentative date 1/13, but we are likely moving this out. The reason for the date push is because we are defining a process for doing a point release.
+- JK - Aim to keep in January
+- JT - isn't there an issue about sematic versioning for point releases? 
+-> Action - Joe B create an issue for versioning
+
+3) Vote on reducing cadence to roughly every 3 months between stabilization branch cuts.
+- Terry: provide background: With the rate at which we are making changes, waiting 6 months between stabilization passes will make stabilization take longer. By shortening to 3 months, we will be able to provide a stable release more frequently.
+- JK do we know of the effort per release? Terry - we expect it to be about 3 weeks per release.  JK - there are also release efforts like Marketing, coordination that need to take place.
+- JT what about features that may destablize dev.
+- Action: Tony/Joe Questions to answer 1) Can we get everyone to agree to put any new features behind flags? 2) How much admin is needed to do a release?
+- Terry - there's a fixed effort seems to be less than before. Then there's work that scales linearly (testing, stabilization).
+- Terry - optional gems should be considered "feature flags"
+
+Vote
+- Vote is postponed until we can answer questions needed.
+
+
+4) 12/21 release status retrospective
+Things that went well
+-  SanB – it went well overall. Call in the channel was good.
+-  Terry – we had 3-4 community members on the release call. Would be good to plan in the public
+
+Things that didn't go well
+-  Some issues on the call took longer like LFS, we ended up hanging around on the call.
+-  Release felt stressful, unpredictable
+-  DCO was a constant thorn for all integrations (not just this release branch). Not everyone is signing their commits.
+  
+Things we want to change
+-  Would be good to get metrics from docs
+-  Plan out in the open
+-  Start planning earlier
+-  Runbooks
+-  Start including Linux Foundation legal
+-  Have someone from the community act as release manager
+-  DCO - better enforcement of DCO on individual commits. ASWF has a good DCO enforcement bot.
+-  For Jan, set up a specific public meeting to have a larger retro about the 21.11 release.
+
+
+5) Discuss agenda from proposed topics
+(Halle ) - release exception process. Do we need an exception proces for stabilization?
+Terry - for a point release it makes sense to have some Exception process.  We think if we put something in place it would be at the "permission to integrate into the branch level" - this would be at the integrators level. So for the point releae branch, we would only have integrators integrate into the point release branch.
+
+
+----Actions
+1) Tony - continue on friendly naming https://github.com/o3de/sig-release/issues/20
+2) Joe B - create an issue for versionoing
+3) Tony/Joe - 1) Can we get everyone to agree to put any new features behind flags? 2) How much admin is needed to do a release?
+4) For Jan, set up a specific public meeting to have a larger retro about the 21.11 release.
+5) Halle - write up options and a proposal for what we should do for exception process. Start in Discord then add to next meeting.
+
