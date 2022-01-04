@@ -1,0 +1,41 @@
+1. Meeting Details
+Date/Time: January 04, 2022 @ 06:00pm UTC / 10:00am PT
+Location: Discord SIG-Release Voice Room
+Moderator: Joe B
+Note Taker: Tony B
+
+1. Actions
+1.1 Halle call out exception mechanism as a separate task for release
+1.2 Joe - Get wheels turning on Release notes and Blog post
+1.3 Joe - Communicate out release for 21.11.2 on Thursday January 27th, 2021, friendly name “2111.2”
+1.4 Tony – create issue for post mortem feedback with a due date in 2 weeks
+
+
+2. SIG Updates What happened since the last meeting?
+2.1 Confirmed seats for SIG-Release (per issue SIG-Release Chair/Co-Chair Nominations 12/1 - 12/8 -- Elections 12/8 - 12/15 SIG-Release Chair/Co-Chair Nominations 12/1 - 12/8 -- Elections 12/8 - 12/15 #29)
+@amzn JoeB chair @tony B co-chair’.  This will be removed in Jan 18  meeting
+2.2 Discussed moving point release date to end of January (was January 13th, 2022). After discussions a new tentative release date set for January 27th, 2022.  Jan 4 To be discussed in agenda.
+2.3 Issue created for determining point release mechanisms Proposed Sig-Release Meeting Agenda Topic: Release Management Mechanisms #35 . Halle created an issue for this, on the agenda for today.
+2.4 Discussed release cadence, to be brought up with the Technical Steering Committee. Current thought is to reduce from 6 months to 3 month. Meeting attendees voted to reduce release cadence to 3 months, taking this vote to the Technical Steering Committee for discussion. Tony – TSC would like to understand parameters i.e how expensive is it to do a release?
+2.5 It was determined we need an exception process for stabilization branches. This process would allow a sig to request an exception to include a feature or fix that would normally not qualify for inclusion in a stabilization branch, but is deemed beneficial for the release. -> Action: Halle to follow up.
+ 
+3. Meeting Agenda
+3.1 Determining point release mechanisms Proposed Sig-Release Meeting Agenda Topic: Release Management Mechanisms #35
+Per Halle, the issue outlines the mechanisms, not all of the steps and tasks required.
+Feedback:
+- Joe B - Proposal Point 1 seems fine. For point 3 – Claire uses public channels not SIG-Specific channels where possible.
+- Steve – need to make sure we track O3DE.org issues. O3DE.org manages the website, instructional content, blog posts, download links. To make sure O3DE.org tasks are tracked, we will create a fake duplicate ticket on O3DE
+- Joe B what are the next steps? Halle- create all tasks for the release, then meet with individual SIGs to get more details, then meet with all involved SIGs for final review.
+- Sandeep – what about exception mechanism? Halle- that’s a separate task we plan to work on after this release. 
+-> Vote Approved. No objections to proposal.
+
+3.2	Vote on point release date, proposed is Thursday January 27th, 2021.
+- Steve - What’s in the release? Answer: mainly quality of life issues, Compiler support, renderer updates
+- JT – agree that getting the point release process rolled out is important
+->	Vote Approved for 21.11.2 on Thursday January 27th, 2021, friendly name “2111.2”
+
+3.3	Any further additions to post mortem. Should we have a dedicated post mortem meeting?
+- 	See Open Discussion items for current post mortem notes.
+- 	Tony will create issue for mortem feedback 
+o	JT – we should assume people are reading what we put out there. Even if no comments, people are reading.
+o	JT – would be really good to have a water cooler type of chat. We will revisit this. Everyone agreed it's a good idea, just need to get it started. JT will try this in another smaller open source project and bring back learnings.
