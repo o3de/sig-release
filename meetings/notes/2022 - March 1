@@ -1,0 +1,56 @@
+## Meeting Details
+
+- **Date/Time:** March 1, 2022 @06:00pm UTC / 10:00am PT
+- **Location:** [Discord SIG-Release Voice Room](https://discord.gg/Z2bzwCRJEz)
+- **Moderator:** Tony B
+- **Note Taker** Halle F
+
+The [SIG-Release Meetings](https://github.com/o3de/sig-release/tree/main/meetings) repo contains the history past calls, including a link to the agenda, recording, notes, and resources.
+
+## SIG Updates
+
+**What happened since the last meeting?**
+- It was decided a roughly 6 month cadence makes sense given the overhead in releasing due to QA and Documentation needs. Will revisit cadence after each major release.
+- Verified that the Linux Foundation is hiring Web Developers to assist with o3de.org and o3debinaries.org
+
+
+## Meeting Agenda
+
+**Discuss agenda and notes**
+
+- @Ulrick28 restarting discussions around Long Term Support timeline (no progress)
+     - Need to know if LTS is off the table for 2022
+     - How do we support early adopter partners and customers without an LTS? Will need an alternate plan if no LTS.
+- How do we handle downloading older releases of the engine?
+     - Will need to revisit this topic once web developers are hired by the LF
+- Right now Amazon handles all of the QA resourcing. Future releases will need assistance from outside of Amazon, particularly as O3DE grows. How will we handle QA for future releases?
+- We currently do not have any available Web Developers to update the website (o3de.org and o3debinaries.org), who is responsible for staffing Web Developers? What is the plan?
+     - Need an update on who/when for web developers
+
+
+## Outcomes from Discussion topics
+
+**Discuss outcomes from agenda**
+
+- Long Term Support timeline
+     - No comments
+- Downloading older releases of the engine
+     - Terry - Industry standard is to include a link on the main download page that redirects the user to a list of installer links. We only need to determine how long we should keep each installer.
+     - Tony - We also need to solve how the user obtains documentation appropriate for the selected installer
+     - Terry - It is common to provide past documentation as a packaged zip that users can install locally.
+- QA for future releases
+     - Terry - Sig release does not own this problem, although we have an interest in the solution because it impacts ability to stabilize releases. 
+     - Terry - Sig testing does not own the testing, but may be able to create a framework to be used for releases that various companies and contributors can take pieces of.
+     - Terry (@tjmichaels) will discuss with sig testing and the board the potential for sig testing to create a framework that can be used to divy up work amoungst various companies and contributors when testing a release.
+- Web Developers
+     - Halle (@forhalle) will post a message to Marketing committee to see if there is any progress on hiring web developers.
+
+
+
+## Action Items
+- @tjmichaels will discuss with sig testing and the board the potential for sig testing to create a framework that can be used to divy up work amoungst various companies and contributors when testing a release.
+- @forhalle will post a message to Marketing committee to see if there is any progress on hiring web developers.
+
+## Open Discussion Items
+- Tony - Should we create a set of template tasks to use as a starting point for releases, or should we just have the assigned Release Manager use tasks from previous releases as a starting point?
+  - Terry - A template would be useful because it would allow us to define standard, which may vary from release to release
