@@ -24,6 +24,19 @@ Below is a list of all prior completed meetings and related resources.
 
 | No   | Date       | Time | Agenda  | Media | Notes | Resources |
 | ---- | ---------- | ---- | ------- | ----- | ----- | ---- |
+| 0001 | 2021-08-18 | 1800 UTC | n/a | n/a | https://github.com/o3de/sig-release/blob/main/meetings/notes/2021%20-%20August%2018 | Link |
+| 0002 | 2021-08-31 | 1800 UTC | n/a | n/a | https://github.com/o3de/sig-release/blob/main/meetings/notes/2021%20-%20August%2031 | Link |
+| 0003 | 2021-09-14 | 1800 UTC | n/a | n/a | https://github.com/o3de/sig-release/blob/main/meetings/notes/2021%20-%20Sep%2014.txt | Link |
+| 0004 | 2021-09-28 | 1800 UTC | n/a | n/a | https://github.com/o3de/sig-release/blob/main/meetings/notes/2021%20-%20Sep%2028 | Link |
+| 0005 | 2021-10-19 | 1800 UTC | n/a | n/a | https://github.com/o3de/sig-release/blob/main/meetings/notes/2021%20-%20October%2019%202021 | Link |
+| 0006 | 2021-10-26 | 1800 UTC | n/a | n/a | https://github.com/o3de/sig-release/blob/main/meetings/notes/2021%20-%20October%20%2026 | Link |
+| 0007 | 2021-11-23 | 1800 UTC | n/a | n/a | https://github.com/o3de/sig-release/blob/main/meetings/notes/2021%20-%20November%2023 | Link |
+| 0008 | 2021-12-07 | 1800 UTC | n/a | n/a | https://github.com/o3de/sig-release/blob/main/meetings/notes/2021%20-%20December%207 | Link |
+| 0009 | 2021-12-21 | 1800 UTC | n/a | n/a | https://github.com/o3de/sig-release/blob/main/meetings/notes/2021%20-%20December%2021 | Link |
+| 0010 | 2022-01-04 | 1800 UTC | n/a | n/a | https://github.com/o3de/sig-release/blob/main/meetings/notes/2022%20-%20January%204 | Link |
+| 0011 | 2022-01-18 | 1800 UTC | n/a | n/a | https://github.com/o3de/sig-release/blob/main/meetings/notes/2022%20-%20January%2018 | Link |
+| 0012 | 2021-02-15 | 1800 UTC | n/a | n/a | https://github.com/o3de/sig-release/blob/main/meetings/notes/2022%20-%20February%2015 | Link |
+| 00013 | 2022-03-01 | 1800 UTC | https://github.com/o3de/sig-release/issues/46 | n/a | Link | Link |
 | 0001 | 2021-00-00 | 0000 UTC | n/a | n/a | Link | Link |
 
 # General Resources
