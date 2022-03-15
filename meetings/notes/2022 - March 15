@@ -1,0 +1,37 @@
+1. Discuss proposed release timing.
+  1.1 April 1 Stabilization branch will be cut. @Terry - we need to find someone to cut the branch.
+  1.2 April 4 QA will begin
+  1.3 Joe to reach out to Marketing to inform them the release is coming up.
+  1.4 April 1 – Tony will  post features that will be in 22.05.0
+  1.5 Per Steven (Docs) documenting known issues will be fine with the current Schedule.
+  1.6 Joe and Tony to discuss next release manager, report in next meeting
+  
+2. Is the Logo change a requirement for the next release and if so, how long would marketing, UX, web development, etc need to adapt for the release? What does the release sig need to take into consideration for the logo change?
+  2.1	Steven – New Marketing director April 1 FYI. Steven to work with them to understand impact of logo change to docs.
+  2.2 Joe to reach out to LF to determine 1) If we have to wait for the logo for the release 2) Impact of these changes. 
+     UPDATE: The logo change is not a requirement for the release, but Royal says they need to have the logo decided within 2 weeks. So, if they do get the logo in place within two weeks, then we should use it. If they do not, then we do not need to hold up the release.
+  2.3 Tony - This ultimately  falls under the release manager.
+
+3. Discuss on any progress @tjmichaels has made on making previous versions of O3DE available.  Will need to revisit this topic once web developers are hired by the LF
+  3.1 Terry: no update
+
+4. Discuss any information @forhalle may have obtained concerning LF hiring web developers.
+ 4.1 Halle: no update
+
+5. @Ulrick28 restarting discussions around Long Term Support timeline (no progress). Need to know if LTS is off the table for 2022. How do we support early adopter partners and customers without an LTS? Will need an alternate plan if no LTS.
+  5.1 Joe: conversation is still open. We do know that there will be no LTS during 2022.
+
+6. Follow up on available QA resources for our next release?
+  6.1 David: yes, QA will have full availability. Future releases this year will have less support
+
+7. Is there a better time/day for release sig meetings?
+  7.1 Finchy – recommend creating a thread on Discord and issue
+
+8. @Ulrick28 (Joe B) will be stepping down from chairing the release sig starting July 1st, or the next elections, whichever comes sooner. Understanding is that the election cycle is every 6 months, which would put them sometime in June 2022.
+
+9. Exception process https://github.com/o3de/sig-release/issues/43 - 
+ 9.1 need to inform SIG-Release channel, SIG-ALL, TSC
+ 9.2 Vote in 3/29 meeting on this process
+
+10. Sean – SIG-Testing – asking about a post mortem.
+  10.1 Joe – post mortems are current done via issues and comments.
