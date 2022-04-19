@@ -3,7 +3,7 @@ O3DE 22.05.0 Feature List
 Status: In Progress as of 4/18 
 
 The release contains AT LEAST the below features. Additional features may be added as we review pull requests.
-At this point this list is suitable to move forward with preparing the O3DE Marketing blog post for the release.
+At this point this list is suitable to move forward with preparing the O3DE Marketing blog post for the release. The suggested "Top 3" items to highlight (see below for the details) are "1. Motion Matching Updates 2. User-Defined Property support for the Asset Pipeline. 3. Overall performance, stability & automated testing improvements, including Installer Validation.
 
 * Asset Pipeline "Prefabs as product of scene processing" Adds a new way to create prefabs by generating them during the asset pipeline's scene builder. 
 * Asset Pipeline "Default prefab generation for scene files"	The Prefab gem will automatically create a default procedural prefab for each source scene asset (such as a STL or FBX file) if no scene manifest is discovered.
