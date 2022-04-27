@@ -1,13 +1,12 @@
-O3DE 22.05.0 Feature List
+# O3DE 22.05.0 Feature List
 
-Status: In Progress as of 4/26
+## Status: In Progress as of 4/26
 
-The release contains AT LEAST the below features. Additional features may be added as we review pull requests.
-At this point this list is suitable to move forward with preparing the O3DE Marketing blog post for the release. 
+The release contains _AT LEAST_ the below features. Additional features may be added as we review pull requests. At this point this list is suitable to move forward with preparing the O3DE Marketing blog post for the release.
 
-The suggested "Top 3" items to highlight (see below for the details) are "1. Motion Matching Updates 2. User-Defined Property support for the Asset Pipeline. 3. Overall performance, stability & automated testing improvements, including Installer Validation.
+The suggested "Top 3" items to highlight (see below for the details) are 1. Motion Matching Updates 2. User-Defined Property support for the Asset Pipeline. 3. Overall performance, stability & automated testing improvements, including Installer Validation.
 
-The general theme of this release is “Quality of Life Improvements, Stability, and Usability”.
+The general theme of this release is "Quality of Life Improvements, Stability, and Usability".
 
 * Audio System "Improved Audio Controls Editor, including new connection properties for Audio Engines" For more information see https://github.com/o3de/o3de/pull/6480 and https://github.com/o3de/o3de/pull/6303
 * Asset Pipeline "Prefabs as product of scene processing" Adds a new way to create prefabs by generating them during the asset pipeline's scene builder. 
@@ -29,6 +28,7 @@ The general theme of this release is “Quality of Life Improvements, Stability,
 * Viewport "Camera	Editor View Bookmarks V1"	View Bookmarks MVP adds the ability to store local view transforms with level prefabs. It has been designed as a solid foundation to expand for all prefabs in the scene. The View Bookmark system aims to allow the user to store different view bookmarks for a root (level) prefab. These bookmarks can be stored locally (currently in the Settings Registry). In future they will be able to be shared in any prefab. More information available at  https://github.com/o3de/o3de/pull/7855 and https://github.com/o3de/o3de/pull/8400. The UX experience of the View Bookmarks MVP does not expose view bookmarks to the UI but this is planned for an upcoming release. Bookmarks can be set with Ctrl-<Function Key> and restored with Shift-<Function Key> (currently a maximum of 12 can be set per level).
 * Viewport "Experimental Editor Mode Visual Feedback"	In order to make the experience of using the Viewport clearer and more intuitive, additional rendering functionality is being investigated to improve feedback and usability. Editor Mode Visual Feedback is at a very early stage and can be toggled on through the Settings Registry (`--regset=/Amazon/Preferences/EnableEditorModeFeedback=true`). Note: This feature is experimental and under active development. It is a proof of concept (POC) release and is not currently enabled by default. Please see https://github.com/o3de/o3de/pull/8235 for the initial PR and https://github.com/o3de/o3de/issues/3458 for future updates.
 * Viewport "Prefabs Focus Mode Improvements"	A number of fixes and quality of life improvements have been added to Focus Mode Prefab editing. Now Ctrl-S will save the focused Prefab not the entire scene, Focus Mode breadcrumbs now have icons, the right-click context menu grouping has been improved, as well as a number of other small fixes and updates.
+* Viewport	"Cursor wrap mode for manipulators was added with help from community member [Pollend](https://github.com/pollend). See [#5155](https://github.com/o3de/o3de/pull/5155) for more details. Note: This is currently an option in the Settings Registry (`--regset=/Amazon/Preferences/Editor/Manipulator/ManipulatorMouseWrapSetting=true`) and is off by default"
 * Atom	"Gems can now inject custom passes to the render pipeline at runtime."	Previously it was cumbersome for a Gem to introduce new passes to the render pipeline. Customers had to basically copy/paste the render pipeline or modify the existing assets. A new set of APIs is now available to facilitate customization of the render pipeline. https://github.com/o3de/o3de/wiki/Work-With-Passes-In-Gems. Example of Gems using these new APIs are Terrain, LyShine & TressFX.
 * Atom	"New Debug Rendering Level Component" There's a new level component that allows users to visualize and debug various aspects of the rendering, for example visualize the normals, show only diffuse or specular lighting, override certain properties for all materials in the scene, and more. 
 * Atom "Pipeline Global Pass Attachment Reference" Users writing .pass files for rendering can now declare and reference attachments in a way that is global to the pipeline
@@ -41,4 +41,4 @@ The general theme of this release is “Quality of Life Improvements, Stability,
 * Atom	"MSAA state is easier to enable/disable."	The MSAA state can now be changed in the MainRenderPipeline.azasset file by setting the MultisampleState/samples parameter.  Setting the samples to 1 will disable MSAA.
 * Atom	"Several improvements to Diffuse GI and ReflectionProbe visual quality"	Several improvements to Diffuse GI and ReflectionProbe visual quality.
 * Atom	"Simplified and improved re-usability of Material Types."	Creating a new Material Type from another Material Type is a easy as referencing another *.materialtype json file and overriding the properties of interest. No need to copy/paste another Material Type anymore. See this RFC for details: https://github.com/o3de/sig-graphics-audio/issues/16
-
+* White Box	"White Box support for Linux was added to O3DE with help from community member [Pollend](https://github.com/pollend). See [#4654](https://github.com/o3de/o3de/pull/5075) for more details."
