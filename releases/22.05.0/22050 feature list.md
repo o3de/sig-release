@@ -1,8 +1,6 @@
 # O3DE 22.05.0 Feature List
 
-## Status: Complete as of 4/28
-
-The release contains _AT LEAST_ the below features. Additional features may be added as we review pull requests. At this point this list is suitable to move forward with preparing the O3DE Marketing blog post for the release.
+## Status: Complete
 
 The suggested "Top 3" items to highlight (see below for the details) are 1. Motion Matching Updates 2. User-Defined Property support for the Asset Pipeline. 3. Overall performance, stability & automated testing improvements, including Installer Validation.
 
