@@ -1,6 +1,6 @@
 # O3DE 22.05.0 Feature List
 
-## Status: In Progress as of 4/26
+## Status: Complete as of 4/28
 
 The release contains _AT LEAST_ the below features. Additional features may be added as we review pull requests. At this point this list is suitable to move forward with preparing the O3DE Marketing blog post for the release.
 
