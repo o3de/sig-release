@@ -353,12 +353,7 @@ O3DE 22.05.0 represents our first major release of 2022. This release has seen 1
 | Module | Feature | Functional | Content | Code/API | Performance | Platform | Github Link | Doc Link | Notes |
 | :-- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | Core services | ❌ Unscheduled | || || || || || || || | |
-## SIG-Operations 
 
-### NewSubsystem 
-| Module | Feature | Functional | Content | Code/API | Performance | Platform | Github Link | Doc Link | Notes |
-| :-- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| New Module | || || || || || || || || | |
 ## SIG-Platform 
 
 ### Platform Abstraction Layer 
@@ -439,24 +434,7 @@ O3DE 22.05.0 represents our first major release of 2022. This release has seen 1
 | Paris | 🟡 Active | 🟠 Minimal | || || || || || || | |
 | Salem | 🟡 Active | 🟠 Minimal | || || || || || || | |
 | Provo | 🟡 Active | 🟠 Minimal | || || || || || || | |
-## SIG-Release 
 
-### NewSubsystem 
-| Module | Feature | Functional | Content | Code/API | Performance | Platform | Github Link | Doc Link | Notes |
-| :-- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| New Module | || || || || || || || || | |
-## SIG-Security 
-
-### NewSubsystem 
-| Module | Feature | Functional | Content | Code/API | Performance | Platform | Github Link | Doc Link | Notes |
-| :-- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| New Module | || || || || || || || || | |
-## SIG-Security-Reports 
-
-### NewSubsystem 
-| Module | Feature | Functional | Content | Code/API | Performance | Platform | Github Link | Doc Link | Notes |
-| :-- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| New Module | || || || || || || || || | |
 ## SIG-Testing 
 
 ### AutomatedReview 
