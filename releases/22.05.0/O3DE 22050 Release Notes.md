@@ -1,6 +1,7 @@
 # O3DE 22.05.0 Release Notes
 
-O3DE 22.05.0 represents our first major release of 2022. This release has seen 1,417 submits that containing bug fixes, quality of life improvements, and feature additions. 
+O3DE 22.05.0 represents our first major release of 2022. This release has seen 1,417 submits that containing bug fixes, quality of life improvements, and feature additions. Starting with this release, our release notes will contain a feature grid that represents the current state of development for each feature in O3DE. 
+
 # Highlights for 22.05.0
 * Asset Pipeline "User Defined Properties" Add support in Asset Processing to read in user defined properties (UDP) metadata from source assets. UDP can be assigned in content creation tools to store custom properties about hierarchy nodes such as mesh, light, and animation nodes etc to power asset generation workflows for O3DE. See https://docs.o3de.org/blog/posts/blog-udp/
 * Character "Motion Matching Phase 2: Customized MM for a game/sim" Experimental release of the motion matching gem. Motion matching is a data-driven animation technique that synthesizes motions based on existing animation data and the current character and input contexts. An example prefab of a character which is controllable using a gamepad is provided with the gem. More details on the supported features and how things work internally can be found on the https://github.com/o3de/o3de/tree/development/Gems/MotionMatching  page.
