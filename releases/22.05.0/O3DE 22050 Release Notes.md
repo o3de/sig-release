@@ -40,6 +40,11 @@ O3DE 22.05.0 represents our first major release of 2022. This release has seen 1
 * Atom	"MSAA state is easier to enable/disable."	The MSAA state can now be changed in the MainRenderPipeline.azasset file by setting the MultisampleState/samples parameter.  Setting the samples to 1 will disable MSAA.
 * Atom	"Several improvements to Diffuse GI and ReflectionProbe visual quality"	Several improvements to Diffuse GI and ReflectionProbe visual quality.
 * White Box	"White Box support for Linux was added to O3DE with help from community member [Pollend](https://github.com/pollend). See [#4654](https://github.com/o3de/o3de/pull/5075) for more details."
+ 
+# Deprecation
+ 
+* TransformUniformScale deprecation [7573](https://github.com/o3de/o3de/issues/7573) (issue)
+* BoxManipulatorRequestBus deprecation [7572](https://github.com/o3de/o3de/issues/7572) (issue)
 
 # Feature Grid
  
