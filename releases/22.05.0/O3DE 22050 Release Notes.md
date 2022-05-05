@@ -52,7 +52,7 @@ O3DE 22.05.0 represents our first major release of 2022. This release has seen 1
  # Known Issues
  
 * EMFX (Character)
-     * If you have a saved a layout in the old viewpoer, it will load the old open gl viewport. Workaround is to Delete OpenGL widget and add new Atom viewport widget, then save layout (or) Recreate the same layout from the default layout.
+     * If you have a saved a layout in the old viewport, it will load the old open gl viewport. Workaround is to Delete OpenGL widget and add new Atom viewport widget, then save layout (or) Recreate the same layout from the default layout.
  
 # Feature Grid
  
