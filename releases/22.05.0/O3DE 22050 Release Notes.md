@@ -5,7 +5,7 @@ O3DE 22.05.0 represents our first major release of 2022. This release has seen 1
 # Highlights for 22.05.0
 * O3DE has a new logo! The branding guidelines been updated https://www.o3de.org/docs/tools-ui/branding-guidelines/
 * Asset Pipeline "User Defined Properties" Add support in Asset Processing to read in user defined properties (UDP) metadata from source assets. UDP can be assigned in content creation tools to store custom properties about hierarchy nodes such as mesh, light, and animation nodes etc to power asset generation workflows for O3DE. See https://docs.o3de.org/blog/posts/blog-udp/
-* Character "Motion Matching Phase 2: Customized MM for a game/sim" Experimental release of the motion matching gem. Motion matching is a data-driven animation technique that synthesizes motions based on existing animation data and the current character and input contexts. An example prefab of a character which is controllable using a gamepad is provided with the gem. More details on the supported features and how things work internally can be found on the https://github.com/o3de/o3de/tree/development/Gems/MotionMatching  page.
+* EMFX (Character) "Motion Matching Phase 2: Customized MM for a game/sim" Experimental release of the motion matching gem. Motion matching is a data-driven animation technique that synthesizes motions based on existing animation data and the current character and input contexts. An example prefab of a character which is controllable using a gamepad is provided with the gem. More details on the supported features and how things work internally can be found on the https://github.com/o3de/o3de/tree/development/Gems/MotionMatching  page.
 * Atom "Gems can now inject custom passes to the render pipeline at runtime." Previously it was cumbersome for a Gem to introduce new passes to the render pipeline. Customers had to basically copy/paste the render pipeline or modify the existing assets. A new set of APIs is now available to facilitate customization of the render pipeline. https://github.com/o3de/o3de/wiki/Work-With-Passes-In-Gems. Example of Gems using these new APIs are Terrain, LyShine & TressFX.
 * Atom "Simplified and improved re-usability of Material Types." Creating a new Material Type from another Material Type is a easy as referencing another *.materialtype json file and overriding the properties of interest. No need to copy/paste another Material Type anymore. See this RFC for details: o3de/sig-graphics-audio#16
 * Networking "Player spawners" Provides an interface for determining what entity is spawned and where, when a user joins a session. Ownership of spawning a networked prefab now belongs to the game code that uses the Multiplayer Gem. A sample implementation of the spawner logic is provided for reference in the MultiplayerSample project. See: o3de/o3de#7060 and o3de/o3de-multiplayersample#106
@@ -43,9 +43,17 @@ O3DE 22.05.0 represents our first major release of 2022. This release has seen 1
  
 # Deprecation
  
-* TransformUniformScale deprecation [7573](https://github.com/o3de/o3de/issues/7573) (issue)
-* BoxManipulatorRequestBus deprecation [7572](https://github.com/o3de/o3de/issues/7572) (issue)
-
+* Physics
+     * TransformUniformScale deprecation [7573](https://github.com/o3de/o3de/issues/7573) (issue)
+     * BoxManipulatorRequestBus deprecation [7572](https://github.com/o3de/o3de/issues/7572) (issue)
+* EMFX (Character)
+     * OpenGL Render Plugin is now deprecated and replaced by EMFX Atom Viewport
+ 
+ # Known Issues
+ 
+* EMFX (Character)
+     * If you have a saved a layout in the old viewpoer, it will load the old open gl viewport. Workaround is to Delete OpenGL widget and add new Atom viewport widget, then save layout (or) Recreate the same layout from the default layout.
+ 
 # Feature Grid
  
  ## SIG-Build 
@@ -490,6 +498,4 @@ O3DE 22.05.0 represents our first major release of 2022. This release has seen 1
 | Viewport interaction | 🔵 Backlogged | 🔵 In-Design | || || || || || || | |
 | || || || || || || || || || | |
 
-
-# Known Issues
 
