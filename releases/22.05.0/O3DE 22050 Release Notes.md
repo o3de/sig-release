@@ -54,6 +54,21 @@ O3DE 22.05.0 represents our first major release of 2022. This release has seen 1
 * EMFX (Character)
      * If you have a saved a layout in the old viewport, it will load the old open gl viewport. Workaround is to Delete OpenGL widget and add new Atom viewport widget, then save layout (or) Recreate the same layout from the default layout.
  
+* Atom (Graphics)
+     * [Linux] Editor crashes when pressing the Activate LUT button right after Generating LUT in HDR Color Grading component https://github.com/o3de/o3de/issues/9157
+ 
+* Asset Processor
+     * [Linux]: Closing Editor while Asset Processor is still running will result in a crash upon relaunching the Editor.
+ 
+* Networking
+     * Network entity hierarchies are limited to hierarchies with max count of 16 entities.
+     * GameLift server launchers are manually relocatable. There is currently no automated build or asset layout generation. See instructions here: AWS GameLift Gem Build Packaging for Windows and AWS GameLift Gem Build Packaging for Linux . (You can ignore GameLift-specific steps if you are not relocating your servers to GameLift instances).
+     * Monolithic release server builds are currently not supported.
+     * imgui keyboard is not working in server launcher.
+     * If you experience unexpected client disconnect issues with Multiplayer, set sv_isTransient=False, to see if server auto termination logic is causing issue. See https://www.o3de.org/docs/user-guide/networking/settings/ for further settings and https://github.com/o3de/o3de/issues/9328 o3de#9328.
+     * All CDK samples in the AWS Gems are for CDK v1 (https://docs.aws.amazon.com/cdk/v1/guide/home.html). CDK applications are not currently compatible with CDK v2.
+ 
+ 
 # Feature Grid
  
  ## SIG-Build 
