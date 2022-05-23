@@ -399,10 +399,6 @@ O3DE 22.05.0 represents our first major release of 2022. This release has seen 1
 | Mac | 🟢 Complete | 🟢 Complete | || || || || || || | |
 | Android | 🟢 Complete | 🟢 Complete | || || || || || || | |
 | Linux | 🟢 Complete | 🟢 Complete | || || || || || || | |
-| Jasper | 🟢 Complete | 🟢 Complete | || || || || || || | |
-| Paris | 🟢 Complete | 🟢 Complete | || || || || || || | |
-| Salem | 🟢 Complete | 🟢 Complete | || || || || || || | |
-| Provo | 🟢 Complete | 🟢 Complete | || || || || || || | |
 | || || || || || || || || || | |
 ### Platform Build (Engine Centric) 
 | Module | Feature | Functional | Content | Code/API | Performance | Platform | Github Link | Doc Link | Notes |
@@ -411,10 +407,6 @@ O3DE 22.05.0 represents our first major release of 2022. This release has seen 1
 | Mac | 🟢 Complete | 🟢 Complete | || || || || || || | |
 | Android | 🟢 Complete | 🟢 Complete | || || || || || || | |
 | Linux | 🟢 Complete | 🟢 Complete | || || || || || || | |
-| Jasper | 🟢 Complete | 🟢 Complete | || || || || || || | |
-| Paris | 🟢 Complete | 🟢 Complete | || || || || || || | |
-| Salem | 🟢 Complete | 🟢 Complete | || || || || || || | |
-| Provo | 🟢 Complete | 🟢 Complete | || || || || || || | |
 | || || || || || || || || || | |
 ### Platform Configure (Project Centric) 
 | Module | Feature | Functional | Content | Code/API | Performance | Platform | Github Link | Doc Link | Notes |
@@ -423,10 +415,7 @@ O3DE 22.05.0 represents our first major release of 2022. This release has seen 1
 | Mac | 🟡 Active | 🟡 Partial | || || || || || || | |
 | Android | 🟡 Active | 🟡 Partial | || || || || || || | |
 | Linux | 🟡 Active | 🟡 Partial | || || || || || || | |
-| Jasper | 🟡 Active | 🟡 Partial | || || || || || || | |
-| Paris | 🟡 Active | 🟡 Partial | || || || || || || | |
-| Salem | 🟡 Active | 🟡 Partial | || || || || || || | |
-| Provo | 🟡 Active | 🟡 Partial | || || || || || || | |
+
 ### Platform Build (Project Centric) 
 | Module | Feature | Functional | Content | Code/API | Performance | Platform | Github Link | Doc Link | Notes |
 | :-- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -434,10 +423,7 @@ O3DE 22.05.0 represents our first major release of 2022. This release has seen 1
 | Mac | 🟡 Active | 🟡 Partial | || || || || || || | |
 | Android | 🟡 Active | 🟡 Partial | || || || || || || | |
 | Linux | 🟡 Active | 🟡 Partial | || || || || || || | |
-| Jasper | 🟡 Active | 🟡 Partial | || || || || || || | |
-| Paris | 🟡 Active | 🟡 Partial | || || || || || || | |
-| Salem | 🟡 Active | 🟡 Partial | || || || || || || | |
-| Provo | 🟡 Active | 🟡 Partial | || || || || || || | |
+
 ### O3DE Object Externalization 
 | Module | Feature | Functional | Content | Code/API | Performance | Platform | Github Link | Doc Link | Notes |
 | :-- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -460,10 +446,6 @@ O3DE 22.05.0 represents our first major release of 2022. This release has seen 1
 | Mac | 🟢 Complete | 🟢 Complete | || || || || || || | |
 | Android | 🟢 Complete | 🟢 Complete | || || || || || || | |
 | Linux | 🟢 Complete | 🟢 Complete | || || || || || || | |
-| Jasper | 🟡 Active | 🟡 Partial | || || || || || || | |
-| Paris | 🟡 Active | 🟠 Minimal | || || || || || || | |
-| Salem | 🟡 Active | 🟠 Minimal | || || || || || || | |
-| Provo | 🟡 Active | 🟠 Minimal | || || || || || || | |
 
 ## SIG-Testing 
 
