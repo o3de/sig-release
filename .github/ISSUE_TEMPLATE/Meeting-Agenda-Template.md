@@ -22,15 +22,3 @@ The [SIG-Release Meetings](https://github.com/o3de/sig-release/tree/main/meeting
 ## Meeting Agenda
 
 **Discuss agenda from proposed topics**
-
-## Outcomes from Discussion topics
-
-**Discuss outcomes from agenda**
-
-## Action Items
-
-**Create actionable items from proposed topics**
-
-## Open Discussion Items
-
-List any additional items below!
