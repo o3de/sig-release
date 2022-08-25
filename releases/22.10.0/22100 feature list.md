@@ -54,6 +54,8 @@ The general theme of this release is "TBD".
 * The performance of the Terrain system has seen significant performance improvements for both editing and runtime/rendering.  It can now handle 16km x 16km worlds and beyond at high framerates.
 
 **sig-testing**
+* Material Editor test tools for python-based tests
+* GitHub codeowners alias hints now output during python test failure
 
 **sig-ui-ux**
 
