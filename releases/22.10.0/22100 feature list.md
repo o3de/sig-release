@@ -34,6 +34,7 @@ The general theme of this release is "TBD".
 
 
 **sig-network**
+* Multiple improvements to the client server connection experience, including debug text to convery current step in connection process, along with connection status ImGui display and new ImGUI menu options.
 * Added an optional TypeValidatingSerializer which will raise an assert when serialization results in a type or variable name mismatch to aid debugging of networking serialization issues.
 * The Network TargetManagement Gem adds support for tools and applications in O3DE that need a network connection to share information or to support debugging. An example of this would be the O3DE Editor connecting to Lua IDE to debug Lua scripts.
 * Unified Network Spawner Pipeline - unifies the networking spawning pipeline with the non-network spawnable system. This is mostly an under-the-hood improvement but reduces the complexity of networked entity spawning.
