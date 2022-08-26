@@ -63,6 +63,10 @@ The general theme of this release is "TBD".
 
 ## sig-testing
 
+* Material Editor test tools support for [python-based tests](https://www.o3de.org/docs/user-guide/testing/parallel-pattern/), expanding automated testing to more parts of O3DE. This helps O3DE contributors efficiently verify and improve the behavior of the Material Editor.
+* [GitHub codeowners](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners) alias hints now output during python test failure. This helps O3DE contributors immediately know who to contact for support. Customers using O3DE's test framework will also see hints if their repo contains a codeowners file.
+
+
 ## sig-ui-ux
 
 > Written with [StackEdit](https://stackedit.io/).
