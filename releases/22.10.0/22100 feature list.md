@@ -12,6 +12,8 @@ The general theme of this release is "TBD".
 
 ## sig-build
 
+* The Project Manager will now utilize Visual Studio 2022+ for project builds if it is installed. Going foward, Project Manager will always build on the highest version of Visual Studio detected in the local environment https://github.com/o3de/o3de/pull/11449
+
 ## sig-content
 
 * AssetProcessor now shows the time spent analyzing and processing assets on a per-asset and builder basis. These metrics will aid improving AssetBuilder throughput, tracking performance over time, and identify areas of asset processing that require more focus.
