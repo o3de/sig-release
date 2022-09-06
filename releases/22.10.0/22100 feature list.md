@@ -37,6 +37,21 @@ The general theme of this release is "TBD".
 ## sig-docs-community
 
 ## sig-graphics-audio
+- Added a new Shadow Bias flag for parallax materials, to deal with shadow acne on parallax surfaces.
+- Added min/max sliders to the pass tree debug tool to support trimming the color output for increased contrast of fine details. https://github.com/o3de/o3de/pull/9292.
+- Added averages to the CPU Profiler https://github.com/o3de/o3de/pull/10253.
+- Made the ImGui debug tools not disable the rest of the Editor.
+- Added a Tga image loader instead of using QImage to load tga images. It handles more tga file formats. https://github.com/o3de/o3de/pull/11161.
+- Switched to use tile resource for streaming images for DX12 backend. https://github.com/o3de/o3de.
+- Removing default image pool budget caps. https://github.com/o3de/o3de/pull/11345.
+- Added new Sky Atmosphere Component. https://github.com/o3de/o3de/pull/9649.
+- Added new Stars Component. https://github.com/o3de/o3de/pull/8624.
+- DiffuseProbeGrid components are now in a Gem. https://github.com/o3de/o3de/pull/10899.
+- RayTracing performance improvements. https://github.com/o3de/o3de/pull/8945.
+- Added "Affects GI" option to Lights. https://github.com/o3de/o3de/pull/9379.
+- Added the Terrain mesh to the RayTracing scene. https://github.com/o3de/o3de/pull/10207.
+- Added RHI CommandList submit range validation. https://github.com/o3de/o3de/pull/10504.
+- Changed FindReflectionProbes to use the Visibility system. https://github.com/o3de/o3de/pull/9174.
 
 
 ## sig-network
