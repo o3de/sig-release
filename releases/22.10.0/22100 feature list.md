@@ -48,6 +48,7 @@ The general theme of this release is "TBD".
 ## sig-operations
 
 ## sig-platform
+* Update Python from version 3.7.12 to 3.10.5. This will increase the window for support and security updates for Python to 2026 ([PEP 619](https://peps.python.org/pep-0619/)) as well as brings in many language and performance improvements over Python 3.7. See the [Python Update RFC](https://github.com/o3de/sig-platform/issues/54) for further details.
 
 ## sig-security
 
