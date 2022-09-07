@@ -52,6 +52,8 @@ The general theme of this release is "TBD".
 - Added the Terrain mesh to the RayTracing scene. https://github.com/o3de/o3de/pull/10207.
 - Added RHI CommandList submit range validation. https://github.com/o3de/o3de/pull/10504.
 - Changed FindReflectionProbes to use the Visibility system. https://github.com/o3de/o3de/pull/9174.
+- RHI OpenXr support for Vulkan backend. https://github.com/o3de/o3de/pull/10170, https://github.com/o3de/o3de/pull/9664.
+- Added support for a mode that forces cpu to run in lockstep with gpu. https://github.com/o3de/o3de/pull/10604.
 
 
 ## sig-network
