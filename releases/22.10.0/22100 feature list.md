@@ -37,6 +37,33 @@ The general theme of this release is "TBD".
 ## sig-docs-community
 
 ## sig-graphics-audio
+* Added a new Shadow Bias flag for parallax materials, to deal with shadow acne on parallax surfaces.
+* Added min/max sliders to the pass tree debug tool to support trimming the color output for increased contrast of fine details. https://github.com/o3de/o3de/pull/9292.
+* Added averages to the CPU Profiler https://github.com/o3de/o3de/pull/10253.
+* Made the ImGui debug tools not disable the rest of the Editor.
+* Added a Tga image loader instead of using QImage to load tga images. It handles more tga file formats. https://github.com/o3de/o3de/pull/11161.
+* Switched to use tile resource for streaming images for DX12 backend. https://github.com/o3de/o3de.
+* Removing default image pool budget caps. https://github.com/o3de/o3de/pull/11345.
+* Added new Sky Atmosphere Component. https://github.com/o3de/o3de/pull/9649.
+* Added new Stars Component. https://github.com/o3de/o3de/pull/8624.
+* DiffuseProbeGrid components are now in a Gem. https://github.com/o3de/o3de/pull/10899.
+* RayTracing performance improvements. https://github.com/o3de/o3de/pull/8945.
+* Added "Affects GI" option to Lights. https://github.com/o3de/o3de/pull/9379.
+* Added the Terrain mesh to the RayTracing scene. https://github.com/o3de/o3de/pull/10207.
+* Added RHI CommandList submit range validation. https://github.com/o3de/o3de/pull/10504.
+* Changed FindReflectionProbes to use the Visibility system. https://github.com/o3de/o3de/pull/9174.
+* RHI OpenXr support for Vulkan backend. https://github.com/o3de/o3de/pull/10170, https://github.com/o3de/o3de/pull/9664.
+* Added support for a mode that forces cpu to run in lockstep with gpu. https://github.com/o3de/o3de/pull/10604.
+* Material component API improvements for getting and setting properties in Lua and script canvas.
+* Material component and instance editor support for editing multiple selected entities.
+* Reflected many RPI and RHI shader related types to edit and behavior context to support scripting and creating tools.
+* Implemented support for editing shader variant lists, undo, and redo in shader management console.
+* Added a settings dialog to material editor, shader management console, and similar tools for configuring common registry settings.
+* Implemented autosave feature in material editor, shader management console, and similar tools. The autosave feature can be enabled from the tool’s settings dialog. Once autosave is enabled and configured, documents will be saved after users make modifications inside material editor.
+* Updated the asset system, instance database, material component, and the thumbnail system to better support processing asset changes in the background and hot reloading materials as the auto saved from the material editor.
+* Added support to open files by dragging and dropping into the material editor.
+* Added support for saving custom window layouts in material editor and related tools.
+* Experimental preview of material canvas, a node based, visual editor, combining features from material editor and script canvas for creating new material types and shaders.
 
 
 
