@@ -33,6 +33,10 @@ The general theme of this release is "TBD".
 ## sig-core
 
 * New feature that allows users to dynamically spawn prefabs at runtime using Lua scripting.
+* The Settings Registry has two new user facing features added to it
+  * The first is the Settings Registry Origin Tracker, which tracks which .setreg/.setregpatch files particular settings are loaded from.  That information can be queried via a new console command of "sr_dump_origin <JSON key path>". (https://github.com/o3de/o3de/pull/11028)
+  * Second is a Document Object Model Adapter has been added to visualized the Settings Registry fields, current value and the file origin.  It is currently hooked up the DPEDebugViewStandalone application that can be built by specifying the CMake target of "DPEDebugViewStandalone". (https://github.com/o3de/o3de/pull/11404)
+
 
 ## sig-docs-community
 
