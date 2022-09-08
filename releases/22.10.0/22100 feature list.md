@@ -70,6 +70,8 @@ The general theme of this release is "TBD".
 * Experimental preview of material canvas, a node based, visual editor, combining features from material editor and script canvas for creating new material types and shaders.
 
 
+* Improved and refactored how raw requests are defined, created, sent, and processed in the AudioSystem Gem. All existing locations that created and sent an audio request directly to the system have been updated to the newer version.
+* CMake can now detect the Wwise SDK version and check it against a minimum supported version of the SDK.
 
 ## sig-network
 
