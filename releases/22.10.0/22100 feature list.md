@@ -27,8 +27,9 @@ The general theme of this release is "TBD".
 * The Project Manager now displays the engine name and version number each project is registered with. The Project Manager now displays the current engine version in the title bar.
 * Script Canvas Architecture update that provides a framework to embed ScriptCanvas functionality in places other than Entity / Component system via the ScriptCanvas Component. The new architecture introduces a set of classes that handle a small part of the ScriptCanvas runtime. The highest level class is the ScriptCanvas::Executor which is now used by the ScriptCanvas::RuntimeComponent. The ScriptCanvas::Executor is also used by the new ScriptCanvasEditor::Interpreter, which is a class that allows developers to embed user access to ScriptCanvas functionality any where in the editor.
 * Writing C++ Script Canvas nodes is now a lot easier! We have deprecated node generics (a set of C++ macros) in favor of using AzAutoGen to produce libraries of functions or standalone nodes. We have consolidated the autogen semantics for Script Canvas grammar nodes and nodeables. We removed the concept of Script Canvas node libraries, anytime you write a node it gets registered automatically. It is no longer necessary to manually reflect or register Script Canvas nodes.
-* The O3DE editor viewport now comes with a new effect to help show both selected entities (using an outline effect) as well as helping you know what Prefab you're editing by applying a screen effect to everything not in focus.
-* Improved visualization for the rotation manipulator in the 3D viewport (rotation segment is now displayed).
+* The O3DE editor viewport now comes with a new effect to help show both selected entities (using an outline effect) as well as helping you know what Prefab you're editing by applying a screen effect to everything not in focus. ([Editor Mode Visual Feedback Improvements (Prefab Edit Mode) #3458](https://github.com/o3de/o3de/issues/3458)).
+* Improved visualization for the rotation manipulator in the 3D viewport (rotation segment is now displayed). ([Add rotation manipulator segment #11195](https://github.com/o3de/o3de/pull/11195) and [No overlap when drawing rotate gizmo and draw start/end segments #11550](https://github.com/o3de/o3de/pull/11550)).
+* The O3DE editor viewport now contains the new Component Mode Switcher to quickly switch between available Component Modes on entities. ([Component Mode Viewport UI Switcher](https://github.com/o3de/o3de/issues/10662)).
 
 ## sig-core
 
@@ -37,10 +38,10 @@ The general theme of this release is "TBD".
   * The first is the Settings Registry Origin Tracker, which tracks which .setreg/.setregpatch files particular settings are loaded from.  That information can be queried via a new console command of "sr_dump_origin <JSON key path>". (https://github.com/o3de/o3de/pull/11028)
   * Second is a Document Object Model Adapter has been added to visualized the Settings Registry fields, current value and the file origin.  It is currently hooked up the DPEDebugViewStandalone application that can be built by specifying the CMake target of "DPEDebugViewStandalone". (https://github.com/o3de/o3de/pull/11404)
 
-
 ## sig-docs-community
 
 ## sig-graphics-audio
+
 * Added a new Shadow Bias flag for parallax materials, to deal with shadow acne on parallax surfaces.
 * Added min/max sliders to the pass tree debug tool to support trimming the color output for increased contrast of fine details. https://github.com/o3de/o3de/pull/9292.
 * Added averages to the CPU Profiler https://github.com/o3de/o3de/pull/10253.
@@ -69,7 +70,6 @@ The general theme of this release is "TBD".
 * Added support for saving custom window layouts in material editor and related tools.
 * Experimental preview of material canvas, a node based, visual editor, combining features from material editor and script canvas for creating new material types and shaders.
 
-
 * Improved and refactored how raw requests are defined, created, sent, and processed in the AudioSystem Gem. All existing locations that created and sent an audio request directly to the system have been updated to the newer version.
 * CMake can now detect the Wwise SDK version and check it against a minimum supported version of the SDK.
 
@@ -83,25 +83,25 @@ The general theme of this release is "TBD".
 ## sig-operations
 
 ## sig-platform
+
 * Update Python from version 3.7.12 to 3.10.5. This will increase the window for support and security updates for Python to 2026 ([PEP 619](https://peps.python.org/pep-0619/)) as well as brings in many language and performance improvements over Python 3.7. See the [Python Update RFC](https://github.com/o3de/sig-platform/issues/54) for further details.
 
 ## sig-security
 
 ## sig-simulation
 
-* A series of fixes and improvements to the animation import process.
-* O3DE now supports root motion extraction to making bringing in models from DCC tools such as Mixamo easier than ever before.
-* The O3DE Motion Matching Gem is ready for experimental use. See https://www.o3de.org/blog/posts/blog-motionmatching/ for more details.
-* O3DE now ships with support for navigation using the excellent Recast/Detour navigation library. You can now create a navmesh in your scene and see your characters path-find from one point to another.
-* The ragdoll authoring experience has been completely overhauled to make setting up colliders and joint limits a breeze. We now provide joint limit auto-fitting and manipulator support for fine-grained adjustments for both colliders and joint limits.
-* The way physics material assets are stored and used have been completely updated. The physics material library asset has been removed and we now support individual physics material assets, much like render materials and other assets in O3DE. This makes working with physics materials much easier and more consistent.
-* The performance of the Terrain system has seen significant performance improvements for both editing and runtime/rendering.  It can now handle 16km x 16km worlds and beyond at high framerates.
+* A series of fixes and improvements to the animation import process. ([Animation Support for Common Third-Party Tools #10661](https://github.com/o3de/o3de/issues/10661)).
+* O3DE now supports root motion extraction to make bringing in models from DCC tools such as Mixamo easier than ever before. ([Root Motion Extraction #10655](https://github.com/o3de/o3de/issues/10655)).
+* The O3DE Motion Matching Gem is ready for experimental use. See [Motion Matching in O3DE, a Data-Driven Animation Technique](https://www.o3de.org/blog/posts/blog-motionmatching/) for more details. ([Motion Matching #10665](https://github.com/o3de/o3de/issues/10665)).
+* O3DE now ships with support for navigation using the excellent Recast/Detour navigation library. You can now create a navmesh in your scene and see your characters path-find from one point to another. ([Navigation Support #10663](https://github.com/o3de/o3de/issues/10663))
+* The ragdoll authoring experience has been completely overhauled to make setting up colliders and joint limits a breeze. We now provide joint limit auto-fitting and manipulator support for fine-grained adjustments for both colliders and joint limits. ([Ragdoll Authoring Improvements #10654](https://github.com/o3de/o3de/issues/10654)).
+* The way physics material assets are stored and used have been completely updated. The physics material library asset has been removed and we now support individual physics material assets, much like render materials and other assets in O3DE. This makes working with physics materials much easier and more consistent. ([Physics Material System Improvements #2897](https://github.com/o3de/o3de/issues/2897)).
+* The performance of the Terrain system has seen significant performance improvements for both editing and runtime/rendering.  It can now handle 16km x 16km worlds and beyond at high framerates. ([Terrain System #1847](https://github.com/o3de/o3de/issues/1847)).
 
 ## sig-testing
 
 * Material Editor test tools support for [python-based tests](https://www.o3de.org/docs/user-guide/testing/parallel-pattern/), expanding automated testing to more parts of O3DE. This helps O3DE contributors efficiently verify and improve the behavior of the Material Editor.
 * [GitHub codeowners](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners) alias hints now output during python test failure. This helps O3DE contributors immediately know who to contact for support. Customers using O3DE's test framework will also see hints if their repo contains a codeowners file.
-
 
 ## sig-ui-ux
 
