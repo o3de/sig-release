@@ -1,14 +1,16 @@
+
 # O3DE 22.10.0 Feature List
 
 **Status:** In Progress
 
-The suggested "Top 3" items to highlight (see below for the details) are
+Release 22.10.0 consists of Quality of Life Improvements (performance, workflows, usability) and some notable new features. Here are some highlights, followed by a detailed list of features broken down by SIG.
+* Onboarding and Collaboration (Easier to onboard and collaborate with other team members using remote projects, templates, networked asset cache ) 
+* Multiplayer is easier to setup (client-server connection, debugging, network spawning ) 
+* Artist workflow (animation import, root motion extraction, motion matching now experimental) 
+* Usability:  Viewport Interaction Improvements (Viewport entity selection, Prefab edit mode), Gem Creation Wizard, Asset Browser Improvements, hot reloading of assets, 
+*  Terrain performance - The new O3DE Terrain system is in preview. For developers who have found O3DE best for working in smaller or more enclosed environments, now you can start working on larger-scale worlds with significant performance improvements for both editing and runtime/rendering.  It can now handle 16km x 16km worlds and beyond at high framerates.
+* New features: Sky Atmosphere, Stars 
 
- 1.
- 2.
- 3.
-
-The general theme of this release is "TBD".
 
 ## sig-build
 
@@ -27,9 +29,11 @@ The general theme of this release is "TBD".
 * The Project Manager now displays the engine name and version number each project is registered with. The Project Manager now displays the current engine version in the title bar.
 * Script Canvas Architecture update that provides a framework to embed ScriptCanvas functionality in places other than Entity / Component system via the ScriptCanvas Component. The new architecture introduces a set of classes that handle a small part of the ScriptCanvas runtime. The highest level class is the ScriptCanvas::Executor which is now used by the ScriptCanvas::RuntimeComponent. The ScriptCanvas::Executor is also used by the new ScriptCanvasEditor::Interpreter, which is a class that allows developers to embed user access to ScriptCanvas functionality any where in the editor.
 * Writing C++ Script Canvas nodes is now a lot easier! We have deprecated node generics (a set of C++ macros) in favor of using AzAutoGen to produce libraries of functions or standalone nodes. We have consolidated the autogen semantics for Script Canvas grammar nodes and nodeables. We removed the concept of Script Canvas node libraries, anytime you write a node it gets registered automatically. It is no longer necessary to manually reflect or register Script Canvas nodes.
-* The O3DE editor viewport now comes with a new effect to help show both selected entities (using an outline effect) as well as helping you know what Prefab you're editing by applying a screen effect to everything not in focus. ([Editor Mode Visual Feedback Improvements (Prefab Edit Mode) #3458](https://github.com/o3de/o3de/issues/3458)).
+* Prefab Edit Mode Visual Feedback: Now when you double-click on a prefab and enter prefab edit mode, there is the option to enable an effect to grey out all entities not inside the current prefab.
+* The O3DE editor viewport now comes with a new feature to help show selected entities with an outline effect.
 * Improved visualization for the rotation manipulator in the 3D viewport (rotation segment is now displayed). ([Add rotation manipulator segment #11195](https://github.com/o3de/o3de/pull/11195) and [No overlap when drawing rotate gizmo and draw start/end segments #11550](https://github.com/o3de/o3de/pull/11550)).
 * The O3DE editor viewport now contains the new Component Mode Switcher to quickly switch between available Component Modes on entities. ([Component Mode Viewport UI Switcher](https://github.com/o3de/o3de/issues/10662)).
+* Asset Browser Updates: Previously, Asset Browser was just a view of your asset with no way of interacting with your assets. We have now added in some core features you would expect in most asset browser including, duplicating, deleting, open in associated application (material editor if it's a material file, Script canvas if it's a script canvas file, etc.) We also detect allow you to open up asset in 3rd party apps. JSON to Visual studios (or default coding tool), 3d asset in your associated DCC tool, etc. We also now have a create new workflow for the creation of new assets you want to start in a specific folder or directory.
 
 ## sig-core
 
