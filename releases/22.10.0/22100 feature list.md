@@ -1,7 +1,7 @@
 
 # O3DE 22.10.0 Feature List
 
-**Status:** In Progress
+**Status:** Done
 
 Release 22.10.0 consists of Quality of Life Improvements (performance, workflows, usability) and some notable new features. Here are some highlights, followed by a detailed list of features broken down by SIG.
 * Onboarding and Collaboration (Easier to onboard and collaborate with other team members using remote projects, templates, networked asset cache ) 
