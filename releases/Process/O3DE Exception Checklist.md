@@ -1,0 +1,11 @@
+**Exception Tracking**
+- [ ] 1. Owning SIG requests the exception, by a Sig Representative (Chair/co-chair) adding the PR to the exception requests queue board.
+- [ ] 2. Owning SIG comments on the PR explaining impact if this code does not go into stabilization.
+- [ ] 3. Unrelated SIG representative (chair/cochair) approves the exception, adding a comment indicating approval and the SIG they represent.
+- [ ] 4. UX SIG representative (chair/cochair) approves the exception, adding a comment indicating approval and the SIG they represent.
+- [ ] 5. Testing SIG representative (chair/cochair) approves the exception, adding a comment indicating approval and the SIG they represent.
+- [ ] (Must occur at some point before SIG-Release approval) Code has been approved for merging by maintainers
+- [ ] 6. SIG-Release Release Manager or co-Release Manager approves the exception, adding a comment indicating approval and the SIG they represent.
+- [ ] 7. If all approvals are accepted, then the exception PR may be merged
+- [ ] 8. Merged PR is verified successful via testing. If Merged PR verification testing failed, consult reps from step 3-5 and discussion occurs on fixing the failure vs backing out change
+- [ ] 9. Exception is complete
