@@ -1,4 +1,5 @@
 # This automation performs release tagging and artifact uploads of the LFS objects
+# Contact SIG-Build for any issues or looking to make changes
 
 name: Publish new release
 
@@ -42,7 +43,7 @@ jobs:
       contents: write
     
     steps:
-      # Checks-out the repository under $GITHUB_WORKSPACE, so the job can access it
+      # Checkout the repository under $GITHUB_WORKSPACE, so the job can access it
       - name: Checkout repo
         uses: actions/checkout@v3
         with:
@@ -79,7 +80,7 @@ jobs:
           fi
           rm -f temp-archive.*
           
-      # Creates a release tag based on imputs
+      # Creates a release tag based on inputs
       - name: Create Release
         id: create_release
         uses: ncipollo/release-action@v1.11.1
