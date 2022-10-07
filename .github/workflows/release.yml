@@ -1,4 +1,4 @@
-# This automation is to perform release tagging and artifact uploads of the LFS objects
+# This automation performs release tagging and artifact uploads of the LFS objects
 
 name: Publish new release
 
@@ -13,7 +13,7 @@ on:
         default: o3de
         options:
           - o3de
-          - o3de-atom-sampleviewer
+          - o3de-atom-sampleviewer-changml
           - o3de-multiplayersample
           - o3de-netsoaktest
       release_tag:
@@ -60,24 +60,36 @@ jobs:
         run: |
           echo ::set-output name=latest_tag::$(git describe --tags `git rev-list --tags --max-count=1`)
           echo ::set-output name=latest_main_sha::$(git log -n 1 --pretty=format:"%H" origin/main)
+          echo ::set-output name=archive_file::${{ inputs.repository }}-${{ inputs.release_tag }}-lfs
           
       - name: Archive repo as compressed files
         run: |
-          git archive -o ${{ inputs.repository }}-${{ inputs.release_tag }}-lfs.zip HEAD
-          git archive -o ${{ inputs.repository }}-${{ inputs.release_tag }}-lfs.tar.gz HEAD
+          git archive -o ${{ steps.vars.outputs.archive_file }}.zip HEAD
+          git archive -o ${{ steps.vars.outputs.archive_file }}.tar.gz HEAD
+      
+      - name: Split archive files if over limit
+        run: | # MAXSIZE = 2GB
+          MAXSIZE=2000000000
+          ARCFILE=${{ steps.vars.outputs.archive_file }}
+          if [ $(stat -c '%s' $ARCFILE.zip) -ge $MAXSIZE ]; then
+            mv $ARCFILE.zip temp-archive.zip && zip temp-archive.zip -s $MAXSIZE --out $ARCFILE.zip
+          fi
+          if [ $(stat -c '%s' $ARCFILE.tar.gz) -ge $MAXSIZE ]; then
+            mv $ARCFILE.tar.gz temp-archive.tar.gz && split -b $MAXSIZE temp-archive.tar.gz $ARCFILE.tar.gz.part
+          fi
+          rm -f temp-archive.*
           
       # Creates a release tag based on imputs
       - name: Create Release
         id: create_release
-        uses: actions/create-release@latest
-        env:
-          GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }} # The RELEASE_TOKEN var is provided by the repo's Github enviroment scecret to do cross repo actions
+        uses: ncipollo/release-action@v1.11.1
         with:
+          token: ${{ secrets.RELEASE_TOKEN }} # The RELEASE_TOKEN var is provided by the repo's Github enviroment scecret to do cross repo actions
           repo: ${{ inputs.repository }}
           owner: ${{ github.repository_owner }}
-          tag_name: ${{ inputs.release_tag }}
-          release_name: ${{ inputs.release_tag }}
-          commitish: ${{ steps.vars.outputs.latest_main_sha }}
+          name: ${{ inputs.release_tag }}
+          tag: ${{ inputs.release_tag }}
+          commit: ${{ steps.vars.outputs.latest_main_sha }}
           body: |
             ## Release Notes
             ${{ inputs.release_notes_url }}
@@ -85,28 +97,4 @@ jobs:
             **Full Changelog**:  https://github.com/${{ github.repository_owner }}/${{ inputs.repository }}/compare/${{ steps.vars.outputs.latest_tag }}...${{ inputs.release_tag }}
           draft: ${{ inputs.draft_release }}
           prerelease: false
-          
-      # Uploads zip archive to release
-      - name: Upload Release Asset Zip
-        id: upload-release-asset-zip
-        uses: actions/upload-release-asset@latest
-        env:
-          GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`.
-          asset_path: ./${{ inputs.repository }}-${{ inputs.release_tag }}-lfs.zip
-          asset_name: ${{ inputs.repository }}-${{ inputs.release_tag }}-lfs.zip
-          asset_content_type: application/zip
-      
-      # Uploads Gzip archive to release
-      - name: Upload Release Asset Gzip
-        id: upload-release-asset-gzip
-        uses: actions/upload-release-asset@latest
-        env:
-          GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./${{ inputs.repository }}-${{ inputs.release_tag }}-lfs.tar.gz
-          asset_name: ${{ inputs.repository }}-${{ inputs.release_tag }}-lfs.tar.gz
-          asset_content_type: application/x-gzip
-      
+          artifacts: "${{ steps.vars.outputs.archive_file }}.*"
