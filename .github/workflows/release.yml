@@ -14,7 +14,7 @@ on:
         default: o3de
         options:
           - o3de
-          - o3de-atom-sampleviewer-changml
+          - o3de-atom-sampleviewer
           - o3de-multiplayersample
           - o3de-netsoaktest
       release_tag:
@@ -85,7 +85,7 @@ jobs:
         id: create_release
         uses: ncipollo/release-action@v1.11.1
         with:
-          token: ${{ secrets.RELEASE_TOKEN }} # The RELEASE_TOKEN var is provided by the repo's Github enviroment scecret to do cross repo actions
+          token: ${{ secrets.RELEASE_TOKEN }} # The RELEASE_TOKEN var is provided by the repo's Github environment secret to do cross repo actions
           repo: ${{ inputs.repository }}
           owner: ${{ github.repository_owner }}
           name: ${{ inputs.release_tag }}
