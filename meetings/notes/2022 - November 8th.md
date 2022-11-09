@@ -1,6 +1,6 @@
 ## Meeting Details
 
-- **Date/Time:** November 9th, 2022 @ 5:00pm UTC / 10:00am PDT
+- **Date/Time:** November 8th, 2022 @ 5:00pm UTC / 10:00am PDT
 - **Location:** [Discord SIG-Release Voice Room](https://discord.gg/Z2bzwCRJEz)
 - **Moderator**: @tonybalandiuk
 - **Note Taker**: @vincentvincent
