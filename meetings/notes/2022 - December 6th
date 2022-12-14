@@ -1,0 +1,41 @@
+## Meeting Details
+
+- **Date/Time:** December 6th, 2022 @ 5:00pm UTC / 10:00am PDT
+- **Location:** [Discord SIG-Release Voice Room](https://discord.gg/Z2bzwCRJEz)
+- **Moderator**: @tonybalandiuk
+- **Note Taker**: @vincentvincent
+- **Agenda**: https://github.com/o3de/sig-release/issues/96
+
+## SIG Updates
+**What happened since the last meeting?**
+1. Updated the [Roadmap RFC](https://github.com/o3de/sig-release/issues/79) with the latest feedback. We will get SIG acknowledgment this week and start the RFC execution starting from December 12th, 2022. That means SIGs should start thinking about their roadmap and SIG release will work with each SIG on the roadmap publishing date.
+2. ASV will be its own release as decided [here](https://github.com/o3de/sig-release/discussions/101#discussioncomment-4222621).
+
+## Meeting Notes
+1. Discuss the next release date ~ Marketing discussion updates.
+    
+    Will need to discuss having a dedicated RM for O3DE before deciding the next release date. Tony will draft the job desc by the next meeting.
+
+2. @tonybalandiuk Update on Release Process Documentation.
+
+    Tony made a [PR](https://github.com/o3de/sig-release/pull/115). Ready to be reviewed.
+
+3. @vincent6767 - Roadmap Maintenance Roadmap Process Quick Updates.
+
+    Updated the [Roadmap RFC](https://github.com/o3de/sig-release/issues/79) with the latest feedback. We will get SIG acknowledgment this week via DM and start the RFC execution starting from December 12th, 2022. 
+
+4. SIG Release Roadmap - What are the next steps?
+
+    Tony to draft the prioritized roadmap and shares it with the channel.
+
+5. @AMZN-daimini Streamlining the release notes process updates.
+
+    Danilo will follow up with Mike to assess the feasibility.
+
+
+## Action Items
+1. @tonybalandiuk to work with Linux Foundations on opening O3DE RM job position
+2. @vincentvincent to review the Release process documentation.
+3. @vincentvincent to follow up with each SIG so they're aware of the Roadmap RFC
+4. @tonybalandiuk to draft the prioritiezd roadmap and shares it with the channel.
+5. @AMZN-daimini to follow up with Mike to assess the feasibility of the idea.
