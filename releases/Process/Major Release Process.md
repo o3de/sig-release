@@ -1,7 +1,7 @@
 > Written with [StackEdit](https://stackedit.io/).
 > <![endif]-->
 
-# O3DE Major Release Process
+# Draft - O3DE Major Release Process
 V1.0 Updated December 5, 2022. 
 The release process is managed by sig-release. To request an update to this document, please open an issue at https://github.com/o3de/sig-release/issues
 
