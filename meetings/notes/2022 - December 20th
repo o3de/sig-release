@@ -1,0 +1,46 @@
+## Meeting Details
+
+- **Date/Time:** December 20th, 2022 @ 5:00pm UTC / 10:00am PDT
+- **Location:** [Discord SIG-Release Voice Room](https://discord.gg/Z2bzwCRJEz)
+- **Moderator**: @tonybalandiuk
+- **Note Taker**: @vincentvincent
+- **Agenda**: https://github.com/o3de/sig-release/issues/96
+
+## SIG Updates
+**What happened since the last meeting?**
+1. [Roadmap RFC](https://github.com/o3de/sig-release/issues/79). We were aiming to get SIG acknowledgment the week of Dec 4 then start the RFC execution starting from December 12th, 2022, but discussion has picked up delaying our efforts to get this moving forward.
+
+## Meeting Notes
+1. Discuss with @chanmosq about release notes process. This will be a joint effort of sig-release working with sig-docs-community
+    1. Release notes
+        SIG release proposes using bot automation to remind the author to write the summary of the issue whenever they merge the PRs. Here is the proposal: https://github.com/o3de/sig-release/discussions/107
+    2. Stabilization of the documentation
+        Chanelle will talk with her team about whether there are issues with the current process and see if is there something SIG release can help with.
+    3. Features grid
+        Challenge: Persistantly reminding people. SIG release will follow up with TSC whether they still need features grid or not.
+
+2. New marketing websites
+    The group discussed briefly how's the new websites impacts the SIG release. Release notes content format will be affected, but it's just matter of structuring the content. Here is the new websites design: https://www.figma.com/file/LCRhOYaja2UqTPlxon5O0N/O3DE_Website?node-id=442%3A34&t=VBaNZylBHpEcMNCn-1
+
+2. @vincent6767 - Roadmap Discussion Updates
+    Addressed all feedbacks related with issues automation and displaying all issues in the prject. Currently waiting for further feedback.
+
+3. @tonybalandiuk Update on next release/Release manager discussion
+     will reach out to O3DF by 12/23 to get this discussion moving. 
+
+4. @tonybalandiuk Update on Release Process Documentation.
+     will review PR feedback for current process documentation today. will post PR for stabilization process by 12/23
+
+5. @tonybalandiuk Update on SIG Release Roadmap
+    have not had a change to make this yet. After I do the above, this is next on my list.
+
+6. @AMZN-daimini Streamlining the release notes process updates.
+    No updates.
+
+
+## Action Items
+1. Chanelle will talk with her team about whether there are issues with the current process and see if is there something SIG release can help with.
+2. Vincent / Tony to follow up with TSC whether the features grid are still being used or not in the TSC channel by January 2023.
+3. Tony will reach out to O3DF by 12/23 to get this discussion moving. 
+4. Vincent to update the Roadmap RFC based on the feedback.
+5. Tony will review PR feedback for current process documentation today. will post PR for stabilization process by 12/23
