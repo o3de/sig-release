@@ -1,7 +1,3 @@
-
-> Written with [StackEdit](https://stackedit.io/).
-> <![endif]-->
-
 # Draft - O3DE Major Release Process
 V1.1 Updated December 22, 2022. 
 The release process is managed by the Release Special Interest Group (SIG). To request an update to this document, please open an issue at https://github.com/o3de/sig-release/issues
@@ -27,10 +23,10 @@ The release process is managed by the Release Special Interest Group (SIG). To r
 |SIG or Group|Title|Count|Description
 |--|--|--|--
 |Release SIG|Release Manager (and optional Co-Release Manager)|1 to 2|Project manager for a given release responsible for coordinating the release and ensuring processes are followed and tasks are completed. A release manager will also have some tasks they need to complete themselves. Coordination and communication with other SIGs and the marketing committee are essential skills in being a successful release manager. Co-Release manager is second project manager for a given release. They work side-by-side with the release manager on the project management of a release and they take on some of the project management tasks. Co-Release Manager may also be used as a “training role” for someone eventually wanting to serve as release manager.
-|Build SIG|Release Deployment Engineer|1|Responsible for creating the stabilization branch, uploading the release, tagging Release, and publishing the version number update to o3debinaries.org
+|Build SIG|Release Deployment Engineer|1|Responsible for creating the stabilization branch, uploading the release, tagging Release, and publishing the version number update to o3debinaries.org. Must have maintainer privileges . 
 |Docs-Community SIG|Documentation Project Manager|1|Responsible for managing the documentation repository for a release. This includes managing release notes, publishing the documentation for a release, and applying release tags to the docs site. The Documentation Project Manager works closely with the Release manager.
 |Any SIG|Mainline Integrator|1|Requires privilege https://github.com/orgs/o3de/teams/integrators/members . Engineer responsible for merging code from the stabilization branch to mainline.
-|Any SIG|Stabilization Integrator|(up to 12 people)|During the stabilization phase, these community members are responsible for performing "branch maintenance" by merging code from the stabilization branch to the development branch according to a schedule. This branch maintenance is ensures that all of the code submitted into the stabilization branch is also applied back to the development branch.
+|Any SIG|Stabilization Integrator|up to 12|During the stabilization phase, these community members are responsible for performing "branch maintenance" by merging code from the stabilization branch to the development branch according to a schedule. This branch maintenance is ensures that all of the code submitted into the stabilization branch is also applied back to the development branch. Integrators must have maintainer privileges.
 |Any SIG|Release Verifier|1|Responsible for verifying release actions such as confirming the merge to the mainline branch, installer verification, and binary verification.
 |Marketing Committee|Marketing Coordinator|1|The marketing committee representative responsible for all of the marketing efforts around a release. They will use the feature list to develop their materials for launch such as blog posts and social media. 
 |Marketing Committee|Website Manager|1|Responsible for updates to O3DE.org. 
@@ -163,3 +159,5 @@ Begins immediately after the release. The work in this phase may be minimal, dep
 1. **Feature List Process:** The ideal way to generate a feature list would be to run a query against pull requests, since the O3DE codebase itself is the source of truth for what has been added since the last release. Although running a query against Github would be ideal, this is not yet possible for O3DE. To achieve this ideal state, you would need to introduce and some standardization for pull requests so that the feature descriptions and details are always present for significant features. More here on simplifying the process https://github.com/o3de/sig-release/discussions/107
 2. **Lack of clear overall metrics on Release Readiness:** Through discussions we realized that release readiness likely requires project-wide input (performance, ux, quality, security). Today we mainly look at bug count. We need to get project-wide input and figure out which metrics we should monitor.
 3. **We don't have a link on the downloads page for the stabilization build.** We should work with the Build SIG to make sure they get a link up the day we create the stabilization branch, so the community can more easily get and test the build. It's listed here https://github.com/o3de/o3de/issues/13208 so that it will be done for future releases. We may want to also get it on the downloads page on the website.
+
+> Written with [StackEdit](https://stackedit.io/).
