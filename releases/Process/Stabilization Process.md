@@ -7,6 +7,7 @@ O3DE Stabilization is the process we use to prepare the codebase for a release. 
 ## Key Details
 
 -   The Stabilization Process typically takes place as part of the Release Process. Please refer to the [O3DE Major Release Process](https://github.com/o3de/sig-release/blob/main/releases/Process/Major%20Release%20Process.md) for more information about O3DE releases.
+-   As of Release 22.10.0, stabilization takes approximately 5 weeks from beginning stabilization to declaring the stabilization branch as "stable"
 -   Stabilization involves the following O3DE Repositories:
     -   o3de
     -   o3de-multiplayersample
