@@ -1,3 +1,4 @@
+
 # Draft - O3DE Stabilization Process
 
 O3DE Stabilization is the process we use to prepare the codebase for a release. During Stabilization we create a branch off of the development branch to create a “stabilization branch”, limit any new feature introduced into the branch, and the community fixes bugs. This helps to ensure O3DE releases do not ship with bugs that will block a user’s ability to utilize O3DE. Note that stabilization is not mean to catch every issue, and instead works in conjunction with unit tests, nightly automated test runs, functional automated testing, manually running test passes, and issues filed by the community.  
@@ -19,9 +20,12 @@ The following outlines roles and responsibilities related to the Stabilization p
 |SIG or Group|Title|Count|Description
 |--|--|--|--
 Build SIG| Release Deployment Engineer|1|Responsible for creating the stabilization branch, uploading the release, tagging Release, and publishing the version number update to o3debinaries.org . Must have maintainer privileges.
-|Any SIG|Stabilization Integrator|up to 12|During the stabilization phase, these community members are responsible for performing "branch maintenance" by merging code from the stabilization branch to the development branch according to a schedule. This branch maintenance is ensures that all of the code submitted into the stabilization branch is also applied back to the development branch. Integrators must have maintainer privileges.
+|*All Code-Contributing SIG|Stabilization Integrator|up to 12|During the stabilization phase, these community members are responsible for performing "branch maintenance" by merging code from the stabilization branch to the development branch according to a schedule. This branch maintenance is ensures that all of the code submitted into the stabilization branch is also applied back to the development branch. Integrators must have maintainer privileges.
 |Release SIG|Release Manager|1 to 2|Release Manager (and Co-Release Manager) act on behalf of sig-release as Project manager for a given release. They responsible for coordinating the release and ensuring processes are followed and tasks are completed.
-|Any SIG|Mainline Integrator|1|Requires specific privilege [https://github.com/orgs/o3de/teams/integrators/members](https://github.com/orgs/o3de/teams/integrators/members) . Responsible for merging code from the stabilization branch to mainline.
+|*All Code-Contributing SIG|Mainline Integrator|1|Requires specific privilege [https://github.com/orgs/o3de/teams/integrators/members](https://github.com/orgs/o3de/teams/integrators/members) . Responsible for merging code from the stabilization branch to mainline.
+
+***All Code-Contributing SIG** refers to engineering/feature SIGs. These include: Build SIG, Content SIG, Core SIG, Network SIG, Platform SIG, Graphics-Audio SIG, Security SIG, Simulation SIG, Testing SIG     
+
 
 ## Terminology
 *Intent: Define terms used throughout the release process* 
@@ -71,12 +75,12 @@ There is an open discussion regarding streamlining the exception process: [https
 1.  The frequent cadence ensures that the commit rate per integration is low, making for an easier and quicker integration.
 2.  The frequent cadence makes it easier to identify and remove any stabilization changes that we do NOT want integrated into development. Better signal to noise ratio.
 3.  If a major conflict is encountered, the stall in the integration is not holding up a large chain of commits
-4.  It is easier to handle DCO issues with smaller integrations.
+4.  It is easier to handle Developer Certificate of Origin (DCO) issues with smaller integrations.
 5.  Integrations usually occur on Mondays and Thursdays. Never Fridays to reduce the chance the development branch is broken over a weekend.
 
 ### Phase 3 - Soft Lock
-
-1.  (Release Manager) Once sig-release determines the stabilization branch is potentially releasable, the branch is “soft locked”. This means no changes are allowed into the branch unless the change receives an exception from sig release and the owning sig.
+ 
+1. (Release Manager) Once sig-release determines the stabilization branch is potentially releasable, the branch is “soft locked”. This means no changes are allowed into the branch unless the change receives an exception from sig release and the owning sig. "Soft Lock" is not a physical lock - it is something that is communicated and understood across the project. The Release Manager should communicate in Discord #sig-all, #sig-release that the stabilization branch is soft locked. 
 
 ### Phase 4 - Release
 
