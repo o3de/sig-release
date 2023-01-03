@@ -1,13 +1,13 @@
 ---
 name: 'Roadmap Item'
-about: Create Roadmap Item for this project
+about: Create roadmap item for this project
 title: Roadmap Item =description=
 labels: kind/roadmap
 assignees: ''
 
 ---
 
-# O3DE RFC Feature Template
+# O3DE Roadmap Item Template
 
 ### When using this template, you do not have to fill out every question below. The questions are there for guidance.
 
