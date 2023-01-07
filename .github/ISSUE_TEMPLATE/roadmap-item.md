@@ -19,7 +19,10 @@ This roadmap item template should be used for any feature that shows in the O3DE
 Single paragraph explanation of the roadmap item
 
 ### What is the relevance of this feature?
-What problems does it solves? Why is this important? What are the use cases? What will it do once completed?
+- What problems does it solves? 
+- Why is this important? 
+- What will it do once completed?
+- Are there any changes or impacts to other features? 
 
 ### Tasks
 What tasks are necessary to complete the roadmap item?
