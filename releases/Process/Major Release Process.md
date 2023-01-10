@@ -63,7 +63,7 @@ Begins: 3 months prior to estimated release.
 Entry Criteria: Release SIG has has indicated the need for a release and has a general idea of the release date. See [key details.](#key-details) for the current release cadence.*
 
 ### 1.1 General Steps
- 1. **Release SIG** coordinates with the Technical Steering Committee, the O3DE Foundation, and the sigs to determine a release date. This may be done by the SIG chair, co-chair, or the release manager is one has been chosen.
+ 1. **Release SIG** coordinates with the Technical Steering Committee, the Open 3D Foundation Marketing Committee, and the SIGs to determine a release date. This may be done by the SIG chair, co-chair, or the release manager if one has been chosen.
  2. **Release Manager** begins the feature list (see below)
  3. **Release Manager** Creates Milestones for each of the repositories outlined in [Key Details](#key-details). Here is an example from the 22.10.0 Release. https://github.com/o3de/o3de/milestone/11 - follow a similar naming convention.
  4.  **Release Manager** creates the Key Information Github Issue similar to https://github.com/o3de/sig-release/issues/64. The releaser manager should maintain the Key Information throughout the release. It should be updated as more information about the release is known, or when details change. The release manager should also post a link to the Key Information in #sig-all Discord channel to inform the community of the upcoming release, If the Key Information changes, the Release Manager should post a new message to #sig-all noting that release information has changed.
