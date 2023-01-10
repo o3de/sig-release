@@ -1,3 +1,4 @@
+
 # Draft - O3DE Major Release Process
 V1.1 Updated December 22, 2022. 
 The release process is managed by the Release Special Interest Group (SIG). To request an update to this document, please open an issue at https://github.com/o3de/sig-release/issues
@@ -33,7 +34,6 @@ The release process is managed by the Release Special Interest Group (SIG). To r
 
 ***All Code-Contributing SIG** refers to engineering/feature SIGs. These include: Build SIG, Content SIG, Core SIG, Network SIG, Platform SIG, Graphics-Audio SIG, Security SIG, Simulation SIG, Testing SIG
 
-
 ## Terminology
 *Intent: Define terms used throughout the release process* 
 
@@ -63,7 +63,7 @@ Begins: 3 months prior to estimated release.
 Entry Criteria: Release SIG has has indicated the need for a release and has a general idea of the release date. See [key details.](#key-details) for the current release cadence.*
 
 ### 1.1 General Steps
- 1. **Release SIG** coordinates with the Technical Steering Committee, the Open 3D Foundation Marketing Committee, and the SIGs to determine a release date. This may be done by the SIG chair, co-chair, or the release manager if one has been chosen.
+1. **Release SIG** coordinates with the Technical Steering Committee, the Open 3D Foundation Marketing Committee, and the SIGs to determine a release date. This may be done by the SIG chair, co-chair, or the release manager if one has been chosen.
  2. **Release Manager** begins the feature list (see below)
  3. **Release Manager** Creates Milestones for each of the repositories outlined in [Key Details](#key-details). Here is an example from the 22.10.0 Release. https://github.com/o3de/o3de/milestone/11 - follow a similar naming convention.
  4.  **Release Manager** creates the Key Information Github Issue similar to https://github.com/o3de/sig-release/issues/64. The releaser manager should maintain the Key Information throughout the release. It should be updated as more information about the release is known, or when details change. The release manager should also post a link to the Key Information in #sig-all Discord channel to inform the community of the upcoming release, If the Key Information changes, the Release Manager should post a new message to #sig-all noting that release information has changed.
@@ -92,7 +92,8 @@ For pre-release step (4) "Review closed issues to see if anything else should be
 For each release, Github milestones are used to track bugs found in the stabilization branches of each repo involved in the release. For example, for the 22.20.0 release, the [Release/2210 milestone](https://github.com/o3de/o3de/milestone/11) captures all of the bugs found during release stabilization of the O3DE repo.
 
 Milestones are used as follows:
-* When bugs are found in the stabilization branch, the reported bug is added to the Milestone. (these instructions are posted in the Release "Key Information")
+* When bugs are found in the stabilization branch, the reported bug is added to the Milestone by the release manager. (these instructions should be posted/clarified in the Release "Key Information")
+    * This means that the release manager will need to watch incoming bugs, and for any bugs reported against the stabilization branch, they should add the bug to the release milestone.
 * Each SIG will use the milestone to understand which issues are outstanding (and should be fixed).
 * For some Milestone issues, we may choose to not fix them. For example a minor issue found very late in the stabilization process. If an issue will not be fixed for the release then (1) it should be agreed upon by the Release Manager and owning SIG (2) Add a comment to the issue indicating that the issue should get a "release note" and make sure to "@" the Documentation Project Manager (3) upon confirmation from the Documentation Project Manager, remove the milestone from the issue
 * The Release Manager will use the milestone to monitor the number of outstanding bugs, to understand how the project is progressing towards being stable.
@@ -118,23 +119,27 @@ It is crucial to maintain strong communication with the community and throughout
  - **Release Manager** communicate with the Documentation Program Manager to ensure that the release notes are kept up to date. This is important because during stabilization there will be bugs that do not get fixed and in some cases these bugs will need to be documented as known issues. 
 
 ### 2.2 Steps
- 1. **Release Manager** is responsible for ensuring all Github issues in the "Pre Release" phase of the project board are completed.
+ 1. **Release Manager** is responsible for ensuring all Github issues in the "Pre Release" phase of the project board are completed. 
+	 -  Prioritize the Feature Grid Process and make sure you reach out to SIGs ASAP about updating their feature Grids.
  2.  **Release Manager** is responsible for overall maintenance and accuracy of the project board.
  3. **Release Manager** is responsible for all tasks assigned to them  identified in the [Stabilization Process](https://github.com/o3de/sig-release/tree/main/releases/Process/Stabilization%20Process), which includes periodic community duties. For example, communicating to the community via Discord #sig-all, to inform the community that stabilization phase has begun.
- 4. On the day we end stabilization (according to plan) it is up to the **Release Manager** to make a determination on whether the stabilization branch is stable enough to be releases.  A release is considered stable when (1) there are no more blocker or critical bugs in the Stabilization branch (2)  and there is agreement from the parties involved in the release
+ 4. On the day we end stabilization (according to plan) it is up to the **Release Manager** to make a determination on whether the stabilization branch is stable enough to be releases.  A release is considered stable when (1) there are no more blocker or critical bugs in the Stabilization branch (2)  and there is agreement from the parties involved in the release.
+ 5. Per the [Stabilization Process](https://github.com/o3de/sig-release/tree/main/releases/Process/Stabilization%20Process), as of Release 22.10.0, stabilization takes approximately 5 weeks from beginning stabilization to declaring the stabilization branch as "stable"
 
  Then the stabilization branch is merged back to O3DE/main to create the release. After the release is published and all of the code has been merged back to development, the stabilization branch is deleted. During the Stabilization Phase the development branch is used in the same way that it is always used – code submissions to the development branch are not restricted in any way.
 
-### 2.3 Stabilization
+### 2.3 Stabilization Process
 [Stabilization Process](https://github.com/o3de/sig-release/tree/main/releases/Process/Stabilization%20Process)
 
-### 2.4 Feature Grid 
-//TODO - document the process for updating the feature grid. This needs to be discussed further with TSC as this should be a core requirement for each SIG.
+### 2.4 Feature Grid Process
+Currently, updating the Feature Grid is a brute force manual process, by which the Release Manager requests the other SIGs to update the process. See all of the feature grid issues from the 22.10 release here:  https://github.com/o3de/o3de/projects/18?card_filter_query=grid  
+
+During Phase 2, it is up to the Release Manager to work with SIGs to get them to update the Feature Grid.
 
 *Exit Criteria: All Pre-Release Steps are complete*
 
 ## Phase (3 of 4): Release Day
-*Intent: Accomplish all tasks needed to deploy the release so that it is available for download. 
+*Intent: Accomplish all tasks needed to deploy the release so that it is available for download.
 Begins: day of release
 Entry Criteria: All pre-release steps are complete. Prior to Release Day you will have had 2 opportunities to go through the Release day work (1) In the Planning phase of the release, there will be a task "Prepare for Launch Call" which will be the first time you read through all of the steps in the launch call (2) In the Pre-Release phase there will be a "dry run" of the release day call.*
 
@@ -155,11 +160,15 @@ Begins immediately after the release. The work in this phase may be minimal, dep
 1. Go through the "Post Release" phase of the Github project board and ensure the tasks get completed. Reach out to the owners of each task as needed to make sure they complete their tasks.
 2. Make sure all previous tasks are fully completed closed (you may have minor things you wanted to follow up on).
 3. Make any updates to this documentation as needed. This documentation should reflect the current release process.
+4. Open a discussion to gather feedback on the release, similar to https://github.com/o3de/sig-release/discussions/101  . Post to Discord #sig-all and #sig-release to ask for feedback. 
+5. In a future sig-release meeting review the discussion with the Release SIG. In the meeting address comments,  then if needed generate new issues of things that should be changed.
 
 
 ## Appendix A: Opportunities and Potential Improvements
 1. **Feature List Process:** The ideal way to generate a feature list would be to run a query against pull requests, since the O3DE codebase itself is the source of truth for what has been added since the last release. Although running a query against Github would be ideal, this is not yet possible for O3DE. To achieve this ideal state, you would need to introduce and some standardization for pull requests so that the feature descriptions and details are always present for significant features. More here on simplifying the process https://github.com/o3de/sig-release/discussions/107
 2. **Lack of clear overall metrics on Release Readiness:** Through discussions we realized that release readiness likely requires project-wide input (performance, ux, quality, security). Today we mainly look at bug count. We need to get project-wide input and figure out which metrics we should monitor.
 3. **We don't have a link on the downloads page for the stabilization build.** We should work with the Build SIG to make sure they get a link up the day we create the stabilization branch, so the community can more easily get and test the build. It's listed here https://github.com/o3de/o3de/issues/13208 so that it will be done for future releases. We may want to also get it on the downloads page on the website.
+4. **Feature Grid Process** Currently, updating the Feature Grid is a brute force manual process, by which the Release Manager requests the other SIGs to update the process. See all of the feature grid issues from the 22.10 release here:  https://github.com/o3de/o3de/projects/18?card_filter_query=grid  . SIG-Release  thinks this can be made easier by potentially making the feature grid updating a requirement of SIGs on a recurring basis. 
+Why we are not trying to change this right now? We are asking SIG to work on roadmaps in Jan 2023, we do not want to add additional requests to SIG at this time.  
 
 > Written with [StackEdit](https://stackedit.io/).
