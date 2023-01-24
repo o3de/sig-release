@@ -24,7 +24,7 @@
 5. To discuss whether to include O3DE extras as part of the O3DE release or not.
    1. Byrcolin proposes O3DE Extra as part of the release mainly due to it's a canonical repo of O3DE engine, meaning it should be part of one project.
    1. Few details of O3DE extras discussed: O3DE Extra goes through AR and it's not automatically if the engine is updated.
-   1. Next step: @byrcolin to create a GHI in the SIG release defining the proposal and SIG relaese will help mention relevant party.
+   1. Next step: @tonybalandiuk to open a discussion for the general "what should be included in a release" and then there would be a request to add o3de-extras before the next release
 6. @tonybalandiuk to give an update on when the marketing website changes will happen.
    1. No exact date yet. @aFinchy will get back to us once the date is set.
 7. @AMZN-daimini Streamlining the release notes process updates. 
@@ -36,6 +36,6 @@
 ## Action Items
 1. @vincentvincent to work with the SIGs to merge the roadmap issue template, follow up with SIG about the roadmap, and follow up with TSC about their feedback related to the roadmap placement.
 2. @tonybalandiuk will work with @vincentvincent to define the roadmap.
-3. @byrcolin to create a GHI in the SIG release defining the proposal and SIG relaese will help mention relevant party.
+3. @tonybalandiuk to open a discussion for the general "what should be included in a release" and then there would be a request to add o3de-extras before the next release
 4. @aFinchy will get back to us once the date is set.
 5. @tonybalandiuk will hold a discussion @AMZN-daimini and @chanmosq to go through the discussion.
