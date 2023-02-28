@@ -124,14 +124,14 @@ It is crucial to maintain strong communication with the community and throughout
  1. **Release Manager** is responsible for ensuring all Github issues in the "Pre Release" phase of the project board are completed. 
 	 -  Prioritize the Feature Grid Process and make sure you reach out to SIGs ASAP about updating their feature Grids.
  2.  **Release Manager** is responsible for overall maintenance and accuracy of the project board.
- 3. **Release Manager** is responsible for all tasks assigned to them  identified in the [Stabilization Process](https://github.com/o3de/sig-release/tree/main/releases/Process/Stabilization%20Process), which includes periodic community duties. For example, communicating to the community via Discord #sig-all, to inform the community that stabilization phase has begun.
+ 3. **Release Manager** is responsible for all tasks assigned to them  identified in the [Stabilization Process](https://github.com/o3de/sig-release/blob/main/releases/Process/Stabilization%20Process.md), which includes periodic community duties. For example, communicating to the community via Discord #sig-all, to inform the community that stabilization phase has begun.
  4. On the day we end stabilization (according to plan) it is up to the **Release Manager** to make a determination on whether the stabilization branch is stable enough to be releases.  A release is considered stable when (1) there are no more blocker or critical bugs in the Stabilization branch (2)  and there is agreement from the parties involved in the release.
- 5. Per the [Stabilization Process](https://github.com/o3de/sig-release/tree/main/releases/Process/Stabilization%20Process), as of Release 22.10.0, stabilization takes approximately 5 weeks from beginning stabilization to declaring the stabilization branch as "stable"
+ 5. Per the [Stabilization Process](https://github.com/o3de/sig-release/blob/main/releases/Process/Stabilization%20Process.md), as of Release 22.10.0, stabilization takes approximately 5 weeks from beginning stabilization to declaring the stabilization branch as "stable"
 
  Then the stabilization branch is merged back to O3DE/main to create the release. After the release is published and all of the code has been merged back to development, the stabilization branch is deleted. During the Stabilization Phase the development branch is used in the same way that it is always used – code submissions to the development branch are not restricted in any way.
 
 ### 2.3 Stabilization Process
-[Stabilization Process](https://github.com/o3de/sig-release/tree/main/releases/Process/Stabilization%20Process)
+[Stabilization Process](https://github.com/o3de/sig-release/blob/main/releases/Process/Stabilization%20Process.md)
 
 ### 2.4 Feature Grid Process
 Currently, updating the Feature Grid is a brute force manual process, by which the Release Manager requests the other SIGs to update the process. See all of the feature grid issues from the 22.10 release here:  https://github.com/o3de/o3de/projects/18?card_filter_query=grid  
