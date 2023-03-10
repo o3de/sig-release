@@ -1,6 +1,6 @@
 
-# Draft - O3DE Stabilization Process
-V1.0 Updated Jan 10, 2023. The release process is managed by sig-release. To request an update to this document, please open an issue at [https://github.com/o3de/sig-release/issues](https://github.com/o3de/sig-release/issues)
+# O3DE Stabilization Process
+V1.1 Updated Mar 10, 2023. The release process is managed by sig-release. To request an update to this document, please open an issue at [https://github.com/o3de/sig-release/issues](https://github.com/o3de/sig-release/issues)
 																												
 
 O3DE Stabilization is the process we use to prepare the codebase for a release. During Stabilization we create a branch off of the development branch to create a “stabilization branch”, limit any new feature introduced into the branch, and the community fixes bugs. This helps to ensure O3DE releases do not ship with bugs that will block a user’s ability to utilize O3DE. Note that stabilization is not mean to catch every issue, and instead works in conjunction with unit tests, nightly automated test runs, functional automated testing, manually running test passes, and issues filed by the community.  
@@ -13,7 +13,8 @@ O3DE Stabilization is the process we use to prepare the codebase for a release. 
 -   Stabilization involves the following O3DE Repositories:
     -   o3de
     -   o3de-multiplayersample
-    -   o3de-netsoaktest
+    -   o3de-test
+    -   o3de-extras
 
 ## Roles and Responsibilities
 *Intent: Outlines the minimum set of roles and their responsibilities in order to complete all of the necessary release tasks.*
@@ -88,5 +89,3 @@ There is an open discussion regarding streamlining the exception process: [https
 ### Phase 4 - Release
 
 1.  (Mainline Integrator) This step occurs on release day during the release call. Once sig-release determines the stabilization branch has been locked and hardened for enough time (usually 2 weeks) and no critical issues are outstanding, the stabilization branch is integrated to development, then integrated to main, and tagged with the release version.
-
-> Written with [StackEdit](https://stackedit.io/).
