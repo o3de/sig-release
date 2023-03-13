@@ -1,6 +1,6 @@
 
-# Draft - O3DE Major Release Process
-V1.1 Updated December 22, 2022. 
+# O3DE Major Release Process
+V1.2 Updated Mar 10, 2023. 
 The release process is managed by the Release Special Interest Group (SIG). To request an update to this document, please open an issue at https://github.com/o3de/sig-release/issues
 
 ## Key Details
@@ -16,6 +16,7 @@ The release process is managed by the Release Special Interest Group (SIG). To r
 	* o3de
 	* o3de-multiplayersample
 	* o3de-netsoaktest
+	* o3de-extras
 
 
 ## Roles and Responsibilities
@@ -172,5 +173,3 @@ Begins immediately after the release. The work in this phase may be minimal, dep
 3. **We don't have a link on the downloads page for the stabilization build.** We should work with the Build SIG to make sure they get a link up the day we create the stabilization branch, so the community can more easily get and test the build. It's listed here https://github.com/o3de/o3de/issues/13208 so that it will be done for future releases. We may want to also get it on the downloads page on the website.
 4. **Feature Grid Process** Currently, updating the Feature Grid is a brute force manual process, by which the Release Manager requests the other SIGs to update the process. See all of the feature grid issues from the 22.10 release here:  https://github.com/o3de/o3de/projects/18?card_filter_query=grid  . SIG-Release  thinks this can be made easier by potentially making the feature grid updating a requirement of SIGs on a recurring basis. 
 Why we are not trying to change this right now? We are asking SIG to work on roadmaps in Jan 2023, we do not want to add additional requests to SIG at this time.  
-
-> Written with [StackEdit](https://stackedit.io/).
