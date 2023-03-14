@@ -27,8 +27,11 @@
 @AMZN-daimini Roadmap Item =Simplify the Release Notes tracking process= #135 updates.
 1. No updates
 
+@chanmosq Docs Release Process
+1. Published the docs release process. You can read it here: https://github.com/o3de/sig-docs-community/tree/main/release-process
+
 ## Action Items
 1. @tony to reach out to Royal if we don't get any RM on April 3rd.
 2. @vincent to work with Tony and all SIGs about adding roadmap maintenance responsibilities on the SIG charter.
 3. @tony will update the release process about reviewers/maintainers.
-4. @tony to work on the features list and asks SIGs to contribut
+4. @tony to work on the features list and asks SIGs to contribute
