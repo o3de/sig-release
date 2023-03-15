@@ -1,12 +1,12 @@
 # O3DE Docs Release Process
 
-The **Open 3D Engine (O3DE) Documentation** is released in conjunction with the O3DE codebase, so that each release has a complementary set of documentation accurate to the functionality present in the release. This guide contains all of the information needed to update the O3DE Documentation for an upcoming release. It's a sub-process of the overarching [Major Release Process](./Process/Major%20Release%20Process.md). The O3DE Documentation is maintained in the [`o3de.org`](https://github.com/o3de/o3de.org) repo, and most updates will result in pull requests (PRs).
+The **Open 3D Engine (O3DE) Documentation** is released in conjunction with the O3DE codebase, so that each release has a complementary set of documentation accurate to the functionality present in the release. This guide contains all of the information needed to update the O3DE Documentation for an upcoming release. It's a sub-process of the overarching [Major Release Process](./Major%20Release%20Process.md). The O3DE Documentation is maintained in the [`o3de.org`](https://github.com/o3de/o3de.org) repo, and most updates will result in pull requests (PRs).
 
 *This document is owned by the Docs and Community SIG and maintained in sig-release repository. To make updates to this document, please reach out to the #sig-docs-community channel in the O3DE Discord and create a pull request.*
 
 ## Docs Release Process Runbook
 
-The Docs Release Process Runbook outlines the steps that the Docs Project Manager must take for the upcoming O3DE release. It supplements the overarching [Major Release Process Runbook](./Process/Major%20Release%20Process.md#major-release-process-runbook), which details the process across all roles of the release process. 
+The Docs Release Process Runbook outlines the steps that the Docs Project Manager must take for the upcoming O3DE release. It supplements the overarching [Major Release Process Runbook](./Major%20Release%20Process.md#major-release-process-runbook), which details the process across all roles of the release process. 
 
 The schedule for the time-sensitive release process is as follows:
 
@@ -27,11 +27,11 @@ The schedule for the time-sensitive release process is as follows:
 
 **Phase (3 of 4): Release Day**
 
-Follow [Release Day](./Process/Major%20Release%20Process.md#phase-3-of-4-release-day) instructions in the O3DE Major Release Process document.
+Follow [Release Day](./Major%20Release%20Process.md#phase-3-of-4-release-day) instructions in the O3DE Major Release Process document.
 
 **Phase (4 of 4): Post-Release**
 
-Follow [Post-Release](./Process/Major%20Release%20Process.md#phase-4-of-4-post-release) instructions in the O3DE Major Release Process document.
+Follow [Post-Release](./Major%20Release%20Process.md#phase-4-of-4-post-release) instructions in the O3DE Major Release Process document.
 
 
 Additional details for these steps are described in the remainder of this document.
