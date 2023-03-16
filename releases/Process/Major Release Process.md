@@ -26,7 +26,7 @@ The release process is managed by the Release Special Interest Group (SIG). To r
 |--|--|--|--
 |Release SIG|Release Manager (and optional Co-Release Manager)|1 to 2|Project manager for a given release responsible for coordinating the release and ensuring processes are followed and tasks are completed. A release manager will also have some tasks they need to complete themselves. Coordination and communication with other SIGs and the marketing committee are essential skills in being a successful release manager. Co-Release manager is second project manager for a given release. They work side-by-side with the release manager on the project management of a release and they take on some of the project management tasks. Co-Release Manager may also be used as a “training role” for someone eventually wanting to serve as release manager.
 |Build SIG|Release Deployment Engineer|1|Responsible for creating the stabilization branch, uploading the release, tagging Release, and publishing the version number update to o3debinaries.org. Must have maintainer privileges . 
-|Docs-Community SIG|Documentation Project Manager|1|Responsible for managing the documentation repository for a release. This includes managing release notes, publishing the documentation for a release, and applying release tags to the docs site. The Documentation Project Manager works closely with the Release manager.
+|Docs-Community SIG|Documentation Project Manager|1|Responsible for managing the documentation repository for a release. This includes managing release notes, publishing the documentation for a release, and applying release tags to the docs site. The Documentation Project Manager works closely with the Release manager, completing the steps detailed in the [Docs Release Process](./Docs%20Release%20Process.md).
 |*All Code-Contributing SIG|Mainline Integrator|1|Requires privilege https://github.com/orgs/o3de/teams/integrators/members . Engineer responsible for merging code from the stabilization branch to mainline.
 |*All Code-Contributing SIG|Stabilization Integrator|up to 12|During the stabilization phase, these community members are responsible for performing "branch maintenance" by merging code from the stabilization branch to the development branch according to a schedule. This branch maintenance is ensures that all of the code submitted into the stabilization branch is also applied back to the development branch. Integrators must have maintainer privileges.
 |All SIG|Release Verifier|1|Responsible for verifying release actions such as confirming the merge to the mainline branch, installer verification, and binary verification.
@@ -137,7 +137,18 @@ It is crucial to maintain strong communication with the community and throughout
 ### 2.4 Feature Grid Process
 Currently, updating the Feature Grid is a brute force manual process, by which the Release Manager requests the other SIGs to update the process. See all of the feature grid issues from the 22.10 release here:  https://github.com/o3de/o3de/projects/18?card_filter_query=grid  
 
-During Phase 2, it is up to the Release Manager to work with SIGs to get them to update the Feature Grid.
+During Phase 2, it is up to the Release Manager to work with SIGs to get them to update the Feature Grid. The Documentation Project Manager is responsible for publishing the Feature Grid to the O3DE website. For more information refer to the [Feature Grid](./Docs%20Release%20Process.md#feature-grid) section in the Docs Release Process. 
+
+### 2.5 Documentation Release Process
+
+The Documentation Project Manager is responsible for the following items:
+* **O3DE Docs Stabilization**
+* **Release Notes**
+* **Feature Grid**
+* **C++ API Reference Generation**
+* **Documentation Versioning**
+* **Version Information**
+Each of these tasks are further explained in the [Docs Release Process](./Docs%20Release%20Process.md). 
 
 *Exit Criteria: All Pre-Release Steps are complete*
 
