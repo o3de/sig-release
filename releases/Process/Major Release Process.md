@@ -150,7 +150,9 @@ The Documentation Project Manager is responsible for the following items:
 * **C++ API Reference Generation**
 * **Documentation Versioning**
 * **Version Information**
-Each of these tasks are further explained in the [Docs Release Process](./Docs%20Release%20Process.md). 
+Each of these tasks are further explained in the [Docs Release Process](./Docs%20Release%20Process.md).
+
+The **Release Manager** is responsible for reviewing the release notes once available. This review should happen prior to release. This corresponds to a task in the release project board.  
 
 *Exit Criteria: All Pre-Release Steps are complete*
 
