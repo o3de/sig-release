@@ -15,6 +15,7 @@ O3DE Stabilization is the process we use to prepare the codebase for a release. 
     -   o3de-multiplayersample
     -   o3de-netsoaktest
     -   o3de-extras
+    -	o3de.org
 
 ## Roles and Responsibilities
 *Intent: Outlines the minimum set of roles and their responsibilities in order to complete all of the necessary release tasks.*
