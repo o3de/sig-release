@@ -41,4 +41,4 @@ Release updates: https://github.com/o3de/sig-release/issues/133
 
 ## Action Items
 1. @tony to post the feature list soon so everyone can contribute to it.
-2. @tony and @vincent to continue the o3de-extras discussion in the #sig-release channel and tagging relevan stakeholder.
+2. @tony and @vincent to continue the o3de-extras discussion in the #sig-release channel and tagging relevant stakeholder.
