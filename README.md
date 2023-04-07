@@ -4,7 +4,7 @@
 This group is the coordinating group that works with all SIGs to collect and produce a release package in a cadence with a standard process. This SIG is created with chairs and maintainers from each horizontal SIG as well as dedicated members.
 
 ## Goals
-* Make sure releases are defines and met
+* Make sure releases are defined and met
 * Manage schedule of releases and cadence
 * Determine release naming convention
 * Major goals that SIG seeks to generally achieve
