@@ -17,6 +17,7 @@ The release process is managed by the Release Special Interest Group (SIG). To r
 	* o3de-multiplayersample
 	* o3de-netsoaktest
 	* o3de-extras
+	* o3de.org
 
 
 ## Roles and Responsibilities
@@ -74,8 +75,8 @@ Entry Criteria: Release SIG has has indicated the need for a release and has a g
  6. **Release Manager** ensures all Planning tasks on the project board are completed, either by completing them or assigning them to others.
  7. **Release Manager**  has a Planning task on the project board to identify all Release Roles. These release roles should be updated in the Key Information once known.
 
-### 1.2 Beginning work on the Feature List 
-The Feature List usually begins 6-8 weeks prior to release.  See [Terminology](#terminology) for description of the Feature List.
+### 1.2 Create the Feature List 
+The Feature List usually begins 6-8 weeks prior to release and ends 1-2 weeks after stabilization begins.  See [Terminology](#terminology) for description of the Feature List.
 Entry Criteria: A Pre Release task exists to generate the Feature List, similar to https://github.com/o3de/o3de/issues/11100
 
 Note: This is a highly manual process. There is an opportunity to improve. See Appendix A,
@@ -88,8 +89,9 @@ For pre-release step (4) "Review closed issues to see if anything else should be
 	* For each roadmap item delivered to the o3de codebase since the last release, enter a summary into the feature list.
 	* If you need assistance, comment under the GHI or reach out to the SIG owning that area of the engine
 	* (Optional) Review the submitted pull requests or closed Github Issues. The reason to do this would be to discover any features that were not on the Roadmap, potentially features that were accidentally missed. 
-3. Once you have created the feature list, post a note to #sig-all in discord requesting the SIGs to review and update if needed via Pull Request.
+3. Once you have created the feature list, post a note to #sig-all in discord requesting the SIGs to review and update if needed via Pull Request. Allow Pull Requests to the Feature List until 1-2 weeks after Stabilization begins (agree on a date with the Documentation Project Manager). 
 4. Notify the marketing committee once the feature list is mostly (80%) done (you have some input from each SIG, and they indicate that they "most" of their work submitted). They may ask for a summary of the release and key features. It is up to the release manager to provide this guidance to the marketing committee. The release manager may discuss with the Release SIG or any other SIG to figure this out.
+5. Once you reach the date to stop accpeting PRs to the Feature list. Notify the Documentation Project Manager to take the feature list and begin the Release Notes. From this point forward, any changes needed to the release documentation should be done by coordinating with the Documentation Project Manager.
 
 ### 1.3 More about how Milestones are used
 For each release, Github milestones are used to track bugs found in the stabilization branches of each repo involved in the release. For example, for the 22.20.0 release, the [Release/2210 milestone](https://github.com/o3de/o3de/milestone/11) captures all of the bugs found during release stabilization of the O3DE repo.
@@ -148,7 +150,9 @@ The Documentation Project Manager is responsible for the following items:
 * **C++ API Reference Generation**
 * **Documentation Versioning**
 * **Version Information**
-Each of these tasks are further explained in the [Docs Release Process](./Docs%20Release%20Process.md). 
+Each of these tasks are further explained in the [Docs Release Process](./Docs%20Release%20Process.md).
+
+The **Release Manager** is responsible for reviewing the release notes once available. This review should happen prior to release. This corresponds to a task in the release project board.  
 
 *Exit Criteria: All Pre-Release Steps are complete*
 
