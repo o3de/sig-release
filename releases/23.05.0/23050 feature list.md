@@ -1,5 +1,5 @@
 
-# O3DE 22.10.0 Feature List
+# O3DE 23.05.0 Feature List
 
 **Status:** In-Progress
 
