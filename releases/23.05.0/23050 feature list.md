@@ -105,6 +105,7 @@ Metrics files should ideally be output to an active projects `<project-root>/use
 		* Material editor and material canvas crash switching to Multiview at XR pipelines.
 		* The organization of all of the shader and material files needs to be simplified to make it easier to find shader and material files.
 		* There are several to do items as a result of these changes that need to be addressed.
+* The TAA pass has been split into two passes to allow for the copying of TAA's history buffer to be separated from the TAA algorithm itself. This required a change to PostProcessParent.pass to reference `TaaParentTemplate` instead of `TaaTemplate`. If your project overrides PostProcessParent.pass and uses TAA, then it will need to be updated to point to the new TAA parent pass.
 
 
 ## sig-network
