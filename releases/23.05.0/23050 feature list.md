@@ -18,7 +18,11 @@ Release 23.05.0 consists of .... Here are some highlights, followed by a detaile
 ## sig-content
 
 * Adds support for global python scripts per asset type to simply customizations in the scene pipeline.
-* A new Asset Browser experience is being prepared and can be enabled setting the ed_useWIPAssetBrowserDesign cvar to true. Once enabled you can turn on the new Asset Browser from the Tools menu,
+* A new Asset Browser experience has been prepared and turned on by default. The new Asset Browser experience includes three new layout modes (table view, thumbnail view, list view), file operations (add/delete/edit/rename/move), asset drag and drop support, URL bar for easy sharing and editing, breadcrumb and navigation bar, new detached Asset Browser inspector panel, filter options to hide unusable editor or engine assets, and all new asset icons.
+	* To disable the new Asset Browser, disable the ed_useWIPAssetBrowserDesign console variable from the Tools menu
+	* If the new Asset Browser layout is not properly set, restore the default layout from the View -> Layouts menu option
+	* Searching is disabled in the table view while this feature is being developed, please use the thumbnail or list view to search for assets
+	* Check out all the work done [in the Asset Browser project page](https://github.com/orgs/o3de/projects/16)!
 * Gems creators can now specify compatible platforms, which can be filtered against in the gem catalog.
 * Users can choose to edit existing gems .json files via the Create a Gem Wizard or CLI.
 * O3DE utility widgets in the AzQtComponents library are now exposed to Python and Pyside. This allows Python-based developers of tools and gems to use or extend AzQtComponents for tools, plugins, or automation.
