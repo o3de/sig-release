@@ -84,15 +84,13 @@ Metrics files should ideally be output to an active projects `<project-root>/use
 		* Switching to multi view and XR pipelines causes a crash in material editor and material canvas.
 * CPU performance has been improved such that an 8 core CPU with an nVidia 2080 can handle 9000 static and 1000 dynamic entities at greater than 30fps at 1080p
 * Added support for Terrain nodes in Landscape Canvas  
-	* Added a generic paintbrush workflow and implemented the ability to paint both heights and color directly in the editor viewport for the Terrain System  
-	* Added the Terrain Developer Guide that explains how developers can use and extend the terrain system.  
-	* The paint brush workflow also includes runtime scripting support for real-time modifications of the terrain using a painting API.  
-	* Here are some documentation links, they'll need to get fixed up to point to the release branch of the docs:  
 		* Tutorial on creating terrain from images using Landscape Canvas: https://www.o3de.org/docs/learning-guide/tutorials/environments/create-terrain-from-images/  
-		* Image Gradient Component with Paint Brush support: https://development--o3deorg.netlify.app/docs/user-guide/components/reference/gradients/image-gradient/  
-		* Terrain Macro Material Component with Paint Brush support: https://development--o3deorg.netlify.app/docs/user-guide/components/reference/terrain/terrain-macro-material/  
-		* Generalized Paint Brush documentation: https://development--o3deorg.netlify.app/docs/user-guide/components/reference/paintbrush/paintbrush/  
-		* Terrain Developer Guide: https://development--o3deorg.netlify.app/docs/user-guide/visualization/environments/terrain/terrain-developer-guide/
+* Added a generic paintbrush workflow and implemented the ability to paint both heights and color directly in the editor viewport for the Terrain System  
+	* The paint brush workflow also includes runtime scripting support for real-time modifications of the terrain using a painting API.  
+	* Generalized Paint Brush documentation: https://www.o3de.org/docs/user-guide/components/reference/paintbrush/paintbrush/  
+	* Image Gradient Component with Paint Brush support: https://www.o3de.org/docs/user-guide/components/reference/gradients/image-gradient/  
+	* Terrain Macro Material Component with Paint Brush support: https://www.o3de.org/docs/user-guide/components/reference/terrain/terrain-macro-material/  
+* Added the Terrain Developer Guide that explains how developers can use and extend the terrain system: https://www.o3de.org/docs/user-guide/visualization/environments/terrain/terrain-developer-guide/
 * Sphere and disk lights now support shadow caching, which is accessible as a checkbox on the light component. This makes it so shadows do not re-render when nothing in their field of view has changed, and can greatly accelerate shadows on mostly static scenes. Models which have vertex animation in the shader can toggle on "Always moving" in the mesh component to ensure that they will always trigger updates when in the view of a cached shadow.
 * Added support for stereoscopic rendering (i.e VR support) via OpenXr within O3de. This support was added through the Vulkan backend and it has been extensively tested using Quest 2. As part of this effort we are able to support Link mode where the rendering is done on PC and can be viewed on a stereoscopic display or the app can be run on the device natively. A special optimized VR pipeline has been added to Atom to help support running the app natively on the device.
 * The texture streaming support has been expanded to Vulkan backend. Now we have image streaming control which can load or evict texture mips automatically at runtime based on the streaming image pool's budget.
