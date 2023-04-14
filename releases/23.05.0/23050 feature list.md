@@ -192,6 +192,7 @@ Metrics files should ideally be output to an active projects `<project-root>/use
 
 * PhysX 5.1 shows a 15% increase in simulation performance compared with PhysX 4.
 * With PhysX 5.1, mobile assets now use the more optimal structure eBVH34.
+* Developers can now override `LuaIDE`, and use a different Lua Editor/Debugger: https://github.com/o3de/o3de/wiki/Working-With-An-External-Lua-Debugger.
 
 ## Upgrade Steps
 
