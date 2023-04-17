@@ -112,7 +112,7 @@ Metrics files should ideally be output to an active projects `<project-root>/use
 
 ## sig-network
 
-* Provide a major update to the Multiplayer sample game: https://github.com/o3de/o3de-multiplayersample to provide a feature rich game experience with UX, audio, visual FX, player vs player and player vs environment elements.
+* Provides a major update to the Multiplayer sample game: https://github.com/o3de/o3de-multiplayersample to provide a feature rich game experience with UX, audio, visual FX, player vs player and player vs environment elements.
 * Provide a new simple player spawner component that avoids the needs to write custom spawn logic, [#13871](https://github.com/o3de/o3de/pull/13871)
 * Add a validation mechanism to identify when client and server have differences in networked code and properties to aid debugging of these issues.
 * Provides method for code separation between client and server side code to prevent any exposure of server side logic to clients. Provides a new Unified Launcher target to aid local testing.
