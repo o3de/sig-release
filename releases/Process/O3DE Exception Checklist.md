@@ -8,4 +8,5 @@
 - [ ] 6. SIG-Release Release Manager or co-Release Manager approves the exception, adding a comment indicating approval and the SIG they represent.
 - [ ] 7. If all approvals are accepted, then the exception PR may be merged
 - [ ] 8. Merged PR is verified successful via testing. If Merged PR verification testing failed, consult reps from step 3-5 and discussion occurs on fixing the failure vs backing out change
-- [ ] 9. Exception is complete
+- [ ] 9. Update release documentation if needed. You might need to do this if your change affects something that was specifically called out in the release documentaiton. If your exception is early in the stabilization process then, if needed, issue a pull request against the Feature List (sig-release/releases/YY.MM.N/YYMMN.feature list.md , example (/o3de/sig-release/blob/main/releases/23.05.0/23050%20feature%20list.md ). If the release has progressed to the point where release notes are created, then please issue a pull request against the Release Notes  (o3de/o3de.org/content/docs/release-notes/YYMM-release-notes.md) where YYMM is the year and month of the release, for example (o3de/o3de.org/content/docs/release-notes/2305-release-notes.md)
+- [ ] 10. Exception is complete
