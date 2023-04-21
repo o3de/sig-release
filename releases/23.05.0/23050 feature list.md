@@ -3,10 +3,18 @@
 
 **Status:** In-Progress
 
-Release 23.05.0 consists of .... Here are some highlights, followed by a detailed list of features broken down by SIG.
+Here are some highlights of 23.05.0, followed by a detailed list of features broken down by SIG.
+1.	New and Improved Authoring Experiences: 
+Material Canvas is a new intuitive, easy to use, node based, visual scripting interface that allows users to create new, custom shaders and materials. It is built upon the combined foundations of script canvas and material editor that O3DE users are already familiar with. Read More here https://github.com/o3de/sig-graphics-audio/issues/51
+O3DE now has a Material Pipeline, a layer of abstraction between lighting and materials which utilizes new builders and new features from the asset system to build unique shaders for each render pipeline. This provides modularity and extensibility to the Atom Renderer, allowing easier customization of the render pipeline.
+Physics & animations improvements including support for PhysX 5.1 and improvements in multiple PhysX authoring workflows. Users will notice an update to the Animation Editor experience, which is now more consistent with other O3DE tools. The Animation Asset Import process is now more robust and straightforward, and the Animation Editor Animgraph now has a Performance Visualizer to help users profiling and optimizing their Animgraphs.
+Terrain System now provides users a paintbrush tool so they may paint inside the viewport to create or modify terrain.
 
-* Highlight 1
-* Highlight 2
+2.	Multiplayer Sample Game: The repo O3DE-MultiplayerSample is home to O3DE’s newest project, a networked player vs. player vs. environment game supporting 1 to 15 players. In this sample, players compete for the highest score to win. Over a series of rounds, players race around the starbase to collect gems and rack up points. Each player is armed with a laser pistol and protected by a shield. Taking damage from laser blasts depletes the player's shield. Once the shield is depleted, the player respawns at the cost of some of their collected gems. Do you risk it all to win? Players Read more at https://github.com/o3de/o3de-multiplayersample#readme
+
+3.	New Asset Browser: O3DE now has a new Asset Browser Experience within the editor that provides users with multiple layout options, file operations, an asset inspector panel, and other operations to manage their assets.
+4.	Additional VR/XR support: Support for stereoscopic rendering (i.e VR support) via OpenXr within O3DE.
+
 
 
 ## sig-build
