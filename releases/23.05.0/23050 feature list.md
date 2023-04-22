@@ -13,7 +13,10 @@ Terrain System now provides users a paintbrush tool so they may paint inside the
 2.	Multiplayer Sample Game: The repo O3DE-MultiplayerSample is home to O3DE’s newest project, a networked player vs. player vs. environment game supporting 1 to 15 players. In this sample, players compete for the highest score to win. Over a series of rounds, players race around the starbase to collect gems and rack up points. Each player is armed with a laser pistol and protected by a shield. Taking damage from laser blasts depletes the player's shield. Once the shield is depleted, the player respawns at the cost of some of their collected gems. Do you risk it all to win? Players Read more at https://github.com/o3de/o3de-multiplayersample#readme
 
 3.	New Asset Browser: O3DE now has a new Asset Browser Experience within the editor that provides users with multiple layout options, file operations, an asset inspector panel, and other operations to manage their assets.
-4.	Additional VR/XR support: Support for stereoscopic rendering (i.e VR support) via OpenXr within O3DE.
+
+4. 	Installation and Gem Improvements: Multiple versions of O3DE can now be installed on the same drive, and projects are aware of which O3DE version they were created in and last used with. In addition Gems creators can now specify compatible platforms, which can be filtered against in the gem catalog.
+
+5.	Additional VR/XR support: Support for stereoscopic rendering (i.e VR support) via OpenXr within O3DE.
 
 
 
