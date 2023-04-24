@@ -47,6 +47,8 @@ Terrain System now provides users a paintbrush tool so they may paint inside the
 * Viewport UI Switcher Improvements ([#13108](https://github.com/o3de/o3de/pull/13108), [#13036](https://github.com/o3de/o3de/pull/13036))
 * Multiple fixes and improvements to editor ‘Be this camera’ functionality ([#14269](https://github.com/o3de/o3de/pull/14269), [#15119](https://github.com/o3de/o3de/pull/15119))
 * Several small improvements to viewport camera behavior ([#12882](https://github.com/o3de/o3de/pull/12882), [#13408](https://github.com/o3de/o3de/pull/13408), [#13433](https://github.com/o3de/o3de/pull/13433), [#13590](https://github.com/o3de/o3de/pull/13590), [#13626](https://github.com/o3de/o3de/pull/13626), [#13628](https://github.com/o3de/o3de/pull/13628), [#13669](https://github.com/o3de/o3de/pull/13669))
+* Improved editor extensibility with the introduction of a new Action Manager API that allows adding menus, hotkeys, and, contextual actions from Gems and/or Python scripts. Learn more about this feature at https://www.o3de.org/docs/user-guide/action-manager/index.md
+
 
 ## sig-core
 
