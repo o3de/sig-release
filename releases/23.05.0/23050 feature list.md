@@ -169,14 +169,6 @@ The feature grid represents the current state of development for each feature in
 * Removed deprecated Physics and Blast legacy materials. ([#9840](https://github.com/o3de/o3de/issues/9840), [#9839](https://github.com/o3de/o3de/issues/9839))
 * Moved Blast Gem to experimental branch in `o3de-extras`. ([#13584](https://github.com/o3de/o3de/pull/13584))
 
-### sig-testing
-
-* Feature 1
-* Feature 2
-
-### sig-ui-ux
-* Feature 1
-* Feature 2
 
 ## Known Issues
 
