@@ -118,11 +118,6 @@ The feature grid represents the current state of development for each feature in
 * Added new warnings when client and server have differences in networked code and properties to aid debugging of these issues.
 * Provided method for code separation between client and server side code to prevent any exposure of server side logic to clients. Provided a new Unified Launcher target to aid local testing.
 
- 
-### sig-operations
-
-* Feature 1
-* Feature 2
 
 ### sig-platform
 
