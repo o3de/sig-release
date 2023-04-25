@@ -130,11 +130,6 @@ The feature grid represents the current state of development for each feature in
 	* Documented how to [build and run OpenXR in O3DE](https://github.com/o3de/o3de-extras/wiki/Build-and-Run-OpenXR-in-O3DE), how to use [profiling tools for Meta Quest 2](https://github.com/o3de/o3de-extras/wiki/Profiling-tools-for-Meta-Quest-2), and how to do [advanced GPU profiling on Meta Quest 2](https://github.com/o3de/o3de-extras/wiki/Advanced-GPU-profiling-tools-for-Meta-Quest-2).
 
 
-### sig-security
-
-* Feature 1
-* Feature 2
-
 ### sig-simulation
 
 * Add support for PhysX 5.1 ([#13624](https://github.com/o3de/o3de/issues/13624)) (_see Known Issues and New and Noteworthy for details_)
