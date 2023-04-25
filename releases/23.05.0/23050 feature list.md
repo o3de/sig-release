@@ -7,10 +7,10 @@
 
 ## Highlights
 
-Here are some highlights of O3DE 23.05.0, followed by a detailed list of features broken down by SIG.
+Here are some highlights of O3DE 23.05.0, followed by a detailed list of features broken down by Special Interest Group (SIG).
 
 1.	New and Improved Authoring Experiences:
-Material Canvas is a new intuitive, easy to use, node based, visual scripting interface that allows users to create new, custom shaders and materials. It is built upon the combined foundations of script canvas and Material Editor that O3DE users are already familiar with. For more information, refer to [sig-graphics-audio#51](https://github.com/o3de/sig-graphics-audio/issues/51).
+Material Canvas is a new intuitive, easy to use, node based, visual scripting interface that allows users to create new, custom shaders and materials. It is built upon the combined foundations of Script Canvas and Material Editor that O3DE users are already familiar with. For more information, refer to [sig-graphics-audio#51](https://github.com/o3de/sig-graphics-audio/issues/51).
 O3DE now has a Material Pipeline, a layer of abstraction between lighting and materials which utilizes new builders and new features from the asset system to build unique shaders for each render pipeline. This provides modularity and extensibility to the Atom Renderer, allowing easier customization of the render pipeline.
 We have improved the Editor extensibility with the introduction of a new [Action Manager API](https://www.o3de.org/docs/user-guide/action-manager/) that allows adding menus, hotkeys, and, contextual actions from Gems and Python scripts.
 Physics & animations improvements including support for PhysX 5.1 and improvements in multiple PhysX authoring workflows. Users will notice an update to the Animation Editor experience, which is now more consistent with other O3DE tools. The Animation Asset Import process is now more robust and straightforward, and the Animation Editor AnimGraph now has a Performance Visualizer to help users profiling and optimizing their AnimGraphs.
@@ -20,7 +20,7 @@ Finally, our Terrain System now provides users a paintbrush tool so they may pai
 
 The project also delivers a rich set of open source assets to the community, for use outside of the game. All told this work demonstrates O3DE's ability to deliver a compelling, feature rich game, while providing significant opportunities for the O3DE community to expand and contribute to the game. (MPS  utilizes all of O3DE's key systems, flushing out bugs and expanding feature sets, so everything works better together at a scale and visual polish beyond existing sample games.)
 
-In this game, players compete for the highest score to win. Over a series of rounds, players race around the starbase to collect gems and rack up points. Each player is armed with a laser pistol and protected by a shield. Taking damage from laser blasts depletes the player's shield. When the shield is depleted, the player respawns at the cost of some of their collected gems. Do you risk it all to win? For more information, refer to the [Multiplayer Sample Project README](https://github.com/o3de/o3de-multiplayersample#readme).
+In this game, players compete for the highest score to win. Over a series of rounds, players race around the starbase to collect gems and rack up points. Each player is armed with a laser pistol and protected by a shield. Taking damage from laser blasts or from the environmental hazards depletes the player's shield. When the shield is depleted, the player respawns at the cost of some of their collected gems. Do you risk it all to win? For more information, refer to the [Multiplayer Sample Project README](https://github.com/o3de/o3de-multiplayersample#readme).
 
 3. New Asset Browser: O3DE now has a new Asset Browser experience within the Editor that provides users with multiple layout options, file operations, an asset inspector panel, and other operations to manage their assets.
 
@@ -113,9 +113,9 @@ The feature grid represents the current state of development for each feature in
 
 ### sig-network
 
-* Made a major update to the [Multiplayer Sample game](https://github.com/o3de/o3de-multiplayersample) that provides a feature rich game experience with UX, audio, visual effects, player versus player and player versus environment elements.
+* Made a major update to the [Multiplayer Sample game](https://github.com/o3de/o3de-multiplayersample) that provides a feature rich game experience with UX, audio, VFX, player versus player and player versus environment elements.
 * Provided a new simple player spawner component that avoids the needs to write custom spawn logic ([#13871](https://github.com/o3de/o3de/pull/13871))
-* Added new warnings when client and server have differences in networked code and properties to aid debugging of these issues.
+* Added new warnings when client and server have differences in networked code or properties, to aid debugging of these issues.
 * Provided method for code separation between client and server side code to prevent any exposure of server side logic to clients. Provided a new Unified Launcher target to aid local testing.
 
 
@@ -170,7 +170,7 @@ The feature grid represents the current state of development for each feature in
 * Moved Blast Gem to experimental branch in `o3de-extras`. ([#13584](https://github.com/o3de/o3de/pull/13584))
 
 
-## Known Issues
+## Known issues
 
 * Levels and prefabs containing Polygon Prism components need to be re-saved when switching from PhysX 4 to PhysX 5.1 and vice versa.
 * Material Canvas
