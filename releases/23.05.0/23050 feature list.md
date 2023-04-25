@@ -37,8 +37,9 @@ The feature grid represents the current state of development for each feature in
 
 ### sig-build
 
-* Test Impact Analysis Framework rollout ([#10660](https://github.com/o3de/o3de/issues/10660))
-	* Test Impact Analysis Framework (TIAF) is a system to determine which tests need to run for every source change. The idea behind it is to only run the tests you need to (that might be impacted by the change). The system is now deployed for both Python and native C++ tests. Developers working on O3DE should on average see a reduction in the time they have to wait for their tests to run.
+* Provided Test Impact Analysis Framework ([#10660](https://github.com/o3de/o3de/issues/10660))
+  
+  Test Impact Analysis Framework (TIAF) is a system that determines which tests need to run for every source change. It only runs the tests that you need and that your change may impact. The system is now deployed for both Python and native C++ tests. Developers working on O3DE can see an average reduction in the time they have to wait for their tests to run.
 
 
 ### sig-content
