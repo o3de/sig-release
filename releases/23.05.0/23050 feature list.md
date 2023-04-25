@@ -190,13 +190,3 @@ The feature grid represents the current state of development for each feature in
   * The organization of all of the shader and material files needs to be simplified to make it easier to find shader and material files.
   * There are several to do items as a result of these changes that need to be addressed.
 
-## New and Noteworthy
-
-* PhysX 5.1 shows a 15% increase in simulation performance compared with PhysX 4.
-* With PhysX 5.1, mobile assets now use the more optimal structure eBVH34.
-* Developers can now override `LuaIDE`, and use a different Lua Editor/Debugger: https://github.com/o3de/o3de/wiki/Working-With-An-External-Lua-Debugger.
-
-## Upgrade Steps
-
-*   [#10668](https://github.com/o3de/o3de/issues/10668) - Static Rigid Body ([#14418](https://github.com/o3de/o3de/pull/14418)) and Dynamic and Static Collider Change ([#14850](https://github.com/o3de/o3de/pull/14850))
-	*    See [upgrade steps](https://github.com/o3de/o3de/issues/10668#issuecomment-1476180502).
