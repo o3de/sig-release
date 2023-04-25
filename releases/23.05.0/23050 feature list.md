@@ -81,11 +81,6 @@ The feature grid represents the current state of development for each feature in
 * Fixed Math unit tests on Android and enabled NEON instructions by default ([#13739](https://github.com/o3de/o3de/pull/13739), [#13783](https://github.com/o3de/o3de/pull/13783), [#13792](https://github.com/o3de/o3de/pull/13792))
 
 
-### sig-docs-community
-
-* Feature 1
-* Feature 2
-
 ### sig-graphics-audio
 
 * DccScriptingInterface Gem configures and bootstraps DCC tools like Maya and Blender from the Editor, and provide workflow utilities like a streamlined 'Scene Exporter' to get cleaner content to O3DE projects.
