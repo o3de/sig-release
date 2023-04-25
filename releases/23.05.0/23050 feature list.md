@@ -1,12 +1,29 @@
 
 # O3DE 23.05.0 Feature List
 
-**Status:** In-Progress
+**Status:** Done
 
-Release 23.05.0 consists of .... Here are some highlights, followed by a detailed list of features broken down by SIG.
+Here are some highlights of 23.05.0, followed by a detailed list of features broken down by SIG.
+23.05 levels up the O3DE authoring experience for Robotics Simulation developers and Game creators. In addition to improvements to the core engine, Robotics users in O3DE now have the “O3DE ROS2 Gem”, a gem that provides integration with the Robot Operating System (ROS2) and provides drivers, state-of-the-art algorithms and developer tools for developing robotics simulations. Game Developers in O3DE now have the Multiplayer Sample game available to them - a ready-to-use game that’s not only fun to play, but provides developers with example implementations of common game elements to help jumpstart their own projects.
 
-* Highlight 1
-* Highlight 2
+1. New and Improved Authoring Experiences: 
+Material Canvas is a new intuitive, easy to use, node based, visual scripting interface that allows users to create new, custom shaders and materials. It is built upon the combined foundations of script canvas and material editor that O3DE users are already familiar with. Read More here https://github.com/o3de/sig-graphics-audio/issues/51
+O3DE now has a Material Pipeline, a layer of abstraction between lighting and materials which utilizes new builders and new features from the asset system to build unique shaders for each render pipeline. This provides modularity and extensibility to the Atom Renderer, allowing easier customization of the render pipeline.
+We have Improved the Editor extensibility with the introduction of a new Action Manager API that allows adding menus, hotkeys, and, contextual actions from Gems and/or Python scripts. Learn more about this feature at https://www.o3de.org/docs/user-guide/action-manager/index.md
+Physics & animations improvements including support for PhysX 5.1 and improvements in multiple PhysX authoring workflows. Users will notice an update to the Animation Editor experience, which is now more consistent with other O3DE tools. The Animation Asset Import process is now more robust and straightforward, and the Animation Editor Animgraph now has a Performance Visualizer to help users profiling and optimizing their Animgraphs.
+Finally, our Terrain System now provides users a paintbrush tool so they may paint inside the viewport to create or modify terrain.
+
+2. New Multiplayer Sample Game: The repo O3DE-MultiplayerSample is now home to O3DE’s newest example game, an entertaining player vs. player and player vs. environment game supporting up to 10 players. The game delivers significant examples of  integrations with major O3DE systems including: terrain, sky/atmosphere/stars, lighting, multiplayer, audio, scripting and VFX. Additionally, the game makes extensive use of the Atom renderer’s advanced feature set including global illumination, cascade shadows, emissive surfaces, bounce lighting, temporal anti-aliasing and hybrid reflections (screen space & Ray Tracing)  amongst others to achieve its visual goals.
+
+The project also delivers a rich set of open source assets to the community, for use outside of the game. All told this work demonstrates O3DE’s ability to deliver a compelling, feature rich game, while providing significant opportunities for the O3DE community to expand and contribute to the game. (MPS  utilizes all of O3DE’s key systems, flushing out bugs and expanding feature sets, so everything works better together at a scale and visual polish beyond existing sample games.)
+
+In this game, players compete for the highest score to win. Over a series of rounds, players race around a starbase to collect gems and rack up points. Each player is armed with a laser pistol and protected by a shield. Taking damage from laser blasts and environmental hazards depletes the player's shield. Once the shield is depleted, the player respawns at the cost of some of their collected gems. Do you risk it all to win? Read more at https://github.com/o3de/o3de-multiplayersample#readme.
+
+3. New Asset Browser: O3DE now has a new Asset Browser Experience within the editor that provides users with multiple layout options, file operations, an asset inspector panel, and other operations to manage their assets.
+
+4. Installation and Gem Improvements: Multiple versions of O3DE can now be installed on the same drive, and projects are aware of which O3DE version they were created in and last used with. In addition Gems creators can now specify compatible platforms, which can be filtered against in the gem catalog.
+
+5. Additional VR/XR support and mobile performance improvements: Support for stereoscopic rendering (i.e VR support) via OpenXr within O3DE.  Improved performance on mobile devices by adding half-float support for Atom.
 
 
 ## sig-build
@@ -36,6 +53,8 @@ Release 23.05.0 consists of .... Here are some highlights, followed by a detaile
 * Viewport UI Switcher Improvements ([#13108](https://github.com/o3de/o3de/pull/13108), [#13036](https://github.com/o3de/o3de/pull/13036))
 * Multiple fixes and improvements to editor ‘Be this camera’ functionality ([#14269](https://github.com/o3de/o3de/pull/14269), [#15119](https://github.com/o3de/o3de/pull/15119))
 * Several small improvements to viewport camera behavior ([#12882](https://github.com/o3de/o3de/pull/12882), [#13408](https://github.com/o3de/o3de/pull/13408), [#13433](https://github.com/o3de/o3de/pull/13433), [#13590](https://github.com/o3de/o3de/pull/13590), [#13626](https://github.com/o3de/o3de/pull/13626), [#13628](https://github.com/o3de/o3de/pull/13628), [#13669](https://github.com/o3de/o3de/pull/13669))
+* Improved editor extensibility with the introduction of a new Action Manager API that allows adding menus, hotkeys, and, contextual actions from Gems and/or Python scripts. Learn more about this feature at https://www.o3de.org/docs/user-guide/action-manager/index.md
+
 
 ## sig-core
 
