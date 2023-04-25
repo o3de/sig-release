@@ -113,10 +113,10 @@ The feature grid represents the current state of development for each feature in
 
 ### sig-network
 
-* Provides a major update to the Multiplayer sample game: https://github.com/o3de/o3de-multiplayersample to provide a feature rich game experience with UX, audio, visual FX, player vs player and player vs environment elements.
-* Provides a new simple player spawner component that avoids the needs to write custom spawn logic, [#13871](https://github.com/o3de/o3de/pull/13871)
-* Adds a validation mechanism to identify when client and server have differences in networked code and properties to aid debugging of these issues.
-* Provides method for code separation between client and server side code to prevent any exposure of server side logic to clients. Provides a new Unified Launcher target to aid local testing.
+* Made a major update to the [Multiplayer Sample game](https://github.com/o3de/o3de-multiplayersample) that provides a feature rich game experience with UX, audio, visual effects, player versus player and player versus environment elements.
+* Provided a new simple player spawner component that avoids the needs to write custom spawn logic ([#13871](https://github.com/o3de/o3de/pull/13871))
+* Added new warnings when client and server have differences in networked code and properties to aid debugging of these issues.
+* Provided method for code separation between client and server side code to prevent any exposure of server side logic to clients. Provided a new Unified Launcher target to aid local testing.
 
  
 ### sig-operations
