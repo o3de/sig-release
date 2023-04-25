@@ -28,14 +28,20 @@ In this game, players compete for the highest score to win. Over a series of rou
 
 5. Additional VR/XR support and mobile performance improvements: Support for stereoscopic rendering (such as VR support) via OpenXR within O3DE. Improved performance on mobile devices by adding half-float support for Atom.
 
+## Feature grid
 
-## sig-build
+The feature grid represents the current state of development for each feature in O3DE. Review the [live feature grid](https://o3de.github.io/community/features/form.html) and select a SIG to see their latest feature statuses. 
+
+
+## Features and bug fixes
+
+### sig-build
 
 * Test Impact Analysis Framework rollout ([#10660](https://github.com/o3de/o3de/issues/10660))
 	* Test Impact Analysis Framework (TIAF) is a system to determine which tests need to run for every source change. The idea behind it is to only run the tests you need to (that might be impacted by the change). The system is now deployed for both Python and native C++ tests. Developers working on O3DE should on average see a reduction in the time they have to wait for their tests to run.
 
 
-## sig-content
+### sig-content
 
 * Adds support for global python scripts per asset type to simply customizations in the scene pipeline.
 * A new Asset Browser experience has been prepared and turned on by default. The new Asset Browser experience includes three new layout modes (table view, thumbnail view, list view), file operations (add/delete/edit/rename/move), asset drag and drop support, URL bar for easy sharing and editing, breadcrumb and navigation bar, new detached Asset Browser inspector panel, filter options to hide unusable editor or engine assets, and all new asset icons.
@@ -59,7 +65,7 @@ In this game, players compete for the highest score to win. Over a series of rou
 * Improved editor extensibility with the introduction of a new Action Manager API that allows adding menus, hotkeys, and, contextual actions from Gems and/or Python scripts. Learn more about this feature at https://www.o3de.org/docs/user-guide/action-manager/index.md
 
 
-## sig-core
+### sig-core
 
  * A new performance metrics logging API has been added to AzCore.  
 The API provides the following classes that can be used to output JSON recorded metrics: The pair of `AZ::Metrics::IEventLogger` and `AZ::Metrics::JsonTraceEventLogger`, and the other pair of `AZ::Metrics::IEventFactory` and `AZ::Metrics::EventFactoryImpl`  
@@ -80,12 +86,12 @@ Metrics files should ideally be output to an active projects `<project-root>/use
 * Fixed Math unit tests on Android and enabled NEON instructions by default ([#13739](https://github.com/o3de/o3de/pull/13739), [#13783](https://github.com/o3de/o3de/pull/13783), [#13792](https://github.com/o3de/o3de/pull/13792))
 
 
-## sig-docs-community
+### sig-docs-community
 
 * Feature 1
 * Feature 2
 
-## sig-graphics-audio
+### sig-graphics-audio
 
 * DccScriptingInterface Gem configures and bootstraps DCC tools like Maya and Blender from the Editor, and provide workflow utilities like a streamlined 'Scene Exporter' to get cleaner content to O3DE projects.
 * Added RHI Bindless support which allows RHI to manage bindless heap for all image and buffer views across all backends. It caches view descriptors on the gpu memory and provides access to the index in the unbounded array to RPI at runtime. This index can be used by features to indirectly access image or buffer views on the gpu within the shader. Instead of managing your own custom unbounded arrays for buffer and image views features can now just use the one managed by RHI. As a result RHI bindless support is now being used by Terrain and Ray Tracing.
@@ -132,7 +138,7 @@ Metrics files should ideally be output to an active projects `<project-root>/use
 * The TAA pass has been split into two passes to allow for the copying of TAA's history buffer to be separated from the TAA algorithm itself. This required a change to PostProcessParent.pass to reference `TaaParentTemplate` instead of `TaaTemplate`. If your project overrides PostProcessParent.pass and uses TAA, then it will need to be updated to point to the new TAA parent pass.
 
 
-## sig-network
+### sig-network
 
 * Provides a major update to the Multiplayer sample game: https://github.com/o3de/o3de-multiplayersample to provide a feature rich game experience with UX, audio, visual FX, player vs player and player vs environment elements.
 * Provides a new simple player spawner component that avoids the needs to write custom spawn logic, [#13871](https://github.com/o3de/o3de/pull/13871)
@@ -140,12 +146,12 @@ Metrics files should ideally be output to an active projects `<project-root>/use
 * Provides method for code separation between client and server side code to prevent any exposure of server side logic to clients. Provides a new Unified Launcher target to aid local testing.
 
  
-## sig-operations
+### sig-operations
 
 * Feature 1
 * Feature 2
 
-## sig-platform
+### sig-platform
 
 * New XR and OpenXRVk gems add VR support for OpenXR compatible devices. https://github.com/o3de/o3de/issues/12372  
 	* Added support for Meta Quest 2 using a new multi-view render pipeline with simplified render passes for VR devices.
@@ -156,12 +162,12 @@ Metrics files should ideally be output to an active projects `<project-root>/use
 	* Documented how to build and run OpenXR in O3DE (https://github.com/o3de/o3de-extras/wiki/Build-and-Run-OpenXR-in-O3DE), how to do profiling on Meta Quest 2 (https://github.com/o3de/o3de-extras/wiki/Profiling-tools-for-Meta-Quest-2) and how to do advanced GPU profiling on Meta Quest 2 (https://github.com/o3de/o3de-extras/wiki/Advanced-GPU-profiling-tools-for-Meta-Quest-2).
 
 
-## sig-security
+### sig-security
 
 * Feature 1
 * Feature 2
 
-## sig-simulation
+### sig-simulation
 
 * Add support for PhysX 5.1 ([#13624](https://github.com/o3de/o3de/issues/13624)) (_see Known Issues and New and Noteworthy for details_)
 	* O3DE now comes with optional support for PhysX 5.1 (PhysX 5.1 is off by default but may be enabled with `-DAZ_USE_PHYSX5=ON` when building O3DE). PhysX 5.1 brings a host of performance improvements as well as several new features.
@@ -198,12 +204,12 @@ Metrics files should ideally be output to an active projects `<project-root>/use
 * Removed deprecated Physics and Blast legacy materials. ([#9840](https://github.com/o3de/o3de/issues/9840), [#9839](https://github.com/o3de/o3de/issues/9839))
 * Blast Gem moved to experimental branch in o3de-extras. ([#13584](https://github.com/o3de/o3de/pull/13584))
 
-## sig-testing
+### sig-testing
 
 * Feature 1
 * Feature 2
 
-## sig-ui-ux
+### sig-ui-ux
 * Feature 1
 * Feature 2
 
