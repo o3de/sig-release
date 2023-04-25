@@ -83,49 +83,32 @@ The feature grid represents the current state of development for each feature in
 
 ### sig-graphics-audio
 
-* DccScriptingInterface Gem configures and bootstraps DCC tools like Maya and Blender from the Editor, and provide workflow utilities like a streamlined 'Scene Exporter' to get cleaner content to O3DE projects.
-* Added RHI Bindless support which allows RHI to manage bindless heap for all image and buffer views across all backends. It caches view descriptors on the gpu memory and provides access to the index in the unbounded array to RPI at runtime. This index can be used by features to indirectly access image or buffer views on the gpu within the shader. Instead of managing your own custom unbounded arrays for buffer and image views features can now just use the one managed by RHI. As a result RHI bindless support is now being used by Terrain and Ray Tracing.
-* Material canvas is now available for users to create new, custom shaders and materials. Material canvas is built upon the combined foundations of script canvas and material editor, offering most of the same features and UX as both. Users are able to visually edit, drag, drop, connect, and configure graphical nodes that are automatically transformed into all of the required source files that would otherwise need to be hand created and manually managed.  
-	* Typically, the generated source files include shader configurations, AZSL source, material types, and a default material. As these files are generated, they are automatically recognized and processed by the AP, displayed in the viewport, and made available for use in the material editor, material component, and other aspects of the engine that use shaders and materials.  
-	* Approximately 150 nodes are provided out-of-the-box. Most of those represent AZSL intrinsic functions, constant values, input values, output nodes, and other types. Material output nodes are the main notes for any material graph. They define a template that encapsulates all of the data and dependencies to tell material canvas what to generate when it compiles the graph. Once a material output node has been added to the graph, users will begin to see files generating, assets building, in the viewport updating with subsequent changes.  
-	* All current material graph nodes are implemented as simple JSON configuration files, listening all of the input and output slots, data types, default values, snippets of shader code, and other metadata. The new library is fully extensible and customizable by simply adding new JSON files.  
-	* Material canvas can also open and provides tooling for creating and editing the material graph node files. These can live in any gems or projects but they must have a unique UUID in every file. There are several examples for all of the existing nodes in the material canvas project.  
-	* Like material editor, most or all aspects of the tool are also exposed through behavior context reflection for Python automation.  
-	* Additional testing and documentation are in progress.     
-	* PR: https://github.com/o3de/sig-graphics-audio/issues/51  
-	* Known issues:  
-		*  Load times need to be improved for graphs that contain thousands of nodes.  
-		* Undo redo performance needs to be improved for graphs containing thousands of nodes.  
-		* Undo redo currently selects all nodes in a graph.  
-		* More advanced or artist friendly nodes need to be created to extend the node library.  
-		* Previews rely on shader compilation times which also need to be optimized but there are settings in the tools->settings dialog to disable shader compilation for unused platforms.  
-		* Some changes do not always immediately refresh the viewport due to some asset reloading edge cases.
-		* The layout of node slots is not cleanly aligned and needs to be improved.
-		* Notes do not always resize to there will come a minimum size when making and breaking connections.
-		* General material types can include several shader files packaged more compactly. In the meantime, users will have to be mindful of where they save their material graphs since more complicated material templates and output nodes will produce several files.
-		* Switching to multi view and XR pipelines causes a crash in material editor and material canvas.
-* CPU performance has been improved such that an 8 core CPU with an nVidia 2080 can handle 9000 static and 1000 dynamic entities at greater than 30fps at 1080p
-* Added support for Terrain nodes in Landscape Canvas  
-		* Tutorial on creating terrain from images using Landscape Canvas: https://www.o3de.org/docs/learning-guide/tutorials/environments/create-terrain-from-images/  
-* Added a generic paintbrush workflow and implemented the ability to paint both heights and color directly in the editor viewport for the Terrain System  
-	* The paint brush workflow also includes runtime scripting support for real-time modifications of the terrain using a painting API.  
+* Updated DccScriptingInterface Gem to configure and bootstrap DCC tools like Maya and Blender from the Editor, and to provide workflow utilities like a streamlined "Scene Exporter" to get cleaner content to O3DE projects.
+* Added RHI bindless support which allows RHI to manage bindless heap for all image and buffer views across all backends. It caches view descriptors on the GPU memory and provides access to the index in the unbounded array to RPI at runtime. This index can be used by features to indirectly access image or buffer views on the GPU within the shader. Instead of managing your own custom unbounded arrays for buffer and image views features can now simply use the one managed by RHI. As a result RHI bindless support is now being used by Terrain and Ray Tracing.
+* Added Material Canvas ([sig-graphics-audio#51](https://github.com/o3de/sig-graphics-audio/issues/51))<br>Material Canvas is now available for users to create new, custom shaders and materials. Material Canvas is built upon the combined foundations of script canvas and Material Editor, offering most of the same features and UX as both. Users are able to visually edit, drag, drop, connect, and configure graphical nodes that are automatically transformed into all of the required source files that would otherwise need to be hand created and manually managed.
+	* Typically, the generated source files include shader configurations, AZSL source, material types, and a default material. As these files are generated, they are automatically recognized and processed by the AP, displayed in the Viewport, and made available for use in the Material Editor, material component, and other aspects of the engine that use shaders and materials.  
+	* Approximately 150 nodes are provided out-of-the-box. Most of those represent AZSL intrinsic functions, constant values, input values, output nodes, and other types. Material output nodes are the main notes for any material graph. They define a template that encapsulates all of the data and dependencies to tell Material Canvas what to generate when it compiles the graph. When a material output node has been added to the graph, users will begin to refer to files generating, assets building, in the viewport updating with subsequent changes.  
+	* All current material graph nodes are implemented as simple JSON configuration files, listing all of the input and output slots, data types, default values, snippets of shader code, and other metadata. The new library is fully extensible and customizable by simply adding new JSON files.  
+	* Material Canvas can also open and provide tools for creating and editing the material graph node files. These can live in any Gems or projects but they must have a unique UUID in every file. There are several examples for all of the existing nodes in the Material Canvas project.  
+	* Like Material Editor, most or all aspects of the tool are also exposed through behavior context reflection for Python automation.  
+	* Additional testing and documentation are in progress.   
+* Improved CPU performance such that an 8 core CPU with an NVIDIA 2080 can handle 9000 static and 1000 dynamic entities at greater than 30fps at 1080p
+* Added support for Terrain nodes in Landscape Canvas. For more information, refer to [Create Terrain from Images](https://www.o3de.org/docs/learning-guide/tutorials/environments/create-terrain-from-images/).
+* Added a generic paintbrush workflow and implemented the ability to paint both heights and color directly in the Editor Viewport for the Terrain System.
+  
+  The paint brush workflow also includes runtime scripting support for real-time modifications of the terrain using a painting API.  
 	* Generalized Paint Brush documentation: https://www.o3de.org/docs/user-guide/components/reference/paintbrush/paintbrush/  
 	* Image Gradient Component with Paint Brush support: https://www.o3de.org/docs/user-guide/components/reference/gradients/image-gradient/  
 	* Terrain Macro Material Component with Paint Brush support: https://www.o3de.org/docs/user-guide/components/reference/terrain/terrain-macro-material/  
-* Added the Terrain Developer Guide that explains how developers can use and extend the terrain system: https://www.o3de.org/docs/user-guide/visualization/environments/terrain/terrain-developer-guide/
-* Sphere and disk lights now support shadow caching, which is accessible as a checkbox on the light component. This makes it so shadows do not re-render when nothing in their field of view has changed, and can greatly accelerate shadows on mostly static scenes. Models which have vertex animation in the shader can toggle on "Always moving" in the mesh component to ensure that they will always trigger updates when in the view of a cached shadow.
-* Added support for stereoscopic rendering (i.e VR support) via OpenXr within O3de. This support was added through the Vulkan backend and it has been extensively tested using Quest 2. As part of this effort we are able to support Link mode where the rendering is done on PC and can be viewed on a stereoscopic display or the app can be run on the device natively. A special optimized VR pipeline has been added to Atom to help support running the app natively on the device.
-* The texture streaming support has been expanded to Vulkan backend. Now we have image streaming control which can load or evict texture mips automatically at runtime based on the streaming image pool's budget.
-* The shader library, material system, and builders have been updated to support a layer of abstraction between lighting and materials, called the material pipeline. It uses new builders and new features from the asset system to build unique shaders for each render pipeline. Material types can provide custom data structures and evaluator functions for vertex, pixel, geometry, and lighting stages. The builder inserts any of the custom include files with overridden data types and functions as it builds all of the combinations of shaders listed in the material pipeline.  
+* Added the Terrain Developer Guide that explains how developers can use and extend the terrain system: [Terrain Developer Guide](https://www.o3de.org/docs/user-guide/visualization/environments/terrain/terrain-developer-guide/).
+* Updated Sphere and disk lights to support shadow caching, which is accessible as a checkbox on the light component. This makes it so shadows do not re-render when nothing in their field of view has changed, and can greatly accelerate shadows on mostly static scenes. Models that have vertex animation in the shader can toggle on "Always moving" in the mesh component to ensure that they will always trigger updates when in the view of a cached shadow.
+* Added support for stereoscopic rendering (such as VR support) via OpenXR within O3DE. This support was added through the Vulkan backend and it has been extensively tested using Quest 2. As part of this effort we are able to support Link mode where the rendering is done on PC and can be viewed on a stereoscopic display or the app can be run on the device natively. A special optimized VR pipeline has been added to Atom to help support running the app natively on the device.
+* Expanded the texture streaming support to Vulkan backend. Now we have image streaming control which can load or evict texture mips automatically at runtime based on the streaming image pool's budget.
+* Created the Material Pipeline, a layer of abstraction between lighting and materials. This involves updates to the shader library, material system, and builders. It uses new builders and new features from the asset system to build unique shaders for each render pipeline. Material types can provide custom data structures and evaluator functions for vertex, pixel, geometry, and lighting stages. The builder inserts any of the custom include files with overridden data types and functions as it builds all of the combinations of shaders listed in the material pipeline.  
 	* The result of this is a concrete material type referencing all of the different combinations of shaders for each pipeline, with the customization stitched in. All of this is saved to the intermediate assets folder and processed by the AP to generate Final product material types and shaders. The material pipeline also includes a Lua script that will be invoked whatever material properties or the active render pipeline changes to enable or disable shaders based on the current state.  
-	* All of the PBR as well as other shaders and material types included with atom have been converted to the system.  
-	* All of the ASV samples and tests have also been updated to use this system. ASV also includes different experimental render and material pipelines to demonstrate how existing materials that use this system can be applied to a standard, deferred rendering pipeline.
-	* Known issues:  
-		* It takes more time to compile shaders for all of the active pipelines.
-		* Material editor and material canvas crash switching to Multiview at XR pipelines.
-		* The organization of all of the shader and material files needs to be simplified to make it easier to find shader and material files.
-		* There are several to do items as a result of these changes that need to be addressed.
-* The TAA pass has been split into two passes to allow for the copying of TAA's history buffer to be separated from the TAA algorithm itself. This required a change to PostProcessParent.pass to reference `TaaParentTemplate` instead of `TaaTemplate`. If your project overrides PostProcessParent.pass and uses TAA, then it will need to be updated to point to the new TAA parent pass.
+	* All of the physically based rendering materials, as well as other shaders and material types included with Atom have been converted to the system.  
+	* All of the Atom Sample Viewer (ASV) samples and tests have also been updated to use this system. ASV also includes different experimental render and material pipelines to demonstrate how existing materials that use this system can be applied to a standard, deferred rendering pipeline.
+* Updated the temporal anti-aliasing (TAA) pass by splitting it into two passes, which allows the TAA's history buffer to be copied and separated from the TAA algorithm itself. This required a change to `PostProcessParent.pass` to reference `TaaParentTemplate` instead of `TaaTemplate`. If your project overrides `PostProcessParent.pass` and uses TAA, then it will need to be updated to point to the new TAA parent pass.
 
 
 ### sig-network
@@ -206,6 +189,22 @@ The feature grid represents the current state of development for each feature in
 ## Known Issues
 
 * Levels and prefabs containing Polygon Prism components need to be re-saved when switching from PhysX 4 to PhysX 5.1 and vice versa.
+* Material Canvas
+  *  Load times need to be improved for graphs that contain thousands of nodes.  
+  * Undo redo performance needs to be improved for graphs containing thousands of nodes.  
+  * Undo redo currently selects all nodes in a graph.  
+  * More advanced or artist friendly nodes need to be created to extend the node library.  
+  * Previews rely on shader compilation times which also need to be optimized but there are settings in the **Tools** > **Settings** dialog to disable shader compilation for unused platforms.  
+  * Some changes do not always immediately refresh the Viewport due to some asset reloading edge cases.
+  * The layout of node slots is not cleanly aligned and needs to be improved.
+  * Nodes do not always resize so there is a minimum size when making and breaking connections.
+  * General material types can include several shader files packaged more compactly. In the meantime, users will have to be mindful of where they save their material graphs since more complicated material templates and output nodes will produce several files.
+  * Switching to multi view and XR pipelines causes a crash in Material Editor and Material Canvas.
+* Material Pipeline
+  * It takes more time to compile shaders for all of the active pipelines.
+  * Material Editor and Material Canvas crash switching to Multiview at XR pipelines.
+  * The organization of all of the shader and material files needs to be simplified to make it easier to find shader and material files.
+  * There are several to do items as a result of these changes that need to be addressed.
 
 ## New and Noteworthy
 
