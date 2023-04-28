@@ -204,6 +204,8 @@ The URL of the new branch deploy will be at `<branch-name>--o3deorg.netlify.app/
 
 1. After the PR is merged, cherry-pick the commit from `development` to `stabilization`, following the Git workflow.
 
+1. On launch day, or soon after, cherry-pick the commit to all earlier branches (for example `version/2205`, `version/2210`).
+
 **Example** - Updating the Docs Version Selector in `config.toml`
 
 Before:
