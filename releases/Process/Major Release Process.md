@@ -1,6 +1,6 @@
   
 # O3DE Major Release Process
-V1.3 Updated May 19, 2024. 
+V1.3 Updated May, 2024. 
 The release process is managed by the Release Special Interest Group (SIG). To request an update to this document, please open an issue at https://github.com/o3de/sig-release/issues
 
 ## Key Details
@@ -15,7 +15,6 @@ The release process is managed by the Release Special Interest Group (SIG). To r
 * Releases will update the following Repositories:
 	* o3de
 	* o3de-multiplayersample
-	* o3de-multiplayersample-assets
 	* o3de-netsoaktest
 	* o3de-extras
 	* o3de.org
@@ -178,6 +177,14 @@ Description|Type|Send To|Example Message
 --|--|--|--
 Notify O3DE SIG of outstanding bugs|Discord|#sig-all and/or specific SIG|O3DE 2305 Release Messaging O3DE 23.05.0 Release Update mm/dd. As we progress through release stabilization, please continue to triage and fix any bugs that are being reported. Current bugs are being reported here (link to release milestone)
 
+ - **Release Manager  - What to do when there are date changes.** As you move through stabilization, if there are any date changes, discuss them with key stakeholders as needed. If you update a date, make sure you update the Key Information and communicate with the community. Here are some example messages for notifying the community.
+
+If this date changes|Notification Type|Send To notify|Example Message
+--|--|--|--
+Initial stabilization period (also impacts Code Freeze on Major bugs and below)|#sig-all , #sig-release, @Documentation Project Manager|Discord|O3DE 2305 Release Messaging O3DE 23.05.0 Release Update mm/dd. (provide some reason). The Stabilization period will now end on mm/dd. Beginning mm/dd+1 we will begin our code freeze on major bugs and below and only Blocker and Critical bugs are permitted to be fixed in the Stabilization branch without the exception process. Major bugs or below require an exception. If you have a special circumstance that requires additional time, please communicate with the appropriate SIG and SIG-Release.
+Code Freeze on Critical Bugs and below|Discord|#sig-all , #sig-release, @Documentation Project Manager |O3DE 2305 Release Messaging O3DE 23.05.0 Release Update mm/dd. (provide some reason) The code freeze on critical bugs will now begin Friday April 21 at 5pm Pacific time. After that time, only Blocker bugs are permitted to be fixed in the Stabilization branch without the exception process. No other bug fixes allowed. If you have a special circumstance that requires additional time, please communicate with the appropriate SIG and SIG-Release.
+QA Final Pass Date|Discord|#sig-all , #sig-release, @Documentation Project Manager|O3DE 2305 Release Messaging O3DE 23.05.0 Release Update mm/dd. (provide some reason) Beginning Friday April 21 at 5pm Pacific time, the O3DE stabilization code will be considered completely frozen. We are now focusing on our final QA pass. Blocker bugs are still permitted to be fixed via the exception process, with risk of delaying the release. If you have a special circumstance that requires additional time, please communicate with the appropriate SIG and SIG-Release.
+Release Date|Discord|#sig-all , #sig-release, #marketing-committee, @everyone involved in the release call|O3DE 2305 Release Messaging O3DE 23.05.0 Release Update mm/dd. After discussing with (mention who you discussed with) , we have decided to move the release date because (enter you reason here). The new release date is mm/dd. 
 
  -  **Release Manager** (Optional) post regularly in #sig-all and #sig-release with statistics about the progress toward stabilizing the release. These communications  should include Total number of bugs found, Bug Fixed so Far, Bug remaining.
  - **Release Manager** communicate regularly via Discord and Github with the Documentation Program Manager to ensure that the release notes are kept up to date. This is important because during stabilization there will be bugs that do not get fixed and in some cases these bugs will need to be documented as known issues. 
