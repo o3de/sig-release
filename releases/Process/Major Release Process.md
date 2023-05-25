@@ -73,7 +73,7 @@ Entry Criteria: Release SIG has has indicated the need for a release and has a g
  4.  **Release Manager** creates the Key Information 
 		* Copy the Key Information issue from the [previous release](https://github.com/o3de/sig-release/issues?q=release+key+information+) as your starting point.
 		* Change all of the dates to match your plans for the release.  Work with SIG-Release via Discord to figure out the dates. Consider holidays, game jams, and other events in your planning. 
-		* Confirm the Key information with the Open 3D Foundation Marketing Committee (via Discord #marketing-committee), and the SIGs (via Discord #sig-all), and the Documentation  Project Manager from sig-docs-community. 
+		* Confirm the Key information with the Open 3D Foundation Marketing Committee (via Discord #marketing-committee), and the SIGs (via Discord #sig-all), and the Documentation Project Manager from sig-docs-community. 
 		* Once you have the Key Information ready, send a communication similar to the following:
 
 Description|Type|Send To|Example Message
