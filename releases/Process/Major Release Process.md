@@ -1,6 +1,6 @@
   
 # O3DE Major Release Process
-V1.3 Updated May, 2024. 
+V1.3 Updated May 25, 2023. 
 The release process is managed by the Release Special Interest Group (SIG). To request an update to this document, please open an issue at https://github.com/o3de/sig-release/issues
 
 ## Key Details
@@ -67,12 +67,14 @@ Begins: 3 months prior to estimated release.
 Entry Criteria: Release SIG has has indicated the need for a release and has a general idea of the release date. See [key details.](#key-details) for the current release cadence. See previous release dates at https://www.o3de.org/docs/release-notes/archive/*
 
 ### 1.1 General Steps
-1. **Release SIG** coordinates with the Technical Steering Committee, the Open 3D Foundation Marketing Committee, and the SIGs to determine a release date. This may be done by the SIG chair, co-chair, or the release manager if one has been chosen.
+1. **Release SIG** coordinates with the Technical Steering Committee (via Discord #tac-tsc), the Open 3D Foundation Marketing Committee (via Discord #marketing-committee), and the SIGs (via Discord #sig-all) to determine a release date. This may be done by the SIG chair, co-chair, or the release manager if one has been chosen.
  2. **Release Manager** begins the feature list (see below)
  3. **Release Manager** Creates Milestones for each of the repositories outlined in [Key Details](#key-details). Here is an example from the 22.10.0 Release. https://github.com/o3de/o3de/milestone/11 - follow a similar naming convention.
  4.  **Release Manager** creates the Key Information 
-		* Create a github Issue similar to https://github.com/o3de/sig-release/issues/64. 
-		* Send a communication similar to the following:
+		* Copy the Key Information issue from the [previous release](https://github.com/o3de/sig-release/issues?q=release+key+information+) as your starting point.
+		* Change all of the dates to match your plans for the release.  Work with SIG-Release via Discord to figure out the dates. Consider holidays, game jams, and other events in your planning. 
+		* Confirm the Key information with the Open 3D Foundation Marketing Committee (via Discord #marketing-committee), and the SIGs (via Discord #sig-all), and the Documentation  Project Manager from sig-docs-community. 
+		* Once you have the Key Information ready, send a communication similar to the following:
 
 Description|Type|Send To|Example Message
 --|--|--|--
