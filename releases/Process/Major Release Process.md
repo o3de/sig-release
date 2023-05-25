@@ -1,6 +1,6 @@
-
+  
 # O3DE Major Release Process
-V1.2 Updated Mar 10, 2023. 
+V1.3 Updated May 25, 2023. 
 The release process is managed by the Release Special Interest Group (SIG). To request an update to this document, please open an issue at https://github.com/o3de/sig-release/issues
 
 ## Key Details
@@ -67,19 +67,36 @@ Begins: 3 months prior to estimated release.
 Entry Criteria: Release SIG has has indicated the need for a release and has a general idea of the release date. See [key details.](#key-details) for the current release cadence. See previous release dates at https://www.o3de.org/docs/release-notes/archive/*
 
 ### 1.1 General Steps
-1. **Release SIG** coordinates with the Technical Steering Committee, the Open 3D Foundation Marketing Committee, and the SIGs to determine a release date. This may be done by the SIG chair, co-chair, or the release manager if one has been chosen.
+1. **Release SIG** coordinates with the Technical Steering Committee (via Discord #tac-tsc), the Open 3D Foundation Marketing Committee (via Discord #marketing-committee), and the SIGs (via Discord #sig-all) to determine a release date. This may be done by the SIG chair, co-chair, or the release manager if one has been chosen.
  2. **Release Manager** begins the feature list (see below)
  3. **Release Manager** Creates Milestones for each of the repositories outlined in [Key Details](#key-details). Here is an example from the 22.10.0 Release. https://github.com/o3de/o3de/milestone/11 - follow a similar naming convention.
- 4.  **Release Manager** creates the Key Information Github Issue similar to https://github.com/o3de/sig-release/issues/64. The releaser manager should maintain the Key Information throughout the release. It should be updated as more information about the release is known, or when details change. The release manager should also post a link to the Key Information in #sig-all Discord channel to inform the community of the upcoming release, If the Key Information changes, the Release Manager should post a new message to #sig-all noting that release information has changed.
- 5. **Release Manager** creates a project board for the release with all tasks in the O3DE Repository. Refer to the project board and tasks from the previous release, then manually create tasks in your new release  1-by-1 based on the previous release's tasks. Previous project boards are located at https://github.com/o3de/o3de/projects?type=classic
- 6. **Release Manager** ensures all Planning tasks on the project board are completed, either by completing them or assigning them to others.
- 7. **Release Manager**  has a Planning task on the project board to identify all Release Roles. These release roles should be updated in the Key Information once known.
+ 4.  **Release Manager** creates the Key Information 
+		* Copy the Key Information issue from the [previous release](https://github.com/o3de/sig-release/issues?q=release+key+information+) as your starting point.
+		* Change all of the dates to match your plans for the release.  Work with SIG-Release via Discord to figure out the dates. Consider holidays, game jams, and other events in your planning. 
+		* Confirm the Key information with the Open 3D Foundation Marketing Committee (via Discord #marketing-committee), and the SIGs (via Discord #sig-all), and the Documentation Project Manager from sig-docs-community. 
+		* Once you have the Key Information ready, send a communication similar to the following:
+
+Description|Type|Send To|Example Message
+--|--|--|--
+Initial post about the key information in the upcoming release |Discord| #sig-all, #marketing-committee ,#sig-release |The planned date for our next release is May 3, 2023 Stabilization to begin Mar 15, 2023. The release schedule and information are here [https://github.com/o3de/sig-release/issues/133](https://github.com/o3de/sig-release/issues/133 "https://github.com/o3de/sig-release/issues/133") If you have any concerns with the schedule please comment under the issue. Thanks.
+
+5. **Release Manager** should maintain the Key Information throughout the release. Key Information should be updated as more information about the release is known, or when details change. If Key information changes then
+	*	update the "Key Information" github issue.
+	*	 Send a communication similar to the following:
+
+Description|Type|Send To|Example Message
+--|--|--|--
+Update of the key information in an upcoming release|Discord|#sig-all, #marketing-committee ,#sig-release|The key information for our next release has changed. Please see the latest details at [https://github.com/o3de/sig-release/issues/133](https://github.com/o3de/sig-release/issues/133 "https://github.com/o3de/sig-release/issues/133") If you have any concerns with the schedule please comment under the issue. Thanks.
+
+ 6. **Release Manager** creates a project board for the release with all tasks in the O3DE Repository. Refer to the project board and tasks from the previous release, then manually create tasks in your new release  1-by-1 based on the previous release's tasks. Previous project boards are located at https://github.com/o3de/o3de/projects?type=classic
+ 7. **Release Manager** ensures all Planning tasks on the project board are completed, either by completing them or assigning them to others.
+ 8. **Release Manager**  has a Planning task on the project board to identify all Release Roles. These release roles should be updated in the Key Information once known.
 
 ### 1.2 Create the Feature List 
 The Feature List usually begins 6-8 weeks prior to release and ends 1-2 weeks after stabilization begins.  See [Terminology](#terminology) for description of the Feature List.
 Entry Criteria: A Pre Release task exists to generate the Feature List, similar to https://github.com/o3de/o3de/issues/11100
 
-Note: This is a highly manual process. There is an opportunity to improve. See Appendix A,
+Note: This is a highly manual process. There is an opportunity to improve. See Appendix A.
 
 1. Follow the steps outlined for the pre-release task. In the pre-release task step (1) Create a feature list file at [https://github.com/o3de/sig-release/tree/main/releases](https://github.com/o3de/sig-release/tree/main/releases)  under the appropriate release, for example  [22100 feature list.md](https://github.com/o3de/sig-release/blob/main/releases/22.10.0/22100%20feature%20list.md "22100 feature list.md") . The initial feature list file that you create should have a heading for each SIG.  
 For pre-release step (4) "Review closed issues to see if anything else should be added."  
@@ -89,12 +106,31 @@ For pre-release step (4) "Review closed issues to see if anything else should be
 	* For each roadmap item delivered to the o3de codebase since the last release, enter a summary into the feature list.
 	* If you need assistance, comment under the GHI or reach out to the SIG owning that area of the engine
 	* (Optional) Review the submitted pull requests or closed Github Issues. The reason to do this would be to discover any features that were not on the Roadmap, potentially features that were accidentally missed. 
-3. Once you have created the feature list, post a note to #sig-all in discord requesting the SIGs to review and update if needed via Pull Request. Allow Pull Requests to the Feature List until 1-2 weeks after Stabilization begins (agree on a date with the Documentation Project Manager). 
-4. Notify the marketing committee once the feature list is mostly (80%) done (you have some input from each SIG, and they indicate that they "most" of their work submitted). They may ask for a summary of the release and key features. It is up to the release manager to provide this guidance to the marketing committee. The release manager may discuss with the Release SIG or any other SIG to figure this out.
-5. Once you reach the date to stop accpeting PRs to the Feature list. Notify the Documentation Project Manager to take the feature list and begin the Release Notes. From this point forward, any changes needed to the release documentation should be done by coordinating with the Documentation Project Manager.
+2. Once you have created the feature list, send a communication similar to the following:
+
+Description|Type|Send To|Example Message
+--|--|--|--
+Notify the O3DE community that the feature list is posted. Request community to update. |Discord|#sig-all, #sig-release|Attention SIGs - the 23.05.0 Feature list is posted at https://github.com/o3de/sig-release/blob/main/releases/23.05.0/23050%20feature%20list.md If you have any features for the upcoming release that are not reflected here, or you want to make some other change, please author a pull request (PR) against this file. Thanks! Tips for your PRs: 1) Add a description of the feature that was delivered. 2) Add links to the PR. 3) Add any additional notes, details, links to videos, etc. that may that will help the community understand the feature.
+
+
+3. Allow Pull Requests to the Feature List until 1-2 weeks after Stabilization begins (agree on a date with the Documentation Project Manager). 
+4. Send a communication similar to the following. Notify the marketing committee once the feature list is mostly (80%) done (you have some input from each SIG, and they indicate that they "most" of their work submitted).  They may ask for a summary of the release and key features. It is up to the release manager to provide this guidance to the marketing committee. The release manager may discuss with the Release SIG or any other SIG to figure this out.
+
+Description|Type|Send To|Example Message
+--|--|--|--
+Notify the marketing committee that the feature list is posted.|Discord|#marketing-committee|Hi. The 23.05.0 Feature list is posted at https://github.com/o3de/sig-release/blob/main/releases/23.05.0/23050%20feature%20list.md Please review the feature list to get a sense of what's in the release and follow along as this file is updated. This list will eventually become the release notes. 
+
+5. Once you reach the date to stop accepting PRs to the Feature list. 
+    * From this point forward, any changes needed to the release documentation should be done by coordinating with the Documentation Project Manager.
+    * Send a communication the Documentation Project Manager to take the feature list and begin the Release Notes similar to the following:
+
+Description|Type|Send To|Example Message
+--|--|--|--
+Notify the documentation PM that you are handing off the feature list to them.|Discord|#sig-docs-community|Hi sig-docs-community! The 23.05.0 Feature list is done https://github.com/o3de/sig-release/blob/main/releases/23.05.0/23050%20feature%20list.md. Please use this feature list to begin work on the release notes. Let me know if you need anything else. Thanks!
+
 
 ### 1.3 More about how Milestones are used
-For each release, Github milestones are used to track bugs found in the stabilization branches of each repo involved in the release. For example, for the 22.20.0 release, the [Release/2210 milestone](https://github.com/o3de/o3de/milestone/11) captures all of the bugs found during release stabilization of the O3DE repo.
+For each release, Github milestones are used to track bugs found in the stabilization branches of each repo involved in the release. For example, for the 22.10.0 release, the [Release/2210 milestone](https://github.com/o3de/o3de/milestone/11) captures all of the bugs found during release stabilization of the O3DE repo.
 
 Milestones are used as follows:
 * When bugs are found in the stabilization branch, the reported bug is added to the Milestone by the release manager. (these instructions should be posted/clarified in the Release "Key Information")
@@ -116,33 +152,63 @@ Entry Criteria: Project board exists and Pre-Release tasks were created during t
 
 ### 2.1 Communication during Stabilization
 It is crucial to maintain strong communication with the community and throughout stabilization. This includes but not limited to:
- - **Release Manager** At least 1 week before stabilization, posting a notification to #sig-all and #sig-release Discord channels giving them a heads up.  For example: https://discord.com/channels/805939474655346758/816043864858951710/1011404890364444712
- - **Release Manager** When the stabilization branch is created, post a notification to #sig-all and #sig-release Discord channels. This is listed as a step in the stabilization process, but listing it again here 
- - **Release Manager** Midway through the stabilization, posting a notification informing the community of the remaining time.
+ - **Release Manager** At least 1 week before stabilization, send a communication similar to the following. (Example: https://discord.com/channels/805939474655346758/816043864858951710/1011404890364444712 )
+
+Description|Type|Send To|Example Message
+--|--|--|--
+Notify the O3DE community of the upcoming Stabilization period.|Discord|#sig-all , #sig-release |Just a friendly reminder from that in preparation for the O3DE 22.10.0 Release, the O3DE Stabilization branch will be created next Monday, 8/29, at approximately 10am pacific. Beginning 8/29, bugs may be fixed in the stabilization branch without any exception. New features that you wish to submit into stabilization will require an exception. The Exception project board is here https://github.com/orgs/o3de/projects/49/ . Instructions for using the board can be found by clicking that link, then viewing the readme. More information about the upcoming release can be found at https://github.com/o3de/sig-release/issues/64 .
+
+ - **Release Manager** When the stabilization branch is created, send a communication similar to the following. Note that this is listed as a step outlined in the stabilization process, but listing it again here (Example: https://discord.com/channels/805939474655346758/805939474655346761/1087495324228124762)
+
+Description|Type|Send To|Example Message
+--|--|--|--
+Notify the O3DE community of Stabilization start|Discord|#sig-all , #sig-release|O3DE 2305 Release Messaging O3DE 23.05.0 Release Update 5/03. As part of preparing for the upcoming O3DE 23.05.0 Release, on Wednesday 5/03 the branch stabilization/2305 was created in each of the following repositories. We are now in the "release stabilization" phase. Repositories affected: - o3de, - o3de-extras, - o3de-netsoaktest, - o3de-extras, - o3de.org.  Please test the code in these stabilization branches. Test the engine and test any features you added to help improve the quality of the release. When reporting a bugs you find make sure to mention that the bug is present in the stabilization branch.  * Attention SIGs - for anyone triaging GitHub issues  - (1) Please pay close attention to your triage issue queues. You may need to increase your triage frequency while we stabilize the release. (2) If you determine that an issue should be fixed in Stabilization for the 23.05.0 release , please add the issue to the "Release/2305 Stabilization" milestone https://github.com/o3de/o3de/milestone/13. This helps us keep track of all of the work coming into the stabilization branch. If you see a PR come through that is not tied to an issue, please add the PR to the milestone. * As with previous releases, we will use an Exception Project board for code coming into the stabilization branch that requires additional review.  The Exception project board is here https://github.com/orgs/o3de/projects/49/ . Instructions for using the board can be found by clicking that link, then viewing the readme. Here are the basic guidelines for when to use this Exception Project Board For Bugs: This exception process is only needed for bugs fixed in stabilization per the following schedule: 3/15 through 4/11: Bugs do not require exception. 4/12 through 4/18: Major bugs or below require an exception. Blockers and Criticals can be submitted to stabilization without exception 4/19 through 4/26 : All bug fixes require an exception. For Features: Exception are required for any NEW FEATURES that anyone wants to submit to the stabilization/2305 branch. * If you submit any code to the stabilization branch you DO NOT need to also submit it to the development branch. We have volunteers who will bring these bug fixes to the development branch on a regular basis.* More information about the timeline of upcoming release can be found at https://github.com/o3de/sig-release/issues/133
+
+
+ - **Release Manager** As you move through stabilization, communicate with the community, informing them of each code freeze per the dates noted in the Key Information.
+
+Description|Type|Send To|Example Message
+--|--|--|--
+Notify the O3DE community of Code freeze on Major bugs|Discord|#sig-all , #sig-release|O3DE 2305 Release Messaging O3DE 23.05.0 Release Update mm/dd. Beginning Wednesday April 12 at 5pm Pacific time, there is a code freeze on Major bugs and below in the Stabilization branches. Beginning this date, only Blocker and Critical bugs are allowed without the exception process. Major bugs or below requires an exception. If you have an exception in-progress, please continue to get approvals and try to get it merged ASAP. If you have a special circumstance that requires additional time, please communicate with the appropriate SIG and SIG-Release.
+Notify the O3DE community of Code freeze on Critical bugs|Discord|#sig-all , #sig-release|O3DE 2305 Release Messaging O3DE 23.05.0 Release Update mm/dd. Beginning Friday April 21 at 5pm Pacific time, only Blocker bugs are allowed via the exception process. No other bug fixes allowed. If you have an exception in-progress, please continue to get approvals and try to get it merged ASAP. If you have a special circumstance that requires additional time, please communicate with the appropriate SIG and SIG-Release.
+
+
  -  **Release Manager** communicate regularly with each SIG in Discord to ensure they are aware of the outstanding bugs in the Stabilization branch (the bugs can be found in the Github milestone). 
- -  **Release Manager** post regularly in #sig-all and #sig-release with statistics about the progress toward stabilizing the release. These communications  should include Total number of bugs found, Bug Fixed so Far, Bug remaining.
- - **Release Manager** communicate with the Documentation Program Manager to ensure that the release notes are kept up to date. This is important because during stabilization there will be bugs that do not get fixed and in some cases these bugs will need to be documented as known issues. 
+
+Description|Type|Send To|Example Message
+--|--|--|--
+Notify the O3DE SIG of outstanding bugs|Discord|#sig-all and/or specific SIG|O3DE 2305 Release Messaging O3DE 23.05.0 Release Update mm/dd. As we progress through release stabilization, please continue to triage and fix any bugs that are being reported. Current bugs are being reported here (link to release milestone)
+
+ - **Release Manager  - What to do when there are date changes.** As you move through stabilization, if there are any date changes, discuss them with key stakeholders as needed. If you update a date, make sure you update the Key Information and communicate with the community. Here are some example messages for notifying the community.
+
+If this date changes|Notification Type|Send To notify|Example Message
+--|--|--|--
+Initial stabilization period (also impacts Code Freeze on Major bugs and below)|Discord|#sig-all , #sig-release, @Documentation Project Manager|O3DE 2305 Release Messaging O3DE 23.05.0 Release Update mm/dd. (provide some reason). The Stabilization period will now end on mm/dd. Beginning mm/dd+1 we will begin our code freeze on major bugs and below and only Blocker and Critical bugs are permitted to be fixed in the Stabilization branch without the exception process. Major bugs or below require an exception. If you have a special circumstance that requires additional time, please communicate with the appropriate SIG and SIG-Release.
+Code Freeze on Critical Bugs and below|Discord|#sig-all , #sig-release, @Documentation Project Manager |O3DE 2305 Release Messaging O3DE 23.05.0 Release Update mm/dd. (provide some reason) The code freeze on critical bugs will now begin Friday April 21 at 5pm Pacific time. After that time, only Blocker bugs are permitted to be fixed in the Stabilization branch without the exception process. No other bug fixes allowed. If you have a special circumstance that requires additional time, please communicate with the appropriate SIG and SIG-Release.
+QA Final Pass Date|Discord|#sig-all , #sig-release, @Documentation Project Manager|O3DE 2305 Release Messaging O3DE 23.05.0 Release Update mm/dd. (provide some reason) Beginning Friday April 21 at 5pm Pacific time, the O3DE stabilization code will be considered completely frozen. We are now focusing on our final QA pass. Blocker bugs are still permitted to be fixed via the exception process, with risk of delaying the release. If you have a special circumstance that requires additional time, please communicate with the appropriate SIG and SIG-Release.
+Release Date|Discord|#sig-all , #sig-release, #marketing-committee, @Documentation Project Manager,@everyone involved in the release call|O3DE 2305 Release Messaging O3DE 23.05.0 Release Update mm/dd. After discussing with (mention who you discussed with) , we have decided to move the release date because (enter you reason here). The new release date is mm/dd. 
+
+ -  **Release Manager** (Optional) post regularly in #sig-all and #sig-release with statistics about the progress toward stabilizing the release. These communications  should include Total number of bugs found, Bug Fixed so Far, Bug remaining.
+ - **Release Manager** communicate regularly via Discord and Github with the Documentation Program Manager to ensure that the release notes are kept up to date. This is important because during stabilization there will be bugs that do not get fixed and in some cases these bugs will need to be documented as known issues. 
+
 
 ### 2.2 Steps
- 1. **Release Manager** is responsible for ensuring all Github issues in the "Pre Release" phase of the project board are completed. 
-	 -  Prioritize the Feature Grid Process and make sure you reach out to SIGs ASAP about updating their feature Grids.
+ 1. **Release Manager** is responsible for ensuring all Github issues in the "Pre Release" phase of the release project board are completed. 
+	 -  Prioritize the [Feature Grid Process](#feature-grid-process)  and make sure you reach out to SIGs ASAP about updating their feature Grids.
  2.  **Release Manager** is responsible for overall maintenance and accuracy of the project board.
  3. **Release Manager** is responsible for all tasks assigned to them  identified in the [Stabilization Process](https://github.com/o3de/sig-release/blob/main/releases/Process/Stabilization%20Process.md), which includes periodic community duties. For example, communicating to the community via Discord #sig-all, to inform the community that stabilization phase has begun.
- 4. On the day we end stabilization (according to plan) it is up to the **Release Manager** to make a determination on whether the stabilization branch is stable enough to be releases.  A release is considered stable when (1) there are no more blocker or critical bugs in the Stabilization branch (2)  and there is agreement from the parties involved in the release.
- 5. Per the [Stabilization Process](https://github.com/o3de/sig-release/blob/main/releases/Process/Stabilization%20Process.md), as of Release 22.10.0, stabilization takes approximately 5 weeks from beginning stabilization to declaring the stabilization branch as "stable"
-
- Then the stabilization branch is merged back to O3DE/main to create the release. After the release is published and all of the code has been merged back to development, the stabilization branch is deleted. During the Stabilization Phase the development branch is used in the same way that it is always used – code submissions to the development branch are not restricted in any way.
+ 4. On the day we end stabilization (according to planned date in the Key Information) it is up to the **Release Manager** to make a determination on whether the stabilization branch is stable enough to be releases.  A release is considered stable when (1) there are no more blocker or critical bugs in the Stabilization branch (2)  and there is agreement from the parties involved in the release.
+ 5. Per the [Stabilization Process](https://github.com/o3de/sig-release/blob/main/releases/Process/Stabilization%20Process.md), as of Release 22.10.0, stabilization takes approximately 5 weeks from beginning stabilization to declaring the stabilization branch as "stable". Then the stabilization branch is merged back to O3DE/main to create the release. After the release is published and all of the code has been merged back to development, the stabilization branch is deleted. During the Stabilization Phase the development branch is used in the same way that it is always used – code submissions to the development branch are not restricted in any way.
 
 ### 2.3 Stabilization Process
 [Stabilization Process](https://github.com/o3de/sig-release/blob/main/releases/Process/Stabilization%20Process.md)
 
 ### 2.4 Feature Grid Process
+During this phase of release, it is up to the Release Manager to work with SIGs to get them to update the Feature Grid. The Documentation Project Manager is responsible for publishing the Feature Grid to the O3DE website. For more information refer to the [Feature Grid](./Docs%20Release%20Process.md#feature-grid) section in the Docs Release Process. 
+
 Currently, updating the Feature Grid is a brute force manual process, by which the Release Manager requests the other SIGs to update the process. See all of the feature grid issues from the 22.10 release here:  https://github.com/o3de/o3de/projects/18?card_filter_query=grid  
 
-During Phase 2, it is up to the Release Manager to work with SIGs to get them to update the Feature Grid. The Documentation Project Manager is responsible for publishing the Feature Grid to the O3DE website. For more information refer to the [Feature Grid](./Docs%20Release%20Process.md#feature-grid) section in the Docs Release Process. 
-
 ### 2.5 Documentation Release Process
-
 The Documentation Project Manager is responsible for the following items:
 * **O3DE Docs Stabilization**
 * **Release Notes**
@@ -168,6 +234,10 @@ Entry Criteria: All pre-release steps are complete. Prior to Release Day you wil
 4. The final steps involve verification. After verification, the release is done. At this point confirm with everyone that they do not have any remaining work. Confirm the plan for LFS Binary Objects with the owner - basically you need them to confirm with you once that work is complete. Congratulations, the release is now available to the community!
 5. In Discord #marketing-committee post a note informing them that the release is available. 
 
+Description|Type|Send To|Example Message
+--|--|--|--
+Notify the O3DE Marketing that the release is available|Discord|#marketing-committee|O3DE 2305 Release Messaging O3DE 23.05.0 The release is now available to download and it is ok to proceed with any marketing activities.
+
 *Exit Criteria: All Release Day Tasks are complete.*
 
 ## Phase (4 of 4): Post-Release
@@ -187,4 +257,4 @@ Begins immediately after the release. The work in this phase may be minimal, dep
 2. **Lack of clear overall metrics on Release Readiness:** Through discussions we realized that release readiness likely requires project-wide input (performance, ux, quality, security). Today we mainly look at bug count. We need to get project-wide input and figure out which metrics we should monitor.
 3. **We don't have a link on the downloads page for the stabilization build.** We should work with the Build SIG to make sure they get a link up the day we create the stabilization branch, so the community can more easily get and test the build. It's listed here https://github.com/o3de/o3de/issues/13208 so that it will be done for future releases. We may want to also get it on the downloads page on the website.
 4. **Feature Grid Process** Currently, updating the Feature Grid is a brute force manual process, by which the Release Manager requests the other SIGs to update the process. See all of the feature grid issues from the 22.10 release here:  https://github.com/o3de/o3de/projects/18?card_filter_query=grid  . SIG-Release  thinks this can be made easier by potentially making the feature grid updating a requirement of SIGs on a recurring basis. 
-Why we are not trying to change this right now? We are asking SIG to work on roadmaps in Jan 2023, we do not want to add additional requests to SIG at this time.  
+Why we are not trying to change this right now? We are asking SIG to work on roadmaps in Jan 2023, we do not want to add additional requests to SIG at this time.
