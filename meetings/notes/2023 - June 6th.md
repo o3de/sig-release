@@ -25,5 +25,6 @@
 
 ## Action Items
 1. @tonybalandiuk to follow up with the SIG Docs Community about the features grid statisticts and report back into the Discord SIG release channel.
-2. @joe will talk with Nicole about this and report back the result.
-3. @vincent to figure out the election process and report back in the SIG release channel.
+2. @tonybalandiuk to pick one of the TSC meeting hours and then gets approval from TSC to run the retrospective session on the meeting.
+3. @joe will talk with Nicole about this and report back the result.
+4. @vincent to figure out the election process and report back in the SIG release channel.
