@@ -71,9 +71,10 @@ jobs:
       - name: Split archive files if over limit
         run: | # MAXSIZE = 2GB
           MAXSIZE=2000000000
+          MAXSIZE_ZIP=2g
           ARCFILE=${{ steps.vars.outputs.archive_file }}
           if [ $(stat -c '%s' $ARCFILE.zip) -ge $MAXSIZE ]; then
-            mv $ARCFILE.zip temp-archive.zip && zip temp-archive.zip -s $MAXSIZE --out $ARCFILE.zip
+            mv $ARCFILE.zip temp-archive.zip && zip temp-archive.zip -s $MAXSIZE_ZIP --out $ARCFILE.zip
           fi
           if [ $(stat -c '%s' $ARCFILE.tar.gz) -ge $MAXSIZE ]; then
             mv $ARCFILE.tar.gz temp-archive.tar.gz && split -b $MAXSIZE temp-archive.tar.gz $ARCFILE.tar.gz.part
