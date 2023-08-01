@@ -102,12 +102,14 @@ The release notes must be in a PR to `development` and cherry-picked to `stabili
 
 The feature grid records the state of each feature system within O3DE for the upcoming version. The feature grid is typically published alongside the release notes. Each SIG is responsible for updating their feature grid during the pre-release phase. Then, the Docs Project Manager is responsible for finalizing the feature grid.
 
-**Tip**: **** For a punctual and smooth release process, SIGs should update their feature grids early, leaving at least a week for the Docs Project Manager to finalize the feature grid. This also allows time for any last minute changes to the feature grid.
+**Tip**: For a punctual and smooth release process, SIGs should update their feature grids early, leaving at least a week for the Docs Project Manager to finalize the feature grid. This also allows time for any last minute changes to the feature grid.
 
-✅ **Completion requirement**: (Pre-release phase) For completion, a PR must be merged into `development` and cherry-picked to `stabilization` that adds all feature grids that have been updated for the upcoming O3DE version. As an example, refer to this [PR](https://github.com/o3de/o3de.org/pull/2021/files) and the resulting [published feature grid](https://www.o3de.org/docs/release-notes/archive/22-05-0/feature-state/).
+✅ **Completion requirement**: (Pre-release phase) For completion, a PR must be merged into `development` and cherry-picked to `stabilization` that adds all feature grids, regardless of whether it's been updated or not. As an example, refer to this [PR](https://github.com/o3de/o3de.org/pull/2021/files) and the resulting [published feature grid](https://www.o3de.org/docs/release-notes/archive/22-05-0/feature-state/).
 
 
 ### SIG Feature Grids
+
+For accurate reporting of O3DE features, we highly suggest that all SIGs update their feature grids.
 
 **Instructions for SIGs**:
 
