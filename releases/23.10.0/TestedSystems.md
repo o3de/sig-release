@@ -24,7 +24,6 @@ High priority (to be tested first):
 | Engine Versioning     | Core?          |✔️|
 | Script Canvas         | Content        |✔️|
 | Lua Scripting         | Content        |✔️|
-| Scripting             | Content        |✔️|
 
 Medium priority (to be tested if we have time after completing all high priority workflows):
 
@@ -52,5 +51,17 @@ Low priority (to be tested if we have time after completing all medium priority 
 | Remote Projects       | Content?       |⚪|
 | Remote Gems           | Content?       |⚪|
 
+Not tested for 2310
 
+| Workflow	            | Area/SIG       |Tested?|
+|-----------------------|----------------|-------|
+|Audio                  | Graphics-Audio |⚪|
+|Material Editor        | Graphics-Audio |⚪|
+|Lua Editor             | Content        |⚪|
+|VS Code debugger       | Content        |⚪|
+|Project creation       | Content        |⚪|
+|Gem creation           | Content        |⚪|
+|Project configuration  | Content        |⚪|
+|MPS build creation     | Content        |⚪|
+|Robotics gems          | Simulation     |⚪|
 
