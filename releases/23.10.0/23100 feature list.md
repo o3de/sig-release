@@ -6,7 +6,7 @@
 
 Here are some highlights of O3DE 23.10, followed by a detailed list of features broken down by Special Interest Group (SIG).
 
-1. New and Improved Authoring Experiences: Added compact nodes to Script Canvas. These are nodes that handle simple operations and are utilize less visual space, making for a more compact and easier to debug graph. 
+1. New and Improved Authoring Experiences: Added compact nodes to Script Canvas. These are nodes that handle simple operations and utilize less visual space, making for a more compact and easier to debug graph. 
 
 2. New Document Property Editor (experimental): Default Disabled, The Document Property Editor (DPE) is a new framework that allows tool creators to write editors without having to dive into the complexities inherent in Qt-based UI, element sorting, or user-driven filtering. The DPE allows developers to specify the layout, editing behavior, and general properties of a user interface in an XML-like "document", which the DocumentPropertyEditor widget interprets to create the desired user experience. O3DE's "Console Variables" editor is the first tool to be written using the DPE framework, with experimental support for a DPE-based Entity Inspector debuting in this release, capable of visualizing prefab overrides. How to enable: https://docs.o3de.org/docs/learning-guide/tutorials/entities-and-prefabs/override-a-prefab/#prefab-overrides-in-entity-inspector
 
