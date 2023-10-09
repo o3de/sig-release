@@ -18,7 +18,7 @@ Here are some highlights of O3DE 23.10, followed by a detailed list of features 
 
 6. Many visual and performance improvements to Atom (O3DE graphics and rendering system) including the start of mobile support for iOS/Android. 
 
-7. Robotics oriented features: Improvements to the robotics starter template
+7. Enhanced Robotics Features: Substantial improvements to robotic Project Templates. Manipulation template has been added to enable quick start with robotic arms. Templates now also include mini-tutorials that help to guide users through running them with Robot Operating System 2 (ROS 2) packages. Robotic manipulation components have been redesigned for modularity. Added support for prismatic joints. Camera sensor component has improved performance, configurability, and supports adding of noise. Two grippers are now available, finger gripper and vacuum gripper. Added Contact sensor component.
 
 ## Features and bug fixes
 
