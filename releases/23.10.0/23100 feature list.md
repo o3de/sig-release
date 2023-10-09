@@ -1,7 +1,5 @@
 # O3DE 23.10 Feature List
 
-**Status:** In Progress
-
 **Open 3D Engine (O3DE)** 23.10 release levels up the authoring experience for game creators and robotics simulation developers. In addition to improvements to the core engine, robotics users in O3DE now have an updated ROS2 Gem, a Gem that provides integration with the [Robot Operating System (ROS2)](https://www.ros.org/), which provides drivers, state-of-the-art algorithms, and developer tools for robotics simulations.
 
 ## Highlights
