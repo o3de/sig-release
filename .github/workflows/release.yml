@@ -15,6 +15,7 @@ on:
         options:
           - o3de
           - o3de-atom-sampleviewer
+          - o3de-extras
           - o3de-multiplayersample
           - o3de-netsoaktest
       release_tag:
