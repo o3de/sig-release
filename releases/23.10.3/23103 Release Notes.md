@@ -70,4 +70,5 @@ The **Open 3D Engine (O3DE)** 23.10.3 This release is a point release (primarily
   * fix of the ROS2 Python tests that did not work in 2310.2 [663](https://github.com/o3de/o3de-extras/pull/663)
   * fix in scale calculation applied to a sensor (sensors were not placed correctly when scaled)
   * fix of the multiplayer template which did not work in 2310.2
-  * removal of the unused texture files that were duplicated along different Gems
+  * removal of the unused texture files that were duplicated along different Gems [682](https://github.com/o3de/o3de-extras/pull/682)
+ * Enable compilation of WarehouseAutomationGem with a project-centric approach. [665](https://github.com/o3de/o3de-extras/pull/665)
