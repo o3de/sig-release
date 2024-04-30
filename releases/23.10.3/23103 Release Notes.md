@@ -64,7 +64,7 @@ The **Open 3D Engine (O3DE)** 23.10.3 This release is a point release (primarily
 # o3de/o3de-extras
 
 * https://github.com/o3de/o3de-extras/pull/690 - This PR collects changes that should be integrated into the next point-release.
-  * updates in the documentation that are common for main and development
+  * updates in the documentation that are common for main and development [663](https://github.com/o3de/o3de-extras/pull/633)
   * fix for rclcpp SIGINT and SIGTERM handling (it was not handled in 2310.2)
   * fix in Twist Robot Control that allows to move the robot more smoothly
   * fix of the ROS2 Python tests that did not work in 2310.2
