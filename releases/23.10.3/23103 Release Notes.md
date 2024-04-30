@@ -69,6 +69,6 @@ The **Open 3D Engine (O3DE)** 23.10.3 This release is a point release (primarily
   * fix in Twist Robot Control that allows to move the robot more smoothly [645](https://github.com/o3de/o3de-extras/pull/645)
   * fix of the ROS2 Python tests that did not work in 2310.2 [663](https://github.com/o3de/o3de-extras/pull/663)
   * fix in scale calculation applied to a sensor (sensors were not placed correctly when scaled) [677](https://github.com/o3de/o3de-extras/pull/677)
-  * fix of the multiplayer template which did not work in 2310.2
+  * fix of the multiplayer template which did not work in 2310.2 [680](https://github.com/o3de/o3de-extras/pull/680)
   * removal of the unused texture files that were duplicated along different Gems [682](https://github.com/o3de/o3de-extras/pull/682)
  * Enable compilation of WarehouseAutomationGem with a project-centric approach. [665](https://github.com/o3de/o3de-extras/pull/665)
