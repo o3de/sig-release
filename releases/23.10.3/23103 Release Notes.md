@@ -50,6 +50,8 @@ The **Open 3D Engine (O3DE)** 23.10.3 This release is a point release (primarily
 * Cherry-pick clang 17 compiler errors fix from development [17780](https://github.com/o3de/o3de/pull/17780)
 * Cherrypick my linux/clang compile fixes from dev to point release [17771](https://github.com/o3de/o3de/pull/17771)
 * Cherry-pick fix to ChangeValidate functions not triggering in Property Editors [17763](https://github.com/o3de/o3de/pull/17763)
+* Fix crash when full refreshing from AssetProcessor [17869](https://github.com/o3de/o3de/pull/17869)
+* Fix script canvas error when saving scripts in Linux [17853](https://github.com/o3de/o3de/pull/17853)
 
 # o3de/o3de-extras
 
