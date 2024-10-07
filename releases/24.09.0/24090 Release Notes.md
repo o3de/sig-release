@@ -60,9 +60,9 @@ See Simulation, Rendering, and AR/VR sections for specific changes in these area
 * Added support to run clients headlessly for simulation client  
 * MultiplayerSample gamepad player input support  
 * Added vertex color support to BasePBR, StandardPBR, EnhancedPBR material types as well as material canvas.  
-* [Added three new tone-mapping modes: AcesFitted, AcesFilmic and Filmic](https://github.com/o3de/o3de/commit/af81e8362e5a9a15047d35d34573e4aacceb7941)  
-* [Added shadow support for SimpleSpotLights](https://github.com/o3de/o3de/commit/7ab669f974a6df543339a1cc625c34f6ad21b282)  
-* [Added Gobo (i.e texture projection) support for simple spot light.](https://github.com/o3de/o3de/commit/08e1d396a40b56db24ee26952da935c625d9def1)  
+* Added three new tone-mapping modes: AcesFitted, AcesFilmic and Filmic
+* Added shadow support for SimpleSpotLights
+* Added Gobo (i.e texture projection) support for simple spot light.
 * Added per mesh shader option support when mesh instancing is enabled.  
 * Improved RenderDoc and Pix integration
 
@@ -156,20 +156,20 @@ See Simulation, Rendering, and AR/VR sections for specific changes in these area
 **Mobile Render Pipeline \-** Add support for an extremely performant mobile render pipeline built for tiled GPUs.
 
 * Optimised BRDF for mobile \- Added a new optimised BRDF for mobile as well as support for analytical Env IBL approximation.  
-* [Added Gobo (i.e texture projection) support for simple spot light.](https://github.com/o3de/o3de/commit/08e1d396a40b56db24ee26952da935c625d9def1)  
-* [Added CPU culling for decals](https://github.com/o3de/o3de/commit/6d23563d2b0633409969aeff29f9d10f12c6c875).  
-* [Added shadow support for SimpleSpotLights](https://github.com/o3de/o3de/commit/7ab669f974a6df543339a1cc625c34f6ad21b282).  
-* [Added support for decal colour and decal colour factor to help modulate final calculated decal colour.](https://github.com/o3de/o3de/commit/ed2f49bd2d56137e0ef88c9094dda1f328a8f401)  
-* [Added shader options for simple point/spot lights and decals](https://github.com/o3de/o3de/commit/c8ca92868bff7170bbf4e5d36154e7ed761bd89a).   
-* [Added support for cpu culling for simple-point and simple-punctual lights](https://github.com/o3de/o3de/commit/b6800d426a9e074c9f8a08dc6f9cdaf251ee95ca).  
+* Added Gobo (i.e texture projection) support for simple spot light.
+* Added CPU culling for decals
+* Added shadow support for SimpleSpotLights
+* Added support for decal color and decal color factor to help modulate final calculated decal color.
+* Added shader options for simple point/spot lights and decals
+* Added support for cpu culling for simple-point and simple-punctual lights
 * Added support for deferred fog within the mobile pipeline.  
 * Added exponential and exponential squared fog modes.   
-* [Added support for shader options within PCF filtering for directional light shadows](https://github.com/o3de/o3de/commit/75bc7b72446a34f351929e1d917b25427725a5c2).  
+* Added support for shader options within PCF filtering for directional light shadows
 * Added Silhouette support to the mobile render pipeline. For more details about the Silhouette feature see the section about Rendering additions.  
 * Added particles support to the mobile render pipeline.  
 * Added support for postFX effects within the pipeline  
 * Various half float optimizations for the mobile render pipeline.  
-* [Render scale related support and fixes](https://github.com/o3de/o3de/commit/64edaebaf2c34bb99c733c6c013c1614ba95dfdf) across various mobile devices.
+* Render scale related support and fixes across various mobile devices.
 
 
 **Rendering additions/improvements \-** Various rendering improvements for all the render pipelines and general Atom improvements.
@@ -177,10 +177,10 @@ See Simulation, Rendering, and AR/VR sections for specific changes in these area
 * Initial scaffolding for Multi-GPU support within RHI and RPI layers of the engine. A lot of this work includes initial plumbing for Multi-GPU objects and initial support for basic GPU-GPU synchronisation when transferring resources between devices.  
 * Silhouette Feature \- Add support for Silhouette material type that, when applied to a mesh, draws an outline and filled-in silhouette in various modes: Always, XRay, Visible and Never.  
 * Added vertex colour support  to BasePBR, StandardPBR, EnhancedPBR material types as well as material canvas.  
-* [Added three new tone-mapping modes: AcesFitted, AcesFilmic and Filmic](https://github.com/o3de/o3de/commit/af81e8362e5a9a15047d35d34573e4aacceb7941). Mobile render pipeline defaults to Filmic mode.  
+* Added three new tone-mapping modes: AcesFitted, AcesFilmic and Filmic. Mobile render pipeline defaults to Filmic mode.  
 * Added android and ios registry settings for four tiers (low, medium, high, very high) of graphics quality.  
 * Added support for geometry shader within DX12 and Vulkan RHI backends.  
-* [Added support for intersection shaders](https://github.com/o3de/o3de/commit/820e6b3c30136ed9212aae26803b2ceeddba16bb) within DX12 and Vulkan RHI backends.  
+* Added support for intersection shaders within DX12 and Vulkan RHI backends.
 * Shadow culling outside view frustum \- Improve performance by skipping unnecessary work for all shadows that won't be visible. This is achieved by cpu culling of lights to limit the amount of lights that require processing.  
 * r\_antiAliasing \- Add support to switch anti-aliasing modes via CVar r\_antiAliasing  
 * Add support for lighting channels \- This feature introduces 3 channels for each kind of light and light-able objects. The objects and lights in the same channel are grouped and as a result the lights in the group affect the objects in the same group. The default behaviour is all lights and objects in channel 0, so it should not change the current way to work with lighting, but it will provide a further option to grant the artists the flexibility to control which light shines on which objects.  
@@ -189,14 +189,14 @@ See Simulation, Rendering, and AR/VR sections for specific changes in these area
 * Added device attribute for the GPU model. This allows us to provide better device filtering for graphics quality tiers.  
 * Added per mesh shader option support when mesh instancing is enabled. This allows us to build optimised shader variants for a scene with mesh instancing.  
 * Added support for timeline semaphores within Vulkan RHI to help with low level synchronisation.  
-* [Added ability to disable creating a native window for game launchers](https://github.com/o3de/o3de/commit/66f0ea88fff686f43f1ec7b1e2b717d0b2eb8631) for null renderers.
+* Added ability to disable creating a native window for game launchers for null renderers.
 
 **Atom (O3DE renderer) Memory optimizations**
 
 * Added support to dump information about loaded assets.  
 * Various Metal RHI related memory optimizations.  
 * Added support to release BufferAssets owned by ModelAssets. This allows us to release mesh related memory on the cpu once it is transferred to the gpu.  
-* [Ring buffer support for RayTracing buffers](https://github.com/o3de/o3de/commit/c7c6817c9a374ddbce33eb8c4563335a06b82477).
+* Ring buffer support for RayTracing buffers.
 
 ## VR/OpenXR Improvements for 24.09.0 Release.
 
