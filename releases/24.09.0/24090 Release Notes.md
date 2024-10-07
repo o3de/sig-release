@@ -315,7 +315,6 @@ utk-hua
 Tobias Alexander Franke  
 Yaakuro  
 Adam Krawczyk  
-knicked  
 alexeykostin  
 Joshua Rainbolt  
 Erik Jacobs  
