@@ -323,7 +323,6 @@ kberg-amzn
 yosagi  
 TechnoPorg  
 arvrschool  
-Paweł Liberadzki  
 floroeske  
 JaviNunsys  
 zchengw  
