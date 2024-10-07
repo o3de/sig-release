@@ -304,7 +304,6 @@ solo1967
 LB-MichalRodzos  
 Luis Gutierrez  
 Wiktor Bajor  
-Mateusz Żak  
 Maciej Aleksandrowicz  
 CarbAndrewD  
 Roderick Kieley  
