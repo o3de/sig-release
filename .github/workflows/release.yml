@@ -17,6 +17,7 @@ on:
           - o3de-atom-sampleviewer
           - o3de-extras
           - o3de-multiplayersample
+          - o3de-multiplayersample-assets
           - o3de-netsoaktest
       release_tag:
         description: 'The release tag'
@@ -63,24 +64,33 @@ jobs:
           echo ::set-output name=latest_tag::$(git describe --tags `git rev-list --tags --max-count=1`)
           echo ::set-output name=latest_main_sha::$(git log -n 1 --pretty=format:"%H" origin/main)
           echo ::set-output name=archive_file::${{ inputs.repository }}-${{ inputs.release_tag }}-lfs
+          echo ::set-output name=archive_file_alt::${{ inputs.repository }}_${{ inputs.release_tag }}_lfs
           
       - name: Archive repo as compressed files
         run: |
           git archive -o ${{ steps.vars.outputs.archive_file }}.zip HEAD
           git archive -o ${{ steps.vars.outputs.archive_file }}.tar.gz HEAD
+          git archive --prefix=o3de -o ${{ steps.vars.outputs.archive_file_alt }}.tar.gz HEAD
       
       - name: Split archive files if over limit
         run: | # MAXSIZE = 2GB
-          MAXSIZE=2000000000
+          MAXSIZE=2048000000
           MAXSIZE_ZIP=2g
-          ARCFILE=${{ steps.vars.outputs.archive_file }}
-          if [ $(stat -c '%s' $ARCFILE.zip) -ge $MAXSIZE ]; then
-            mv $ARCFILE.zip temp-archive.zip && zip temp-archive.zip -s $MAXSIZE_ZIP --out $ARCFILE.zip
-          fi
-          if [ $(stat -c '%s' $ARCFILE.tar.gz) -ge $MAXSIZE ]; then
-            mv $ARCFILE.tar.gz temp-archive.tar.gz && split -b $MAXSIZE temp-archive.tar.gz $ARCFILE.tar.gz.part
-          fi
-          rm -f temp-archive.*
+          for ARCFILE in "${{ steps.vars.outputs.archive_file }}" "${{ steps.vars.outputs.archive_file_alt }}"; do
+            # Split zip
+            if [ -f "$ARCFILE.zip" ] && [ "$(stat -c '%s' "$ARCFILE.zip")" -ge "$MAXSIZE" ]; then
+              mv "$ARCFILE.zip" temp-archive.zip
+              zip temp-archive.zip -s "$MAXSIZE_ZIP" --out "$ARCFILE.zip"
+              rm -f temp-archive.zip
+            fi
+
+            # Split tar.gz
+            if [ -f "$ARCFILE.tar.gz" ] && [ "$(stat -c '%s' "$ARCFILE.tar.gz")" -ge "$MAXSIZE" ]; then
+              mv "$ARCFILE.tar.gz" temp-archive.tar.gz
+              split -b "$MAXSIZE" temp-archive.tar.gz "$ARCFILE.tar.gz.part"
+              rm -f temp-archive.tar.gz
+            fi
+          done
           
       # Creates a release tag based on inputs
       - name: Create Release
@@ -100,4 +110,4 @@ jobs:
             **Full Changelog**:  https://github.com/${{ github.repository_owner }}/${{ inputs.repository }}/compare/${{ steps.vars.outputs.latest_tag }}...${{ inputs.release_tag }}
           draft: ${{ inputs.draft_release }}
           prerelease: false
-          artifacts: "${{ steps.vars.outputs.archive_file }}.*"
+          artifacts: "${{ steps.vars.outputs.archive_file }}.*,${{ steps.vars.outputs.archive_file_alt }}.*"
