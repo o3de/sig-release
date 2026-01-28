@@ -70,7 +70,7 @@ jobs:
         run: |
           git archive -o ${{ steps.vars.outputs.archive_file }}.zip HEAD
           git archive -o ${{ steps.vars.outputs.archive_file }}.tar.gz HEAD
-          git archive --prefix=o3de -o ${{ steps.vars.outputs.archive_file_alt }}.tar.gz HEAD
+          git archive --prefix=o3de/ -o ${{ steps.vars.outputs.archive_file_alt }}.tar.gz HEAD
       
       - name: Split archive files if over limit
         run: | # MAXSIZE = 2GB
