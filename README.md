@@ -27,8 +27,8 @@ Our team is small and help is always welcome! As a contributor you can help in o
 2. Join one of our bi-weekly voice call on Discord on Tuesday at 10 AM PST/PDT. You can find the next call on [this calendar](https://lists.o3de.org/g/o3de-calendar/calendar). *Event schedules may change. For an up-to-date schedule, see the official O3DE calendar*
 
 ## SIG Release Chair and Co-chair
-* Chair: @Tony B [Amazon]#7273 (O3DE Discord)
-* Co-chair: @vincentvincent#6260 (O3DE Discord) 
+* Chair: [@nickschuetz](https://github.com/nickschuetz)
+* Co-chair: [@matteogrs](https://github.com/matteogrs) 
 
 ## SIG Release - General resources
 
