@@ -31,7 +31,8 @@ Follow [Release Day](./Major%20Release%20Process.md#phase-3-of-4-release-day) in
 
 **Phase (4 of 4): Post-Release**
 
-Follow [Post-Release](./Major%20Release%20Process.md#phase-4-of-4-post-release) instructions in the O3DE Major Release Process document.
+* **Resync development and main branches**: After a release, the development branch should be in sync with main again, in addition to in-development changes that were not yet released. 
+* Follow [Post-Release](./Major%20Release%20Process.md#phase-4-of-4-post-release) instructions in the O3DE Major Release Process document.
 
 
 Additional details for these steps are described in the remainder of this document.
@@ -282,3 +283,237 @@ Make sure that version numbers are up-to-date in the following locations:
 
 
 *As new documentation is written, there may be new file locations to update. Please update this document as needed.*
+
+
+## Resync development and main branches 
+
+After a release, the development branch should be in sync with main again, in addition to in-development changes that were not yet released.
+
+### Example: O3DE 23.05 Post-Release
+
+The remainder of this section uses O3DE 23.05 as an example. See PR: https://github.com/o3de/o3de.org/pull/2411
+
+### Plan
+
+* Merge development into main. Main branch should have all the same changes as development (and additional changes that were only pushed to main recently). 
+* Reset development branch to main, so development will be at the same point as main again. 
+* There’s multiple Git merge strategies, namely *fast-forward* and *three-way* (see [Stack](https://stackoverflow.com/questions/28407020/keep-commits-history-after-a-git-merge))
+    * A fast-forward merge is ideal because it keeps the history linear (e.g. if merging dev to main, the individual commits in dev are copy individually to main.) This is not possible most of the time because commits go into main and dev simultaneously, so three-way merge occurs instead. 
+    * A three-way merge combines all of the commits into one “merge commit”. (e.g. individual commits in dev are combined into one commit that applies to main).
+    * For O3DE Docs, I want to take the individual commits from development that main will accept. It’s not possible to merge fast-forward only. So, I can cherry-pick some commits, which `git log main..development` identifies.  All other changes whose commits cannot be identified (potentially lost), we can identify using `git diff main..development`, and do a merge commit (three-way merge). 
+
+### Remediation steps
+
+Create a new branch from main, called `dev-to-main`. This branch is compliant with the latest in `main`, and will soon contain changes that bring the latest from `development`. 
+
+```
+$ git switch -c dev-to-main upstream/main
+Switched to a new branch 'dev-to-main'
+Branch 'dev-to-main' set up to track remote branch 'main' from 'upstream'.
+```
+
+#### Step 1: Create a patch that brings changes from development to main
+
+The reason we apply a patch is because these changes cannot be brought from development to main via a `git pull`. (When we run `git pull`, no commits to pull are identified. [Example](https://stackoverflow.com/questions/16490547/what-is-the-right-way-to-merge-branches-when-git-diff-shows-changes-but-git-m).)
+
+1. Get list of changes that are in development, but not in main. See output: [diff-dev-to-main.txt](https://quip-amazon.com/-/blob/HaY9AAfa8HL/r9p-aiaeFsnMO71JEYxzvA?name=diff-dev-to-main.txt) 
+
+```
+$ git diff upstream/main..upstream/development > diff-dev-to-main.txt
+```
+
+1. (Optional) View the git diff in a GUI to see the changes more easily. For example, upload the diff output to diffy.com.
+    How to understand the list of differences. Lines marked with **`-`** indicate lines that exist in main, but not in development. Lines marked with **+** indicate lines that exist in development, but not in main. 
+
+[Image: image.png]
+
+1. Manually verify that all of these changes in development, are changes we want to bring into main. 
+2. Create a patch.
+
+```
+$ git diff dev-to-main..upstream/development --binary > diff-2305-post-release.patch
+
+```
+
+
+You can ensure the patch contains what you expect and does not contain errors using the following commands
+
+* Check if the diff can be applied to this branch. If successful, there is no output.
+
+```
+
+git apply --check diff-2305-post-release.patch
+```
+
+* Check the contents of the patch by running `git apply --stat diff-2305-post-release.patch`.  You can [compare the number of files changed](https://stackoverflow.com/a/6584048/19604334) from the `git diff` to the patch by using `wc -l`. (The second one has 170 lines instead of 169 because 1 line is used to summarize the difference. The rest of the lines show the name of the file.)
+
+```
+$ git diff dev-to-main..upstream/development --name-only | wc -l
+169
+
+$ git apply --stat diff-2305-post-release.patch | wc -l
+170
+```
+
+
+
+#### Step 2: Selectively apply parts of the patch
+
+The patch we created is meant to be applied to main. It contains a complete diff of main and development. Because main has some relevant changes that development doesn’t have, we don’t want to simply apply the entire patch because that would cause undo changes that we want to keep in main.  For each file in the diff, we *likely* want to keep the version that has the more recent changes. 
+
+**Diff spreadsheet**:  [O3DE 23.05 Post-release Diff (dev-to-main)](https://quip-amazon.com/GUASAEa2OKlV)
+This diff spreadsheet helps you determine and track which file changes to keep in the patch.
+[Image: image.png]Contents of diff spreadsheet:
+
+* Each row corresponds to a file with that’s different between main and development.
+* **Filename**: Relative path of file
+* **Branch with latest commit**: Specifies the branch that contains the most recent update for this file.
+* **Latest commit in dev branch**: Specifies this file’s latest commit in the development branch. If **Branch with latest commit** is “development”, then this file likely contains the changes we want to apply to main, so we should add it from the patch.
+* **Latest commit in main branch**: Specifies this file’s latest commit in the main branch. If **Branch with latest commit** is “main”, then this file likely contains the changes we don’t want to apply to main, so we should exclude it from the patch.
+
+
+Source: [(Stack) Find out which branch has the most recent version of a certain file](https://stackoverflow.com/questions/51795893/find-out-which-branch-has-the-most-recent-version-of-a-certain-file)
+
+```
+git branch --all --contains "$(git log --branches 'development' 'main' --format=format:%H -n 1 -- path/to/file)"
+```
+
+
+**To selectively apply parts of the patch**: 
+
+1. Apply the patch. This makes the changes to your local branch. It does not add and commit automatically - you must do this manually and selectively choose which changes to add. 
+
+```
+$ git apply diff-2305-post-release.patch
+```
+
+    1. You may get warning that says “warning: squelched 46 whitespace errors” and “warning: 51 lines add whitespace errors.” No action is needed.
+1. Use the diff spreadsheet and [github.com/o3de/o3de.org](http://github.com/o3de/o3de.org) to manually verify and add the file changes to the patch.
+    1. [Image: image.png]
+    2. See **[Resolving files that did not output a “branch with latest commit”](https://quip-amazon.com/ZcJyAbfhMb93/O3DE-2305-Post-Release#temp:C:HaY450bc19c99ce456b8a1f1a9be)**
+2. Verify the patch was applied
+
+```
+$ git apply diff-2305-post-release.patch -R --check && echo already applied
+```
+
+
+
+#### **Resolving files that did not output a “branch with latest commit”**
+
+
+In this example, it’s unclear whether `distributable-engine.md` should come from main or development because **Branch with latest commit** field is empty. So, we look at the file’s latest commit in both the development and main branches. This additional context helps us determine which changes to keep. 
+[Image: image.png][Image: image.png]
+#### **How the diff spreadsheet was created**
+
+[O3DE 23.05 Post-release Diff (dev-to-main)](https://quip-amazon.com/GUASAEa2OKlV),  the “diff spreadsheet”, was created from the list of differences between `main` and `development`. We used it in step 2 as an organization tool to determine which changes in the patch to apply. 
+
+We ran the following commands to get information for the diff spreadsheet. 
+
+
+* **Get filenames from diff main and development.**
+
+```
+git diff upstream/main..upstream/development --name-only
+```
+
+* **Get the branch that contains the latest commit for each filename.**
+
+```
+git branch -r --contains "$(git log --branches -r --format=format:%H -n 1 -- $in)"
+```
+
+* **Combine filename and latest branch for each file:** Outputs filename, branch(es). I post-processed this data so it’s strictly "filename, branch" — filename and branch are in the same line, comma-separated, and only one branch name listed. 
+
+```
+git diff upstream/main..upstream/development --name-only |  
+while read in; do
+    echo "$in, "
+    git branch -r --contains "$(git log --branches -r --format=format:%H -n 1 -- $in)"
+done
+```
+
+* **Get latest commit in both `development` and `main` branch for each file.** While all files’ latest commit are either in `development` or `main` branch, we want to manually compare their latest commit in both development and main branches. This is to verify that we choose the *correct* latest changes.
+    * **Latest commit in `development`**
+
+```
+git diff upstream/main..upstream/development --name-only |  
+while read in; do
+    commit=$(git log upstream/development --format=format:%H -n 1 -- $in)  
+    echo $commit 
+done
+
+```
+
+    * **Latest commit in `main`**
+
+```
+git diff upstream/main..upstream/development --name-only |  
+while read in; do
+    commit=$(git log upstream/main --format=format:%H -n 1 -- $in)  
+    echo $commit 
+done
+```
+
+
+
+* **(Optional) Get unique commits and their date.** This is extra information if you want to do a deeper dive into the actual commit of the files and see the timeline these commits were introduced. 
+
+```
+git diff upstream/main..upstream/development --name-only |
+    while read in; do
+        commit=$(git log upstream/development --format=format:'%H (%ad)' -n 1 -- $in);
+        echo $commit;
+    done
+```
+
+    * `--format=format: '%H' (%ad)’`:  Formats the commit as `<commit> (<date>)`. For example, `fed58d3523e9b7f1a984786a8e5b25d67fa65b6e (Mon May 8 15:09:36 2023 -0700)`.
+
+
+
+**Excluded from patch**
+
+This PR aims to completely sync `main` and `development`, such that `main` has all current changes. 
+The following files from the patch were excluded. These files contain current changes in main, and are not in development. Because the patch introduces changes from development, it would have tried to remove or undo these changes, which we don’t want.
+
+```
+$ git diff dev-to-main..upstream/development --name-only |
+> while read in; do
+>     commit="$(git log --branches -r --format=format:%H -n 1 -- $in)"
+>     echo "$in ($commit)"
+> done
+
+content/blog/posts/23-05-release.md (a61897fab4d7fc324f9ebc57eb6cf0f17c02fa79)
+content/blog/posts/mps-blog.md (9244d7b0462a89ccde647efa9a641c4bfdf2d19f)
+content/docs/engine-dev/architecture/bootstrap/_index.md (ade027bae685b21f3b71cdbe8b009dcdcd7aa4ef)
+content/docs/engine-dev/frameworks/azcore/_index.md (ade027bae685b21f3b71cdbe8b009dcdcd7aa4ef)
+content/docs/user-guide/assets/asset-processor/skip-startup-scan.md (d390819e6ad1d088bf9fd0e3cb7a215ea63eb51f)
+content/docs/user-guide/editor/_index.md (68818a800972ab3a372b4f9aca1a03b1dc72786a)
+content/docs/user-guide/editor/asset-browser.md (68818a800972ab3a372b4f9aca1a03b1dc72786a)
+content/docs/user-guide/gems/reference/debug/imgui.md (ade027bae685b21f3b71cdbe8b009dcdcd7aa4ef)
+static/images/blog/23-05-release/image01.jpg (a61897fab4d7fc324f9ebc57eb6cf0f17c02fa79)
+static/images/blog/23-05-release/image01.png (80ee62d1a938464ac4ea7512ace12a2d9dc4a595)
+static/images/blog/23-05-release/image02.jpg (a61897fab4d7fc324f9ebc57eb6cf0f17c02fa79)
+static/images/blog/23-05-release/image02.png (80ee62d1a938464ac4ea7512ace12a2d9dc4a595)
+static/images/blog/23-05-release/image03.jpg (a61897fab4d7fc324f9ebc57eb6cf0f17c02fa79)
+static/images/blog/23-05-release/image03.png (80ee62d1a938464ac4ea7512ace12a2d9dc4a595)
+static/images/blog/23-05-release/image04.png (a61897fab4d7fc324f9ebc57eb6cf0f17c02fa79)
+static/images/blog/23-05-release/image05.png (a61897fab4d7fc324f9ebc57eb6cf0f17c02fa79)
+static/images/blog/23-05-release/image06.png (a61897fab4d7fc324f9ebc57eb6cf0f17c02fa79)
+static/images/blog/23-05-release/image07.jpg (a61897fab4d7fc324f9ebc57eb6cf0f17c02fa79)
+static/images/blog/23-05-release/image07.png (80ee62d1a938464ac4ea7512ace12a2d9dc4a595)
+static/images/blog/23-05-release/image08.jpg (a61897fab4d7fc324f9ebc57eb6cf0f17c02fa79)
+static/images/user-guide/assetbrowser/advanced-filter-options.png (68818a800972ab3a372b4f9aca1a03b1dc72786a)
+static/images/user-guide/assetbrowser/asset-browser-welcome.png (68818a800972ab3a372b4f9aca1a03b1dc72786a)
+static/images/user-guide/assetbrowser/asset-management.png (68818a800972ab3a372b4f9aca1a03b1dc72786a)
+static/images/user-guide/assetbrowser/asset-type-filter.png (68818a800972ab3a372b4f9aca1a03b1dc72786a)
+static/images/user-guide/assetbrowser/breadcrumbs-click-navigate.png (68818a800972ab3a372b4f9aca1a03b1dc72786a)
+static/images/user-guide/assetbrowser/breadcrumbs-edit.png (68818a800972ab3a372b4f9aca1a03b1dc72786a)
+static/images/user-guide/assetbrowser/folder-context-menu.png (68818a800972ab3a372b4f9aca1a03b1dc72786a)
+static/images/user-guide/assetbrowser/list-view-button.png (68818a800972ab3a372b4f9aca1a03b1dc72786a)
+static/images/user-guide/assetbrowser/list-view.png (68818a800972ab3a372b4f9aca1a03b1dc72786a)
+static/images/user-guide/assetbrowser/table-view-button.png (68818a800972ab3a372b4f9aca1a03b1dc72786a)
+static/images/user-guide/assetbrowser/table-view.png (68818a800972ab3a372b4f9aca1a03b1dc72786a)
+static/images/user-guide/assetbrowser/thumbnail-view-button.png (68818a800972ab3a372b4f9aca1a03b1dc72786a)
+static/images/user-guide/assetbrowser/thumbnail-view.png (68818a800972ab3a372b4f9aca1a03b1dc72786a)
+```
