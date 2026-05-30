@@ -1,4 +1,4 @@
-The **Open 3D Engine (O3DE)** 23.10.3 This release is a point release (primarily bug fixes) for the 23.10 major release. This point release focuses on bug fixes for the Document Property Editor (DPE), crashes across Windows and Linux, optimization for decals, minor improvements for editor startup times, address control input inconsistencies, quality of life improvements for the Asset Browser, and resolves some build issues with clang versions.
+The **Open 3D Engine (O3DE)** 23.10.3 release is a point release (primarily bug fixes) for the 23.10 major release. This point release focuses on bug fixes for the Document Property Editor (DPE), crashes across Windows and Linux, optimization for decals, minor improvements for editor startup times, address control input inconsistencies, quality of life improvements for the Asset Browser, and resolves some build issues with clang versions.
 
 
 # PR's for point release
