@@ -28,7 +28,7 @@ Our team is small and help is always welcome! As a contributor you can help in o
 
 ## SIG Release Chair and Co-chair
 * Chair: [@nickschuetz](https://github.com/nickschuetz)
-* Co-chair: [@matteogrs](https://github.com/matteogrs) 
+* Co-chair: -
 
 ## SIG Release - General resources
 
