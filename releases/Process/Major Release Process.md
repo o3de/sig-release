@@ -1,6 +1,6 @@
   
 # O3DE Major Release Process
-V1.3 Updated May 25, 2023. 
+V1.4 Updated Aug 28, 2026. 
 The release process is managed by the Release Special Interest Group (SIG). To request an update to this document, please open an issue at https://github.com/o3de/sig-release/issues
 
 ## Key Details
@@ -18,6 +18,7 @@ The release process is managed by the Release Special Interest Group (SIG). To r
 	* o3de-netsoaktest
 	* o3de-extras
 	* o3de.org
+* New features developed for Gems and Templates in canonical repositories such as `o3de-extras` may also be **backported** to older, already-released O3DE engine versions and released alongside the latest release as outlined in [backporting strategy RFC](https://github.com/o3de/sig-release/pull/356).
 
 
 ## Roles and Responsibilities
@@ -38,6 +39,8 @@ The release process is managed by the Release Special Interest Group (SIG). To r
 
 ## Terminology
 *Intent: Define terms used throughout the release process* 
+
+**Backport:** The release of a Gem or Template from a canonical repository (such as `o3de-extras`) for an older, already-released O3DE engine version, rather than only the latest release. Backported changes live on a `backports/<o3de-version>` branch (for example `backports/25051` for O3DE 25.05.1) and are published via an updated `repo.json`, so they become available through the O3DE Project Manager. See [RFC document](https://github.com/o3de/sig-release/pull/356).
 
 **Emergency Release:**  also known as a “hotfix”, an emergency updates to fix a specific set of bugs deemed as either critical security issues or blocking basic utilization of the project. Emergency releases result in an incremental update of the version number (i.e. 22.05.0 would become 25.05.1).
 
