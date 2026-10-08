@@ -66,6 +66,7 @@ Thank you to everyone who contributed code, reviews, issues, testing and discuss
 - Monolithic builds link again; meshoptimizer was missing from them. [o3de#20070](https://github.com/o3de/o3de/pull/20070)
 - Mac automated review fails at the real error when Xcode's post-build step fails, instead of a misleading "AssetProcessorBatch not found" later on. [o3de#20071](https://github.com/o3de/o3de/pull/20071)
 - Keyboard shortcuts in the Action Manager are handled as shortcut events rather than key events, which could swallow a shortcut, and CI artifact caches are hardened. [o3de#20093](https://github.com/o3de/o3de/pull/20093)
+- Shader compilation works on macOS again: azslc is staged inside the Asset Processor bundle where the shader builder looks for it. [o3de#20127](https://github.com/o3de/o3de/pull/20127)
 - The macOS workflow no longer uploads its asset cache after a failed build, which had carried a broken cache into every following run. [o3de#20131](https://github.com/o3de/o3de/pull/20131)
 - Third-party packages and LFS objects are fetched from o3debinaries.org endpoints in place of the previous CloudFront URLs. [o3de#20135](https://github.com/o3de/o3de/pull/20135)
 
@@ -233,9 +234,9 @@ Thank you to everyone who contributed code, reviews, issues, testing and discuss
 - Terrain detail layers blend correctly at their falloff edges when there is no macro material, instead of switching hard between materials. [o3de#20049](https://github.com/o3de/o3de/pull/20049)
 - Decals render on metallic surfaces, the decal texture array cap rises from 5 to 16, decals gain a maximum draw distance, and the diffuse probe grid shaders are recompiled. [o3de#20090](https://github.com/o3de/o3de/pull/20090)
 - Fixed random Editor crashes on macOS when opening a level, caused by a Metal command buffer completion handler writing into a freed frame object. [o3de#20119](https://github.com/o3de/o3de/pull/20119)
-- Shader compilation works on macOS again: azslc is staged inside the Asset Processor bundle where the shader builder looks for it. [o3de#20127](https://github.com/o3de/o3de/pull/20127)
 - The viewport no longer turns green with the motion blur component at ultra sampling quality. [o3de#20130](https://github.com/o3de/o3de/pull/20130)
 - MiniAudio works in unified launcher builds. [o3de#20158](https://github.com/o3de/o3de/pull/20158)
+- Spawning and despawning entities no longer freezes the simulation at random; streaming-image upload callbacks notify their owner through a per-image notification instead of holding a pointer that could deadlock against texture release. [o3de#20179](https://github.com/o3de/o3de/pull/20179)
 
 ## SIG-Network
 - The Multiplayer project template compiles again; float literals in the generated camera component now carry the required suffix. [o3de-extras#1055](https://github.com/o3de/o3de-extras/pull/1055)
