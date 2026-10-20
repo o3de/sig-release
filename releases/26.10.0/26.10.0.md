@@ -2,27 +2,47 @@
 
 The O3DE 26.10 release moves the Editor onto Qt 6, adds experimental support for Apple Silicon, and brings a season of work on robotics simulation to the ROS 2 and SimulationInterfaces gems. It also carries more than two hundred fixes and smaller improvements across the engine.
 
-Here are the notable [highlights](#highlights) for this release. For a comprehensive breakdown, jump to the [full list of changes](#full-list-of-changes), which is organized by Special Interest Group (SIG) and includes links to the relevant Pull Requests (PRs). A short list of [known issues](#known-issues) follows the highlights.
+Visit the [Get Started](https://docs.o3de.org/docs/welcome-guide/setup/) page to start using O3DE 26.10.
 
-To start using O3DE 26.10, follow the steps on the [Get Started](https://docs.o3de.org/docs/welcome-guide/setup/) page. Then, you can start building a new project choosing from one of the [provided templates](https://docs.o3de.org/docs/learning-guide/samples/templates/), or explore a pre-made example for [games](https://docs.o3de.org/docs/learning-guide/samples/advanced/) or [robotics](https://docs.o3de.org/docs/learning-guide/samples/robotic).
+Here are the notable [highlights](#highlights) for this release, grouped by area. For a comprehensive breakdown, jump to the [full list of changes](#full-list-of-changes), which is organized by Special Interest Group (SIG) and includes links to the relevant Pull Requests (PRs). A short list of [known issues](#known-issues) follows the highlights.
 
 # Highlights
 
-- **The Editor runs on Qt 6**. The Editor and all of its tools now build against a standard Qt 6.10.2, replacing the custom Qt 5.15.2 build that O3DE had carried since its first release. Qt 5 is no longer maintained by its authors, so this keeps the Editor on a toolkit that still receives security fixes. The upgrade came with several months of follow-up work: the Entity Inspector was reworked, keyboard shortcuts are now consistent across the Inspector, Outliner, Asset Editor and LyShine, the Asset Editor gained undo, and a long list of crashes, docking and styling regressions found during testing were fixed.
+## Editor
+
+- **The Editor runs on Qt 6**. The Editor and all of its tools now build against a standard Qt 6.10.2, replacing the no-longer-maintained Qt 5 build O3DE originally used. The upgrade brought several additional improvements: the Entity Inspector was reworked; keyboard shortcuts are now consistent across the Inspector, Outliner, Asset Editor and LyShine; the Asset Editor gained undo; and a long list of crashes, docking, and styling regressions found during testing were fixed.
+
+- **Creating components and projects**. The Class Wizard can target any project or Gem and any build target, and it generates basic, level, system and LyShine components as well as data assets. Project templates can inherit from one another, and a new GameplayGem template scaffolds component controllers with their buses, reflection and unit tests. Levels can be loaded from and saved to Gem asset directories, not only the project.
+
+## Platforms
 
 - **Experimental support for Apple Silicon**. O3DE now builds natively for Mac ARM64, and macOS builds no longer require Apple's Clang. Treat this as experimental for 26.10.
 
-- **Linux window systems and the web**. On Linux, the game launcher has initial Wayland support and can switch between X11 and Wayland at build or run time. The Editor still runs through X11 or XWayland; see the known issues. Separately, configuration files for the Emscripten compiler lay the groundwork for a future WebAssembly target.
+- **Wayland for the Linux game launcher**. The game launcher has initial Wayland support and can switch between X11 and Wayland at build or run time. The Editor still runs through X11 or XWayland; see the known issues.
+
+- **Groundwork for WebAssembly**. Configuration files for the Emscripten compiler lay the groundwork for a future WebAssembly target. Configuring still stops at the third-party packages, which are being added separately.
+
+## Robotics
 
 - **Full ROS 2 Lyrical Luth support**. All ROS 2-based Gems now fully support ROS 2 Lyrical Luth. SimulationInterfaces supports the simulation_interfaces 2.1.0 package that ships with Lyrical, alongside versions 1.4 through 1.6. It adds the SpawnEntities service for spawning several entities in one call, notifies when entities are spawned, rejects invalid poses instead of producing undefined results, and removes simulated entities before a level unloads. The ROS 2 camera can now publish compressed images.
 
-- **Physics and navigation**. PhysX 4 has been removed. DetourCrowd joins the Recast Navigation integration and gives agents collision avoidance and smooth steering. PhysX also gains an enhanced-determinism option. ArticulationLink now computes its inertia tensor from mass and shape, which fixes a long-standing mismatch in joint-chain behaviour between O3DE and Isaac Sim.
-
 - **Robot Importer updates**. libsdformat moves to 16.0.1. The Robot Importer code has been refactored to make it easier to read, and files and functions named for URDF have been renamed because the Gem also parses SDF. The importer works the same way as before.
 
-- **Rendering**. Ground Truth Ambient Occlusion is available as an alternative to SSAO, following the [SIG-Graphics-Audio RFC](https://github.com/o3de/sig-graphics-audio/blob/main/rfcs/GTAOIntegration/Proposed%20RFC%20Feature%20GTAO%20%28Ground-Truth%20based%20Ambient%20Occlusion%29.md). Unlit materials gain cutout and blended opacity, double-sided rendering, optional shadows and a billboard mode. Decals render correctly on metallic surfaces and can set a maximum draw distance. The AZSL shader compiler now lives in the engine source tree and builds as a host tool, so every platform compiles the same compiler.
+## Physics
 
-- **Creating components and projects**. The Class Wizard can target any project or Gem and any build target, and it generates basic, level, system and LyShine components as well as data assets. Project templates can inherit from one another, and a new GameplayGem template scaffolds component controllers with their buses, reflection and unit tests. Levels can be loaded from and saved to Gem asset directories, not only the project.
+- **PhysX 4 has been removed**. The deprecation announced in 26.05 is complete. Projects that still reference the Gem by its old name resolve to PhysX 5 through a gem alias, and the remaining PhysX 4 code, references and upgrade script are gone. PhysX also gains an enhanced-determinism option, off by default and enabled per scene.
+
+- **Navigation and articulation**. DetourCrowd joins the Recast Navigation integration and gives agents collision avoidance and smooth steering. ArticulationLink now computes its inertia tensor from mass and shape, which fixes a long-standing mismatch in joint-chain behaviour between O3DE and Isaac Sim.
+
+## Rendering
+
+- **Ground Truth Ambient Occlusion**. GTAO is available as an alternative to SSAO, following the [SIG-Graphics-Audio RFC](https://github.com/o3de/sig-graphics-audio/blob/main/rfcs/GTAOIntegration/Proposed%20RFC%20Feature%20GTAO%20%28Ground-Truth%20based%20Ambient%20Occlusion%29.md).
+
+- **Materials and decals**. Unlit materials gain cutout and blended opacity, double-sided rendering, optional shadows and a billboard mode. Decals render correctly on metallic surfaces and can set a maximum draw distance.
+
+- **One shader compiler for every platform**. The AZSL shader compiler now lives in the engine source tree and builds as a host tool, so every platform compiles the same compiler.
+
+## Core
 
 - **A smaller, more standard core**. AZStd::move, array, span and pair now alias their standard library counterparts, and C++20 concepts replace the old SFINAE machinery across AZStd. The Sandbox plugin system inherited from CryEngine is gone in favour of Gems, and the first pass of legacy Cry cleanup has landed. The engine builds under C++23 and C++26, and third-party dependencies fetched with FetchContent now share a download cache across build configurations.
 
