@@ -63,6 +63,7 @@ Thank you to everyone who contributed code, reviews, issues, testing and discuss
 
 ## SIG-Build
 - A workflow builds and tests the simulation Gems on every pull request that touches them, against the engine at the matching branch. [o3de-extras#1089](https://github.com/o3de/o3de-extras/pull/1089)
+- repo.json points every Gem released since 2409.0 at its engine release tag instead of the 2.0 placeholder, so o3de download validates them, and the Gems changed for 2610 get new versions (ROS2 4.4.0, ROS2RobotImporter 2.0.0, AzQtComponentsForPython 2.0.0 and others). [o3de-extras#1104](https://github.com/o3de/o3de-extras/pull/1104)
 - Configuration files for the Emscripten compiler lay the groundwork for a WebAssembly target; configuring still stops at the third-party packages that are being added separately. [o3de#19109](https://github.com/o3de/o3de/pull/19109)
 - The engine compiles with a C++23 toolchain, mainly by completing types that were forward-declared inside unique_ptr. [o3de#19425](https://github.com/o3de/o3de/pull/19425)
 - Initial Wayland support for the game launcher on Linux, switchable between X11 and Wayland at build or run time. Editor support waited for Qt6. [o3de#19477](https://github.com/o3de/o3de/pull/19477)
@@ -108,6 +109,7 @@ Thank you to everyone who contributed code, reviews, issues, testing and discuss
 - Third-party packages and LFS objects are fetched from o3debinaries.org endpoints in place of the previous CloudFront URLs. [o3de#20135](https://github.com/o3de/o3de/pull/20135)
 
 ## SIG-Content
+- The MachineLearning Gem builds again: its Script Canvas nodes are registered the way engines since 24.09 expect, which fixes #1063. [o3de-extras#1101](https://github.com/o3de/o3de-extras/pull/1101)
 - Assimp is built alongside the engine through FetchContent instead of arriving as a prebuilt package, and moves from 5.4.3 to 6.0.2. [o3de#19365](https://github.com/o3de/o3de/pull/19365)
 - Scene import checks Assimp's incomplete-scene flag correctly; the test had been reverted to an always-true expression. [o3de#19429](https://github.com/o3de/o3de/pull/19429)
 - Drag and drop in the EMotionFX parameter window inserts at the right index under Qt6, without private APIs. [o3de#19523](https://github.com/o3de/o3de/pull/19523)
@@ -180,6 +182,7 @@ Thank you to everyone who contributed code, reviews, issues, testing and discuss
 - The Class Wizard finds PySide6 under a custom third-party package path and reports clearly when it cannot. [o3de#20117](https://github.com/o3de/o3de/pull/20117)
 - Unfiltered asset database product queries no longer read an uninitialised job status. [o3de#20126](https://github.com/o3de/o3de/pull/20126)
 - The Class Wizard's Add Editor Component output compiles; a misplaced declaration is removed. [o3de#20138](https://github.com/o3de/o3de/pull/20138)
+- The Editor and launchers carry a new splash screen and product logo for the 26.10.0 release. [o3de#20211](https://github.com/o3de/o3de/pull/20211)
 
 ## SIG-Core
 - Fixed a wrong AZ::IO::Path construction in the Robot Importer's asset lookup that could produce a bad lookup key. [o3de-extras#1087](https://github.com/o3de/o3de-extras/pull/1087)
@@ -299,6 +302,10 @@ Thank you to everyone who contributed code, reviews, issues, testing and discuss
 - SimulationInterfaces tests build with newer googletest, which rejects the deprecated Invoke wrapper. [o3de-extras#1076](https://github.com/o3de/o3de-extras/pull/1076)
 - The ResetSimulation service treats its scope argument as a bitmask, so combinations of scopes reset correctly. [o3de-extras#1078](https://github.com/o3de/o3de-extras/pull/1078)
 - Duplicate asset detection and copying code in the Robot Importer's import paths is consolidated, and the wizard checks whether a source asset is already in the project before searching by content. [o3de-extras#1085](https://github.com/o3de/o3de-extras/pull/1085)
+- The Robot Importer reads the inertia tensor from URDF and SDF inertial data and applies it to articulation links, instead of leaving PhysX to compute one (needs o3de#20053, also in this release). [o3de-extras#1088](https://github.com/o3de/o3de-extras/pull/1088)
+- ROS 2 topic QoS can set the history policy; previously every topic was hard-coded to KeepLast. [o3de-extras#1098](https://github.com/o3de/o3de-extras/pull/1098)
+- The Robot Importer shows a warning banner when the project registry settings differ from the robotics templates, since that changes how .dae and .stl files are read, and the warning for more than 64 articulations uses the same style. [o3de-extras#1099](https://github.com/o3de/o3de-extras/pull/1099)
+- The SimulationInterfaces editor tests build their spawnable in memory, so the test target no longer runs AssetProcessorBatch or pulls the engine builders into CI, and the TestSimulationEntity prefab that shipped with the Gem is removed. [o3de-extras#1100](https://github.com/o3de/o3de-extras/pull/1100)
 - MotionMatching debug drawing is off by default; it cost a great deal of performance and can be switched on when needed. [o3de#19591](https://github.com/o3de/o3de/pull/19591)
 - The MotionMatching Script Canvas demo files are migrated to current node types and open again. [o3de#19613](https://github.com/o3de/o3de/pull/19613)
 - DetourCrowd from Recast Navigation is now available: a component that steers agents with collision avoidance between them and smooth movement, usable from C++ and Script Canvas. [o3de#19707](https://github.com/o3de/o3de/pull/19707)
