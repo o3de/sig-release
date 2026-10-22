@@ -107,6 +107,7 @@ Thank you to everyone who contributed code, reviews, issues, testing and discuss
 - Keyboard shortcuts in the Action Manager are handled as shortcut events rather than key events, which could swallow a shortcut, and CI artifact caches are hardened. [o3de#20093](https://github.com/o3de/o3de/pull/20093)
 - The macOS workflow no longer uploads its asset cache after a failed build, which had carried a broken cache into every following run. [o3de#20131](https://github.com/o3de/o3de/pull/20131)
 - Third-party packages and LFS objects are fetched from o3debinaries.org endpoints in place of the previous CloudFront URLs. [o3de#20135](https://github.com/o3de/o3de/pull/20135)
+- The Editor and launchers carry a new splash screen and product logo for the 26.10.0 release. [o3de#20211](https://github.com/o3de/o3de/pull/20211)
 
 ## SIG-Content
 - The MachineLearning Gem builds again: its Script Canvas nodes are registered the way engines since 24.09 expect, which fixes #1063. [o3de-extras#1101](https://github.com/o3de/o3de-extras/pull/1101)
@@ -182,7 +183,6 @@ Thank you to everyone who contributed code, reviews, issues, testing and discuss
 - The Class Wizard finds PySide6 under a custom third-party package path and reports clearly when it cannot. [o3de#20117](https://github.com/o3de/o3de/pull/20117)
 - Unfiltered asset database product queries no longer read an uninitialised job status. [o3de#20126](https://github.com/o3de/o3de/pull/20126)
 - The Class Wizard's Add Editor Component output compiles; a misplaced declaration is removed. [o3de#20138](https://github.com/o3de/o3de/pull/20138)
-- The Editor and launchers carry a new splash screen and product logo for the 26.10.0 release. [o3de#20211](https://github.com/o3de/o3de/pull/20211)
 
 ## SIG-Core
 - Fixed a wrong AZ::IO::Path construction in the Robot Importer's asset lookup that could produce a bad lookup key. [o3de-extras#1087](https://github.com/o3de/o3de-extras/pull/1087)
